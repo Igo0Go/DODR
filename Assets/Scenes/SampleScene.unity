@@ -3241,7 +3241,7 @@ MonoBehaviour:
   speed: 1
   xSpeed: 2
   ySpeed: 2
-  zSpeed: 2
+  zSpeed: 1
   sprintSpeedMultiplicator: 2
 --- !u!81 &1217546165
 AudioListener:
