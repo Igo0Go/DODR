@@ -1,0 +1,170 @@
+fileFormatVersion: 2
+guid: f71d4d31fb54a104c8bf51c85edd13a3
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: LowManHips
+    100002: LowManRightArm
+    100004: LowManRightForeArm
+    100006: LowManRightHand
+    100008: LowManRightShoulder
+    100010: LowManSpine
+    100012: LowManSpine1
+    100014: LowManSpine2
+    100016: Shield
+    100018: //RootNode
+    100020: Weapon
+    100022: WeaponPart
+    100024: WeaponPart10
+    100026: WeaponPart2
+    100028: WeaponPart3
+    100030: WeaponPart4
+    100032: WeaponPart5
+    100034: WeaponPart6
+    100036: WeaponPart7
+    100038: WeaponPart8
+    100040: WeaponPart9
+    400000: LowManHips
+    400002: LowManRightArm
+    400004: LowManRightForeArm
+    400006: LowManRightHand
+    400008: LowManRightShoulder
+    400010: LowManSpine
+    400012: LowManSpine1
+    400014: LowManSpine2
+    400016: Shield
+    400018: //RootNode
+    400020: Weapon
+    400022: WeaponPart
+    400024: WeaponPart10
+    400026: WeaponPart2
+    400028: WeaponPart3
+    400030: WeaponPart4
+    400032: WeaponPart5
+    400034: WeaponPart6
+    400036: WeaponPart7
+    400038: WeaponPart8
+    400040: WeaponPart9
+    2100000: 'Material #86'
+    2100002: 'Material #87'
+    2100004: 'Material #88'
+    2300000: Shield
+    2300002: Weapon
+    2300004: WeaponPart
+    2300006: WeaponPart10
+    2300008: WeaponPart2
+    2300010: WeaponPart3
+    2300012: WeaponPart4
+    2300014: WeaponPart5
+    2300016: WeaponPart6
+    2300018: WeaponPart7
+    2300020: WeaponPart8
+    2300022: WeaponPart9
+    3300000: Shield
+    3300002: Weapon
+    3300004: WeaponPart
+    3300006: WeaponPart10
+    3300008: WeaponPart2
+    3300010: WeaponPart3
+    3300012: WeaponPart4
+    3300014: WeaponPart5
+    3300016: WeaponPart6
+    3300018: WeaponPart7
+    3300020: WeaponPart8
+    3300022: WeaponPart9
+    4300000: Weapon
+    4300002: WeaponPart
+    4300004: WeaponPart2
+    4300006: WeaponPart3
+    4300008: WeaponPart4
+    4300010: WeaponPart5
+    4300012: WeaponPart6
+    4300014: WeaponPart7
+    4300016: WeaponPart8
+    4300018: WeaponPart9
+    4300020: WeaponPart10
+    4300022: Shield
+    7400000: Relictus
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.5
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0076200003
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

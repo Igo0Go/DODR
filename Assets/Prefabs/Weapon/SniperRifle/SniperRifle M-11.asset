@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f516a30c161b87e44847884ab94ae553, type: 3}
+  m_Name: SniperRifle M-11
+  m_EditorClassIdentifier: 
+  damage: 50
+  type: 1
+  itemPrefab: {fileID: 1048766825936058, guid: af32d7c2a1962fd4d880103522b74792, type: 2}
+  rHandPos: {x: 0.18, y: -0.03, z: 0.14}
+  rHandRot: {x: -5.37, y: 15.22, z: -98.61001}
+  weaponPrefab: {fileID: 1452331821964444, guid: 8064e6d06417362468c6504dadc7c301,
+    type: 2}
+  weaponPos: {x: 0, y: 0.001, z: 0.113}
+  weaponRot: {x: -90, y: 0, z: 0}

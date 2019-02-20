@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f516a30c161b87e44847884ab94ae553, type: 3}
+  m_Name: ShockPistol
+  m_EditorClassIdentifier: 
+  damage: 5
+  type: 1
+  itemPrefab: {fileID: 1183242798573210, guid: 797defcd291581142bf72c0e7c7065ed, type: 2}
+  rHandPos: {x: 0.08, y: 0.06, z: 0.411}
+  rHandRot: {x: -8.98, y: 15, z: -90.52}
+  weaponPrefab: {fileID: 1542726764380592, guid: f3b3efcf8ce3d48458768f8fdb7fea4f,
+    type: 2}
+  weaponPos: {x: -0.007, y: -0.027, z: 0.044}
+  weaponRot: {x: -2.317, y: -18.947, z: 5.602}

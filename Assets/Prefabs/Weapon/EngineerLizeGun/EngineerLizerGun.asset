@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f516a30c161b87e44847884ab94ae553, type: 3}
+  m_Name: EngineerLizerGun
+  m_EditorClassIdentifier: 
+  damage: 15
+  type: 3
+  itemPrefab: {fileID: 1321099888836094, guid: 382c679214edb334197373d990a0af9a, type: 2}
+  rHandPos: {x: 0.255, y: -0.168, z: 0.067}
+  rHandRot: {x: 32.648, y: 19.1, z: -49.426}
+  weaponPrefab: {fileID: 1751794021458862, guid: b89911400bbf83346a894df50c4cf7ed,
+    type: 2}
+  weaponPos: {x: -0.044, y: 0.01, z: 0.153}
+  weaponRot: {x: 120.165, y: 170.078, z: 105.422}

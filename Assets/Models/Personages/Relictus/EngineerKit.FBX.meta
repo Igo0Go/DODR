@@ -1,0 +1,218 @@
+fileFormatVersion: 2
+guid: 89cced80c52a57e46864708dac52afe8
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Batarey
+    100002: CentralOcular
+    100004: Core
+    100006: Disk
+    100008: EngineerBatarey
+    100010: EngineerBelt
+    100012: EngineerDrone
+    100014: EngineereRemoteControl
+    100016: EngineerHelmet
+    100018: //RootNode
+    100020: EngineerPult
+    100022: EoboticArmMainRob
+    100024: LeftOcular
+    100026: Lense
+    100028: Lense001
+    100030: Lense002
+    100032: Lense003
+    100034: Lense004
+    100036: MiniOcular
+    100038: Ocular
+    100040: RightOcular
+    100042: RoboticArmCreatorRob
+    100044: RoboticArmDestroyerRob
+    100046: RoboticArmMainCylinder
+    100048: RoboticArmSecondCylinder
+    100050: ViewPort
+    400000: Batarey
+    400002: CentralOcular
+    400004: Core
+    400006: Disk
+    400008: EngineerBatarey
+    400010: EngineerBelt
+    400012: EngineerDrone
+    400014: EngineereRemoteControl
+    400016: EngineerHelmet
+    400018: //RootNode
+    400020: EngineerPult
+    400022: EoboticArmMainRob
+    400024: LeftOcular
+    400026: Lense
+    400028: Lense001
+    400030: Lense002
+    400032: Lense003
+    400034: Lense004
+    400036: MiniOcular
+    400038: Ocular
+    400040: RightOcular
+    400042: RoboticArmCreatorRob
+    400044: RoboticArmDestroyerRob
+    400046: RoboticArmMainCylinder
+    400048: RoboticArmSecondCylinder
+    400050: ViewPort
+    2100000: No Name
+    2300000: Batarey
+    2300002: CentralOcular
+    2300004: Core
+    2300006: Disk
+    2300008: EngineerBatarey
+    2300010: EngineerBelt
+    2300012: EngineerDrone
+    2300014: EngineereRemoteControl
+    2300016: EngineerHelmet
+    2300018: //RootNode
+    2300020: EngineerPult
+    2300022: EoboticArmMainRob
+    2300024: LeftOcular
+    2300026: Lense
+    2300028: Lense001
+    2300030: Lense002
+    2300032: Lense003
+    2300034: Lense004
+    2300036: MiniOcular
+    2300038: Ocular
+    2300040: RightOcular
+    2300042: RoboticArmCreatorRob
+    2300044: RoboticArmDestroyerRob
+    2300046: RoboticArmMainCylinder
+    2300048: RoboticArmSecondCylinder
+    2300050: ViewPort
+    3300000: Batarey
+    3300002: CentralOcular
+    3300004: Core
+    3300006: Disk
+    3300008: EngineerBatarey
+    3300010: EngineerBelt
+    3300012: EngineerDrone
+    3300014: EngineereRemoteControl
+    3300016: EngineerHelmet
+    3300018: //RootNode
+    3300020: EngineerPult
+    3300022: EoboticArmMainRob
+    3300024: LeftOcular
+    3300026: Lense
+    3300028: Lense001
+    3300030: Lense002
+    3300032: Lense003
+    3300034: Lense004
+    3300036: MiniOcular
+    3300038: Ocular
+    3300040: RightOcular
+    3300042: RoboticArmCreatorRob
+    3300044: RoboticArmDestroyerRob
+    3300046: RoboticArmMainCylinder
+    3300048: RoboticArmSecondCylinder
+    3300050: ViewPort
+    4300000: EngineerSuit
+    4300002: EngineerPult
+    4300004: EngineerHelmet
+    4300006: ViewPort
+    4300008: RightOcular
+    4300010: Lense
+    4300012: LeftOcular
+    4300014: Lense001
+    4300016: CentralOcular
+    4300018: Lense002
+    4300020: EngineerDrone
+    4300022: EngineereRemoteControl
+    4300024: Ocular
+    4300026: Lense003
+    4300028: MiniOcular
+    4300030: Lense004
+    4300032: RoboticArmMainCylinder
+    4300034: EoboticArmMainRob
+    4300036: RoboticArmSecondCylinder
+    4300038: RoboticArmCreatorRob
+    4300040: RoboticArmDestroyerRob
+    4300042: Disk
+    4300044: Batarey
+    4300046: EngineerBelt
+    4300048: EngineerBatarey
+    4300050: Core
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

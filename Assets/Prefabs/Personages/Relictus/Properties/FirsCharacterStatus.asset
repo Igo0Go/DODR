@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aff1b4e8e44df34183ac6580a2c9613, type: 3}
+  m_Name: FirsCharacterStatus
+  m_EditorClassIdentifier: 
+  standartJumpForce: 5
+  standartGravityForce: 9.8
+  isBehindCover: 0
+  isMove: 0
+  isAimingMove: 0
+  isAiming: 0
+  isSprint: 0
+  isGround: 1
+  isJump: 0
+  isFight: 0
+  onWall: 0
+  sniper: 1
+  currentXrot: 0
+  rotationSpeed: 0.4
