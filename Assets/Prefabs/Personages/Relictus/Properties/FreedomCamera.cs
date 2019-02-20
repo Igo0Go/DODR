@@ -5,9 +5,9 @@ using UnityEngine;
 public class FreedomCamera : MonoBehaviour {
 
     [Range(0,10)] public float speed;
-    [Range(0, 500)] public float xSpeed;
-    [Range(0, 500)] public float ySpeed;
-    [Range(0, 500)] public float zSpeed;
+    [Range(1, 10)] public float xSpeed;
+    [Range(1, 10)] public float ySpeed;
+    [Range(1, 10)] public float zSpeed;
     [Range(1, 5)] public float sprintSpeedMultiplicator;
 
     private float forwardAxis;
@@ -56,9 +56,24 @@ public class FreedomCamera : MonoBehaviour {
 
         Vector3 newRotation = (transform.forward * zSpeed) + (transform.right * ySpeed) + (transform.up * upAxis);
 
-        transform.Rotate(transform.up, mouseX * xSpeed);
-        transform.Rotate(transform.right, -mouseY * ySpeed);
-        transform.Rotate(transform.forward, rotateZ * zSpeed);
+        Quaternion rot = new Quaternion();
+        rot.eulerAngles = newRotation;
+
+        Quaternion rotx = transform.rotation * Quaternion.AngleAxis(mouseX, transform.up);
+        Quaternion roty = transform.rotation * Quaternion.AngleAxis(-mouseY, transform.right);
+        Quaternion rotz = transform.rotation * Quaternion.AngleAxis(rotateZ, transform.forward);
+
+        rot = rotx * roty;
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, rot, xSpeed);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, roty, ySpeed);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, rotz, zSpeed);
+
+        //transform.rotation = Quaternion.Slerp(transform.rotation, rot, xSpeed);
+
+        //transform.Rotate(transform.up, mouseX * xSpeed);
+        //transform.Rotate(transform.right, -mouseY * ySpeed);
+        //transform.Rotate(transform.forward, rotateZ * zSpeed);
 
     }
 }
