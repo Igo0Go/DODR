@@ -30,7 +30,6 @@ public class PlayerController : MyTools {
     private CharacterController controller;
 
     private int _health;
-    private float step;
 
     public int Health
     {
@@ -57,7 +56,6 @@ public class PlayerController : MyTools {
         sprintValue = 0;
         Cursor.lockState = CursorLockMode.Locked;
         controller = GetComponent<CharacterController>();
-        step = 0.5f * Time.deltaTime;
     }
 
     void Update() {

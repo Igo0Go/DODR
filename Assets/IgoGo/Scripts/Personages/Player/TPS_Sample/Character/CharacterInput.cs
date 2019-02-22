@@ -36,7 +36,6 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
     private Animator anim;
     private Transform targetLook;
     private bool leftPivot;
-    private bool opportunityToShoot;
     private float _distance;
 
 
@@ -291,8 +290,5 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
             }
         }
     }
-    private void ShootOpportunity()
-    {
-        opportunityToShoot = true;
-    }
+   
 }

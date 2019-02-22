@@ -67,7 +67,6 @@ public class CharacterReactions : MyTools, IAlive {
     private CharacterInput characterInput;
     private CameraHandler cameraHandler;
     private Crosshair crosshair;
-    private CharacterStatus characterStatus;
     private Animator anim;
 
     public void Initiolize(SampleController sampleController)
@@ -76,7 +75,6 @@ public class CharacterReactions : MyTools, IAlive {
         characterInventory = sampleController.characterInventory;
         characterInput = sampleController.characterInput;
         cameraHandler = sampleController.cameraHandler;
-        characterStatus = sampleController.characterStatus;
         crosshair = sampleController.crosshair;
         anim = sampleController.anim;
     }
@@ -211,7 +209,6 @@ public class CharacterReactions : MyTools, IAlive {
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                anim.SetTrigger("Action");
                 PutOnSuit(kit);
             }
         }

@@ -14,7 +14,6 @@ public class CharacterClimb : MyTools, IPlayerPart {
 
     private CharacterStatus characterStatus;
     private CharacterInventory characterInventory;
-    private CharacterMovement characterMovement;
     private CameraHandler cameraHandler;
     private ClimbPoint currentPoint;
     private Vector3 nextPointPos;
@@ -204,7 +203,6 @@ public class CharacterClimb : MyTools, IPlayerPart {
         characterInventory = sampleController.characterInventory;
         characterStatus = sampleController.characterStatus;
         characterStatus.onWall = false;
-        characterMovement = sampleController.characterMovement;
         cameraHandler = sampleController.cameraHandler;
         anim = sampleController.anim;
     }
