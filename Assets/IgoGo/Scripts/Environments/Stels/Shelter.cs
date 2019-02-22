@@ -8,6 +8,7 @@ public enum ShelterType
     Angel
 }
 
+
 [System.Serializable]
 public class ShelterAngel
 {
@@ -34,6 +35,7 @@ public class Shelter : MonoBehaviour {
     [Header("Простроить связи")]
     public bool checkHelpers;
     public bool drawMarkers;
+    public bool fullShelter;
 
     private void Update()
     {

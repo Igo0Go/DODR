@@ -80,6 +80,7 @@ public class CharacterStels : MyTools, IPlayerPart {
                     if (MyGetComponent(currentCollider.gameObject, out currentShelter))
                     {
                         dir = currentShelter.direction;
+                        anim.SetBool("FullShelter", currentShelter.fullShelter);
                         if (Vector3.Angle(transform.forward, dir) < 100)
                         {
                             characterStatus.isBehindCover = true;
@@ -348,11 +349,12 @@ public class CharacterStels : MyTools, IPlayerPart {
     {
         if (other.tag.Equals("Shelter"))
         {
-            if(characterStatus.isBehindCover)
+            if(characterStatus.isBehindCover && !characterStatus.isAiming)
             {
                 currentCollider = other;
                 currentShelter = currentCollider.gameObject.GetComponent<Shelter>();
-                if(currentShelter.shelterType == ShelterType.Angel)
+                anim.SetBool("FullShelter", currentShelter.fullShelter);
+                if (currentShelter.shelterType == ShelterType.Angel)
                 {
                     anim.SetFloat("Xstate", 0);
                     target = currentShelter.playerPoint.position;
