@@ -17,8 +17,8 @@ MonoBehaviour:
   yRotSpeed: 7
   minYAngel: -45
   maxYAngel: 70
-  minXAngel: -45
-  maxXAngel: 45
+  minXAngel: -75
+  maxXAngel: 75
   normalZ: -1.72
   normalX: 0.4
   normalY: 1.5

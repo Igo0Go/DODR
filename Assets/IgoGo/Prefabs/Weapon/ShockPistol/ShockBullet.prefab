@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  lifeTime: 30
+  lifeTime: 1
   connectDecal: 1
   shock: 1
   metalDecal: {fileID: 1014386417102044, guid: 54f84387d4a8e2e46af1a6313b7afb70, type: 2}

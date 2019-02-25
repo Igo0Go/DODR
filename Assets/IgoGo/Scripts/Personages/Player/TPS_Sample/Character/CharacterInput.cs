@@ -36,6 +36,7 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
     private Animator anim;
     private Transform targetLook;
     private bool leftPivot;
+    private bool flyKey;
     private float _distance;
 
 
@@ -118,15 +119,22 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
                 {
                     Time.timeScale = 0.3f;
                     aud.Play();
+                    if(flyKey)
+                    {
+                        cameraHandler.StaticCam = true;
+                        flyKey = false;
+                    }
                 }
                 else
                 {
                     Time.timeScale = 1f;
+                    flyKey = true;
+                    cameraHandler.StaticCam = false;
                     aud.Stop();
                 }
                 characterStatus.isAiming = true;
                 characterStatus.isAimingMove = true;
-                fightWeapon.transform.position = shootWeapon.shootPoint.transform.position;
+                fightWeapon.transform.position = shootWeapon.shootPoint.transform.position - shootWeapon.shootPoint.forward * 0.15f;
                 fightWeapon.transform.rotation = shootWeapon.shootPoint.transform.rotation;
                 shootDelegate();
             }
@@ -134,6 +142,7 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
             {
                 Time.timeScale = 1f;
                 aud.Stop();
+                cameraHandler.StaticCam = false;
                 characterStatus.isAiming = false;
                 characterStatus.isAimingMove = true;
                 characterFight.weapon.StopProtect();
@@ -149,6 +158,11 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
         if (!Input.GetMouseButton(1) && !sniperMode)
         {
             Time.timeScale = 1f;
+            flyKey = true;
+            if(!characterStatus.isBehindCover && !characterStatus.onWall)
+            {
+                cameraHandler.StaticCam = false;
+            }
             aud.Stop();
             characterStatus.isAiming = false;
             characterStatus.isAimingMove = false;
@@ -205,7 +219,7 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
     }
     private void FightInput()
     {
-        if(characterMovement.State == PlayerState.active)
+        if(characterMovement.State == PlayerState.active && !characterStatus.shock)
         {
             if (Input.GetKeyDown(KeyCode.Q) && characterInventory.fighter && !anim.GetBool("Aiming"))
             {

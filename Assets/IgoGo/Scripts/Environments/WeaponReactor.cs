@@ -98,4 +98,12 @@ public class WeaponReactor : UsingOrigin, IAlive
             }
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag.Equals("Sword"))
+        {
+            GetDamage(30);
+        }
+    }
 }

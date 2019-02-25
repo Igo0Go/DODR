@@ -248,6 +248,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1250723739167522
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4607321667609344}
+  m_Layer: 10
+  m_Name: TargetForEnemies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1275234850632094
 GameObject:
   m_ObjectHideFlags: 1
@@ -1417,7 +1432,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1529565764276110}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.2553532, y: 5.023908e-18, z: -4.525134}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4259326262566170}
@@ -1527,13 +1542,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1362432168017894}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 1.43, y: 0.44, z: 0.21}
+  m_LocalPosition: {x: 44, y: -2.1, z: -44.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4582837891142488}
   - {fileID: 4061528636910622}
   - {fileID: 4504161556759570}
   - {fileID: 4301012593569826}
+  - {fileID: 4607321667609344}
   m_Father: {fileID: 4107869006078204}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -1889,6 +1905,19 @@ Transform:
   m_Father: {fileID: 4402086084436356}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 100.25598, y: 4.6319885, z: 180}
+--- !u!4 &4607321667609344
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250723739167522}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.582, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4259326262566170}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4624614510585658
 Transform:
   m_ObjectHideFlags: 1
@@ -2889,6 +2918,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   cameraConfig: {fileID: 11400000, guid: 538d165c3da36ef499bbf34584a9a1b7, type: 2}
   leftPivot: 0
+  rotateMode: 0
   noObstacles: 0
   smoothX: 0
   smoothY: 0
@@ -3298,7 +3328,9 @@ MonoBehaviour:
   crosshair: {fileID: 114941291572926328}
   anim: {fileID: 95736448883308772}
   ammoSlider: {fileID: 114282863771793634}
+  target: {fileID: 4607321667609344}
   aud: {fileID: 0}
+  characterController: {fileID: 0}
 --- !u!114 &114634508627917354
 MonoBehaviour:
   m_ObjectHideFlags: 1

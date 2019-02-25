@@ -11,10 +11,19 @@ public class AutoWeapon : MyTools {
     public SimpleHandler shootDelegate; //делегат для стрельбы
     public SimpleHandler returnDelegate; //делегат для возврата (прекратить стрельбу)
     public AudioSource aud;
-    public LineRenderer lineRenderer;
     public bool removeDestructive;  //может ли уничтожать препятствия
 
-	void Start () {
+
+    [Tooltip("Толькодля лучевого")] public LineRenderer lineRenderer;
+    [Tooltip("Только для автоматического и oneShoot")] public GameObject bullet;
+    [Tooltip("Только для автоматического и oneShoot")] public Transform shootPoint;
+    [Tooltip("Только для автоматического и oneShoot")] public ParticleSystem muzzleFlash;
+    [Tooltip("Только для автоматического и oneShoot")] public AudioClip shootClip;
+    [Tooltip("Только для автоматического и oneShoot")] public Animator anim;
+    [Tooltip("Только для автоматического и oneShoot")] public bool recoil;
+    
+
+    void Start () {
 		switch(type)
         {
             case WeaponType.Ray:
@@ -25,15 +34,23 @@ public class AutoWeapon : MyTools {
                 aud.loop = true;
                 aud.enabled = false;
                 break;
+            case WeaponType.Automatic:
+                shootDelegate = AutoShoot;
+                aud.playOnAwake = false;
+                aud.loop = false;
+                aud.enabled = true;
+                recoil = false;
+                break;
         }
 	}
 	
 	void Update () {
-        if(active)
+
+        if (active)
         {
             shootDelegate();
         }
-        else
+        else if(type == WeaponType.Ray)
         {
             returnDelegate();
         }
@@ -67,7 +84,24 @@ public class AutoWeapon : MyTools {
         lineRenderer.enabled = true;
         aud.enabled = true;
     }
+    public void AutoShoot()
+    {
+        if (!recoil)
+        {
+            InstanceBullet();
+            aud.PlayOneShot(shootClip);
+            muzzleFlash.Play();
+            recoil = true;
+            anim.SetTrigger("Recoil");
+        }
+    }
 
 
-
+    private void InstanceBullet()
+    {
+        GameObject progectile = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
+        Bullet bulletConfig = progectile.GetComponent<Bullet>();
+        bulletConfig.damage = damage;
+        Destroy(progectile, bulletConfig.lifeTime);
+    }
 }

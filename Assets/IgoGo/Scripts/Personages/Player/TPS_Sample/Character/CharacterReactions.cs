@@ -25,6 +25,7 @@ public interface IAlive
 
     void GetDamage(int damage);
     void Dead();
+    void ShockEffect(float time);
 }
 
 public class CharacterReactions : MyTools, IAlive {
@@ -50,13 +51,11 @@ public class CharacterReactions : MyTools, IAlive {
         get { return healthSlider.value; }
         set
         {
-            float _health = value;
-            if(_health < 0)
+            healthSlider.value = value;
+            if(healthSlider.value <= 0)
             {
-                _health = 0;
                 Dead();
             }
-            healthSlider.value = _health;
         }
     }
 
@@ -64,10 +63,15 @@ public class CharacterReactions : MyTools, IAlive {
     private PlayerState _state;
     private SampleController sampleController;
     private CharacterInventory characterInventory;
+    private CharacterStatus characterStatus;
+    private CharacterMovement characterMovement;
     private CharacterInput characterInput;
     private CameraHandler cameraHandler;
     private Crosshair crosshair;
     private Animator anim;
+    private Transform target;
+
+    private event SimpleHandler deadEvent;
 
     public void Initiolize(SampleController sampleController)
     {
@@ -76,7 +80,10 @@ public class CharacterReactions : MyTools, IAlive {
         characterInput = sampleController.characterInput;
         cameraHandler = sampleController.cameraHandler;
         crosshair = sampleController.crosshair;
+        characterMovement = sampleController.characterMovement;
+        characterStatus = sampleController.characterStatus;
         anim = sampleController.anim;
+        target = sampleController.target;
     }
 
     public void Dead()
@@ -87,19 +94,30 @@ public class CharacterReactions : MyTools, IAlive {
         anim.SetTrigger("DeadTrigger");
         Invoke("NoSuit", 3f);
         Invoke("ReturnActive", 3f);
+        if(deadEvent != null)
+        {
+            deadEvent.Invoke();
+        }
+        deadEvent = null;
     }
     public void GetDamage(int damage)
     {
-        if(Health > 0)
+        if (Health > 0)
         {
             var result = damage - specKit.armorPoint;
             if (result <= 0)
             {
                 result = 1;
             }
-            Health = -result;
+            Health = Health - result;
         }
     }
+    public void ShockEffect(float time)
+    {
+        characterStatus.shock = true;
+        Invoke("ReturnShock", time);
+    }
+
     public void PutOnSuit(SpecKit kit)
     {
         characterInput.selectedWeapon = 3;
@@ -133,6 +151,9 @@ public class CharacterReactions : MyTools, IAlive {
                 case KitType.Comandor:
                     Protected = !Protected;
                     break;
+                case KitType.Sniper:
+                    characterMovement.JetPack = !characterMovement.JetPack;
+                    break;
             }
             specKit.Action();
         }
@@ -146,6 +167,7 @@ public class CharacterReactions : MyTools, IAlive {
         characterInventory.firstWeapon = null;
         characterInventory.secondWeapon = null;
         cameraHandler.SetMask(KitType.NoSuit);
+        characterMovement.JetPack = false;
     }
     private void ReturnActive()
     {
@@ -154,6 +176,11 @@ public class CharacterReactions : MyTools, IAlive {
         Health = 100;
         State = PlayerState.active;
     }
+    private void ReturnShock()
+    {
+        characterStatus.shock = false;
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -165,7 +192,15 @@ public class CharacterReactions : MyTools, IAlive {
                 anim.SetActiveForAll(true);
             }
         }
-        if(other.tag.Equals("Safe"))
+
+        TurretScript turret;
+        if (MyGetComponent(other.gameObject, out turret))
+        {
+            turret.target = target;
+            deadEvent += turret.Clear;
+        }
+
+        if (other.tag.Equals("Safe"))
         {
             sampleController.Safe();
             Health = 100;
@@ -225,7 +260,14 @@ public class CharacterReactions : MyTools, IAlive {
         {
             system.SetActive(0);
         }
+        TurretScript turret;
+        if (MyGetComponent(other.gameObject, out turret))
+        {
+            turret.target = null;
+            deadEvent -= turret.Clear;
+        }
     }
+
 }
 
 public abstract class MyTools : MonoBehaviour

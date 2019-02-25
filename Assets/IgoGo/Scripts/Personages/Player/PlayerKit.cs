@@ -32,6 +32,9 @@ public class PlayerKit : MyTools
                 case KitType.Comandor:
                     Action = ComandorAction;
                     break;
+                case KitType.Sniper:
+                    Action = SniperAction;
+                    break;
             }
             _kit = value;
         }
@@ -183,17 +186,18 @@ public class PlayerKit : MyTools
             roller.transform.GetChild(1).GetComponent<RollerConroller>().Initioze(gameObject.GetComponent<CharacterReactions>());
         }
     }
+    private void SniperAction()
+    {
+        active = !active;
+        anim.SetBool("Active", active);
+    }
 
     private void RoketJumpController()
     {
-        float x, y, z;
-        z = Input.GetAxis("Vertical");
-        x = Input.GetAxis("Horizontal");
-        y = Input.GetAxis("UpDownAxis");
-
-        anim.SetFloat("AxisX", x);
-        anim.SetFloat("AxisY", y);
-        anim.SetFloat("AxisZ", z);
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetTrigger("Jump");
+        }
     }
 
 }

@@ -36,11 +36,30 @@ public class CharacterMovement : MyTools, IPlayerPart {
     private PlayerState _state;
 
     #region Перемещение
+    public bool JetPack
+    {
+        get { return _jetPack; }
+        set
+        {
+            _jetPack = value;
+            if(_jetPack)
+            {
+                jumpForce = jumpForce * 2;
+                grav = 0.7f * characterStatus.standartGravityForce;
+            }
+            else
+            {
+                jumpForce = characterStatus.standartJumpForce;
+                grav = characterStatus.standartGravityForce;
+            }
+        }
+    }
 
+    private bool _jetPack;
     private Vector3 moveVector;
     [SerializeField] private float speed;
-    [SerializeField] private float grav;
-    [SerializeField] private float jumpForce;
+    private float grav;
+    private float jumpForce;
     private float vertSpeed;
 
     #endregion
@@ -52,8 +71,7 @@ public class CharacterMovement : MyTools, IPlayerPart {
         characterController = GetComponent<CharacterController>();
         characterStatus = sampleController.characterStatus;
         cameraTransform = sampleController.cameraHandler.transform;
-        characterStatus.standartJumpForce = jumpForce;
-        characterStatus.standartGravityForce = grav;
+        JetPack = false;
         characterStatus.onWall = false;
         State = sampleController.characterReactions.State;
     }
@@ -102,7 +120,7 @@ public class CharacterMovement : MyTools, IPlayerPart {
             }
             else
             {
-                moveVector = transform.forward * vertical + transform.right * horizontal;
+                moveVector = transform.forward * 2 * vertical + transform.right * horizontal;
             }
            
             characterStatus.isGround = characterController.isGrounded;

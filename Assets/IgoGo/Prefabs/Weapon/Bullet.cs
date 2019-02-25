@@ -49,19 +49,37 @@ public class Bullet : MyTools {
             }
            
 
-            WeaponReactor reactor;
-            if (MyGetComponent(hit.collider.gameObject, out reactor))
+            IAlive alive;
+            if (MyGetComponent(hit.collider.gameObject, out alive))
             {
-                if(shock && reactor.shock)
+                if (alive is WeaponReactor)
                 {
-                    reactor.ShockEffect(lifeTime);
+                    WeaponReactor reactor = alive as WeaponReactor;
+                    if (shock && reactor.shock)
+                    {
+                        alive.ShockEffect(lifeTime);
+                    }
+                    else
+                    {
+                        alive.GetDamage(damage);
+                    }
                 }
                 else
                 {
-                    reactor.GetDamage(damage);
+                    if (shock)
+                    {
+                        alive.ShockEffect(lifeTime);
+                    }
+                    alive.GetDamage(damage);
                 }
             }
             Destroy(gameObject);
+
+            EnergyReactor energyReactor;
+            if(MyGetComponent(hit.collider.gameObject, out energyReactor))
+            {
+                energyReactor.GetDamage(damage);
+            }
         }
         lastPos = transform.position;
 	}

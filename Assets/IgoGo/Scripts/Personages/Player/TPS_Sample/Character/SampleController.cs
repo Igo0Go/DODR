@@ -26,12 +26,13 @@ public class SampleController : MonoBehaviour {
     public CharacterClimb characterClimb;
     public CharacterStels characterStels;
 
+    [Space(20)]
     public PlayableDirector deadPanel;
     public ParticleSystem respawn;
     public Crosshair crosshair;
     public Animator anim;
     public Slider ammoSlider;
-
+    public Transform target;
 
     [HideInInspector] public AudioSource aud;
     [HideInInspector] public CharacterController characterController;

@@ -17,6 +17,7 @@ public class CharacterStatus : ScriptableObject {
     public bool isFight;
     public bool onWall;
     public bool sniper;
+    public bool shock;
 
     public float currentXrot;
     public float rotationSpeed;

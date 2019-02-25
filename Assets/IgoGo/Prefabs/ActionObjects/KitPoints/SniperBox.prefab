@@ -667,8 +667,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1910869093286262}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.70710677, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 46.63, y: 2.9209156, z: -85.60252}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4354001989663606}
@@ -682,7 +682,7 @@ Transform:
   - {fileID: 4900231675489424}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!4 &4645572093771744
 Transform:
   m_ObjectHideFlags: 1
@@ -1828,8 +1828,10 @@ MonoBehaviour:
   belt: {fileID: 1046399977747468, guid: 8c0364498c6f9464a96e1d5f3556f78b, type: 2}
   suit: {fileID: 1967164330235802, guid: 4f98880f558d6f047b30a683820d4e74, type: 2}
   pult: {fileID: 1879255979735660, guid: 86c2a76bb5cd95e4d99ba9ce2d4c6141, type: 2}
-  firstWeapon: {fileID: 0}
+  firstWeapon: {fileID: 11400000, guid: 4389a0982dc2c7c4f84b0f9decf5e45c, type: 2}
   secondWeapon: {fileID: 11400000, guid: 5aae8b6e7128e9849afda45908142207, type: 2}
+  animObj: 1
+  rollerDronPrefab: {fileID: 0}
 --- !u!114 &114564266320073326
 MonoBehaviour:
   m_ObjectHideFlags: 1
