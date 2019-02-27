@@ -22,7 +22,7 @@ public class CharacterFight : MonoBehaviour, IPlayerPart {
             characterStatus.isFight = true;
             characterStatus.isAiming = false;
             characterStatus.isAimingMove = false;
-            anim.SetTrigger("Sword");
+            anim.SetBool("Sword", true);
             anim.SetInteger("SwordCount", impuctNumber);
             weapon.SetValue(impuctNumber);
             weapon.SetActive(true);
@@ -34,8 +34,10 @@ public class CharacterFight : MonoBehaviour, IPlayerPart {
         characterStatus.isFight = false;
         anim.applyRootMotion = false;
         impuctNumber = 0;
+        anim.SetBool("Sword", false);
         anim.SetInteger("SwordCount", impuctNumber);
         weapon.SetActive(false);
+        OpenSwordInput();
     }
     private void OpenSwordInput()
     {

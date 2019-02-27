@@ -254,15 +254,8 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0
+      - time: 0.91855204
         functionName: ReturnSword
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 1
-        functionName: OpenSwordInput
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -331,15 +324,8 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0
+      - time: 0.91402715
         functionName: ReturnSword
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 1
-        functionName: OpenSwordInput
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -401,15 +387,8 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.5022625
+      - time: 0.8325792
         functionName: ReturnSword
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 1
-        functionName: OpenSwordInput
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
