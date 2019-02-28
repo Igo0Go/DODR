@@ -13,7 +13,10 @@ public class WeaponReactor : UsingOrigin, IAlive
     public GameObject model;
     [Space(10)]
     public bool shock;
+    [Tooltip("Audiosource должен быть на этом же объекте")]
+    public AudioClip clip;
 
+    private AudioSource source;
 
     public float Health
     {
@@ -30,6 +33,11 @@ public class WeaponReactor : UsingOrigin, IAlive
                 Dead();
             }
         }
+    }
+
+    private void Start()
+    {
+        MyGetComponent(gameObject, out source);
     }
 
     public void Dead()
@@ -68,6 +76,10 @@ public class WeaponReactor : UsingOrigin, IAlive
         if (particle != null)
         {
             particle.Play();
+        }
+        if(source != null && clip != null)
+        {
+            source.PlayOneShot(clip);
         }
         UseAl();
         Invoke("Remove", removeTime);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class UsingObject: MonoBehaviour
+public abstract class UsingObject: MyTools
 {
     public abstract void Use();
 }
