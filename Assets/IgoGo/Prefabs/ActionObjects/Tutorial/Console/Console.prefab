@@ -175,7 +175,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1415846651676208}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.835949, y: 0.55, z: -9.735396}
+  m_LocalPosition: {x: 4.819031, y: -1.729084, z: -5.942523}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4406791325346710}
@@ -474,11 +474,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionObjects:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   debug: 0
   tip: {fileID: 114253025115991322}
   energyMarker: {fileID: 95454160064721006}
   startConnectEnergy: 1
-  _connectEnergy: 1
 --- !u!114 &114078042236213272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -605,6 +628,7 @@ MonoBehaviour:
   ofterDeadPrefab: {fileID: 0}
   model: {fileID: 0}
   shock: 1
+  clip: {fileID: 0}
 --- !u!114 &114977434685722998
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -367,7 +367,7 @@ Transform:
   m_GameObject: {fileID: 1390800964838888}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -25.5, z: 0}
-  m_LocalScale: {x: 0.027271213, y: 0.027271213, z: 0.0020840159}
+  m_LocalScale: {x: 0.73441076, y: 0.73441076, z: 0.056122318}
   m_Children: []
   m_Father: {fileID: 4689578709772664}
   m_RootOrder: 0
@@ -406,8 +406,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1719604075735942}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.12999725, y: -0.097, z: -0.02599907}
-  m_LocalScale: {x: 0.0435, y: 0.0077199996, z: 0.0435}
+  m_LocalPosition: {x: -2.369999, y: -2.4612494, z: 12.040001}
+  m_LocalScale: {x: 1.101159, y: 0.19542406, z: 1.101159}
   m_Children: []
   m_Father: {fileID: 4446351500259274}
   m_RootOrder: 7
@@ -431,8 +431,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1288988797097104}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -71.699, y: 10.996, z: -15.576}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 31.329037, y: -2.092, z: -32.121}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4465557347231804}
@@ -494,8 +494,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1908181227899976}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.13, y: 0.114, z: -0.02599907}
-  m_LocalScale: {x: 0.043498784, y: 0.0077249184, z: 0.043498784}
+  m_LocalPosition: {x: -2.37, y: 2.88, z: 12.04}
+  m_LocalScale: {x: 1.1011282, y: 0.19554858, z: 1.1011282}
   m_Children:
   - {fileID: 4208350142295626}
   m_Father: {fileID: 4446351500259274}
@@ -973,8 +973,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animObjects:
   - {fileID: 95295671387709376}
+  energyMarker: {fileID: 0}
   triggerReactor: 0
   active: 0
+  startConnectEnergy: 1
 --- !u!114 &114960209200462054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -989,8 +991,6 @@ MonoBehaviour:
   dronPoint: {fileID: 4183761070354370}
   workTime: 3
   energyStatus: 0
-  connectingObjcts:
-  - {fileID: 0}
   anim: {fileID: 114624978499761936}
 --- !u!136 &136315211998324240
 CapsuleCollider:

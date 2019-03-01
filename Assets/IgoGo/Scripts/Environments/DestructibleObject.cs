@@ -39,7 +39,7 @@ public class DestructibleObject : UsingOrigin {
             }
         }
 
-        if (destructibleObject.Count < criticalCount)
+        if (destructibleObject.Count <= criticalCount)
         {
             if (partRb != null)
             {

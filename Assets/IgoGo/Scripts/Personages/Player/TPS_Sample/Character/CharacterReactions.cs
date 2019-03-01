@@ -71,7 +71,7 @@ public class CharacterReactions : MyTools, IAlive {
     private Animator anim;
     private Transform target;
 
-    private event SimpleHandler deadEvent;
+    private event SimpleHandler DeadEvent;
 
     public void Initiolize(SampleController sampleController)
     {
@@ -94,11 +94,11 @@ public class CharacterReactions : MyTools, IAlive {
         anim.SetTrigger("DeadTrigger");
         Invoke("NoSuit", 3f);
         Invoke("ReturnActive", 3f);
-        if(deadEvent != null)
+        if(DeadEvent != null)
         {
-            deadEvent.Invoke();
+            DeadEvent.Invoke();
         }
-        deadEvent = null;
+        DeadEvent = null;
     }
     public void GetDamage(int damage)
     {
@@ -190,14 +190,30 @@ public class CharacterReactions : MyTools, IAlive {
             if(anim.triggerReactor)
             {
                 anim.SetActiveForAll(true);
+                return;
             }
+        }
+
+        LocationReactor reactor;
+        if (MyGetComponent(other.gameObject, out reactor))
+        {
+            reactor.Use();
+            return;
+        }
+
+        MusicChanger changer;
+        if (MyGetComponent(other.gameObject, out changer))
+        {
+            changer.Use();
+            return;
         }
 
         TurretScript turret;
         if (MyGetComponent(other.gameObject, out turret))
         {
             turret.target = target;
-            deadEvent += turret.Clear;
+            DeadEvent += turret.Clear;
+            return;
         }
 
         if (other.tag.Equals("Safe"))
@@ -254,20 +270,34 @@ public class CharacterReactions : MyTools, IAlive {
         if (MyGetComponent(other.gameObject, out anim))
         {
             anim.SetActiveForAll(false);
+            return;
         }
+
         SecurityBotsSystem system;
         if (MyGetComponent(other.gameObject, out system))
         {
             system.SetActive(0);
+            return;
         }
+
         TurretScript turret;
         if (MyGetComponent(other.gameObject, out turret))
         {
             turret.target = null;
-            deadEvent -= turret.Clear;
+            DeadEvent -= turret.Clear;
+            return;
+        }
+
+        LocationReactor reactor;
+        if (MyGetComponent(other.gameObject, out reactor))
+        {
+            if(!reactor.enterOnly)
+            {
+                reactor.Use();
+            }
+            return;
         }
     }
-
 }
 
 public abstract class MyTools : MonoBehaviour

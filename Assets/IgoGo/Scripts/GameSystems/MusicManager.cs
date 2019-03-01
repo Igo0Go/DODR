@@ -8,6 +8,7 @@ public class MusicBox
 {
     public AudioClip clip;
     public bool loop;
+    public bool hide;
 }
 
 public class MusicManager : MyTools {
@@ -36,6 +37,8 @@ public class MusicManager : MyTools {
         }
     }
 
+    [Space(20)]
+    public bool debug;
     public int number;
 
     private int _currentBox;
@@ -51,7 +54,10 @@ public class MusicManager : MyTools {
 
     private void Update()
     {
-        CurrentBox = number;
+        if(debug)
+        {
+            CurrentBox = number;
+        }
         SetMusicBox();
         CheckMusic();
     }
@@ -83,7 +89,7 @@ public class MusicManager : MyTools {
                 {
                     next = 0;
                 }
-                number = next;
+                CurrentBox = next;
             }
         }
     }
@@ -99,7 +105,10 @@ public class MusicManager : MyTools {
         }
         source.clip = musicBoxes[number].clip;
         audioName.text = source.clip.name;
-        anim.SetTrigger("ChangeMusic");
+        if(!musicBoxes[number].hide)
+        {
+            anim.SetTrigger("ChangeMusic");
+        }
         source.loop = musicBoxes[number].loop;
         targetVolume = maxVolume;
         source.Play();
