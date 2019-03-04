@@ -69,7 +69,7 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
     {
         if(!anim.GetBool("Aiming"))
         {
-            if(Input.GetKeyDown(KeyCode.Alpha1) && characterInventory.fightWeapon != null && selectedWeapon != 1)
+            if(Input.GetKeyDown(KeyCode.Alpha1) && characterInventory.firstWeapon != null && selectedWeapon != 1)
             {
                 selectedWeapon = 1;
                 anim.SetTrigger("ChangeWeapon");
@@ -79,7 +79,7 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
                 selectedWeapon = 2;
                 anim.SetTrigger("ChangeWeapon");
             }
-            if (Input.GetKeyDown(KeyCode.Alpha3) && characterInventory.firstWeapon != null && selectedWeapon != 3)
+            if (Input.GetKeyDown(KeyCode.Alpha3) && characterInventory.fightWeapon != null && selectedWeapon != 3)
             {
                 selectedWeapon = 3;
                 anim.SetTrigger("ChangeWeapon");

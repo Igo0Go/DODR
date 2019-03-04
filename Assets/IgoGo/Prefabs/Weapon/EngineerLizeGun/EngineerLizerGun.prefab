@@ -363,6 +363,9 @@ MonoBehaviour:
   shootClip: {fileID: 8300000, guid: 6ee3c707cea7b412698373072cbf2c37, type: 3}
   removeDestruct: 1
   cameraMain: {fileID: 0}
+  ignoreMask:
+    serializedVersion: 2
+    m_Bits: 12292
   bullet: {fileID: 1837326306718852, guid: bcbe18f0df6b6a14ea8cebdd63a3c6b8, type: 2}
   thermalStep: 1
   thermalFrize: 1

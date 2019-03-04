@@ -19,6 +19,7 @@ public class ShootWeapon : Weapon {
     public AudioClip shootClip;
     public bool removeDestruct;
     [HideInInspector] public GameObject cameraMain;
+    public LayerMask ignoreMask;
     public GameObject bullet;
     [Range(1,100)] public float thermalStep;
     [Range(0, 2)] public float thermalFrize;
@@ -169,6 +170,7 @@ public class ShootWeapon : Weapon {
                 GameObject progectile = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
                 Bullet bulletConfig = progectile.GetComponent<Bullet>();
                 bulletConfig.damage = weaponConfig.damage;
+                bulletConfig.ignoreMask = ignoreMask;
 
                 Vector3 dir = progectile.transform.forward +
                     Vector3.up * Random.Range(-angel, angel) + Vector3.right * Random.Range(-angel, angel);
@@ -182,6 +184,7 @@ public class ShootWeapon : Weapon {
             GameObject progectile = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
             Bullet bulletConfig = progectile.GetComponent<Bullet>();
             bulletConfig.damage = weaponConfig.damage;
+            bulletConfig.ignoreMask = ignoreMask;
             Destroy(progectile, bulletConfig.lifeTime);
         }
         ThermalValue += thermalStep;

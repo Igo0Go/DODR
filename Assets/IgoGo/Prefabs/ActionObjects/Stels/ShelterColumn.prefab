@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 4153510035692350}
   - component: {fileID: 33927456325443550}
   - component: {fileID: 65852220089935860}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ShelterColumn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1864663756818214}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.86, y: 0.110000014, z: -28.94}
+  m_LocalPosition: {x: 41.67903, y: -1.2570839, z: -53.66252}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 4893253346990634}

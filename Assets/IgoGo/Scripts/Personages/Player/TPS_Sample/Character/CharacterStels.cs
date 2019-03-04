@@ -322,7 +322,7 @@ public class CharacterStels : MyTools, IPlayerPart {
         anim.SetFloat("Xstate", 0);
 
     }
-    private void CapsulToStelsState(bool state)
+    public void CapsulToStelsState(bool state)
     {
         if(state)
         {

@@ -65,6 +65,7 @@ public class CharacterReactions : MyTools, IAlive {
     private CharacterInventory characterInventory;
     private CharacterStatus characterStatus;
     private CharacterMovement characterMovement;
+    public CharacterStels characterStels;
     private CharacterInput characterInput;
     private CameraHandler cameraHandler;
     private Crosshair crosshair;
@@ -82,6 +83,7 @@ public class CharacterReactions : MyTools, IAlive {
         crosshair = sampleController.crosshair;
         characterMovement = sampleController.characterMovement;
         characterStatus = sampleController.characterStatus;
+        characterStels = sampleController.characterStels;
         anim = sampleController.anim;
         target = sampleController.target;
     }
@@ -90,6 +92,9 @@ public class CharacterReactions : MyTools, IAlive {
     {
         anim.applyRootMotion = true;
         State = PlayerState.dead;
+        characterStatus.isBehindCover = false;
+        anim.SetBool("Stels", characterStatus.isBehindCover);
+        characterStels.CapsulToStelsState(characterStatus.isBehindCover);
         anim.SetBool("Dead", true);
         anim.SetTrigger("DeadTrigger");
         Invoke("NoSuit", 3f);
@@ -160,6 +165,8 @@ public class CharacterReactions : MyTools, IAlive {
     }
     private void NoSuit()
     {
+        characterStatus.isAiming = false;
+        anim.SetInteger("WeaponType", 0);
         characterInput.selectedWeapon = 3;
         anim.SetTrigger("ChangeWeapon");
         Protected = false;

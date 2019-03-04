@@ -120,7 +120,7 @@ public class CharacterMovement : MyTools, IPlayerPart {
             }
             else
             {
-                moveVector = transform.forward * 2 * vertical + transform.right * horizontal;
+                moveVector = transform.forward * vertical + transform.right * horizontal;
             }
            
             characterStatus.isGround = characterController.isGrounded;

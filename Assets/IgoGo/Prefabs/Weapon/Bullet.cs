@@ -8,6 +8,7 @@ public class Bullet : MyTools {
     public float lifeTime; //время, которое держится эффект от выстрела (следы или шок)
     public bool connectDecal; //становится ли декаль дочерним от поверхности объектом
     public bool shock; //шоковый ли снаряд
+    public LayerMask ignoreMask;
 
     public GameObject metalDecal;    //декаль для непробиваемых поверхностей 
     public GameObject unMetalDecal;  //декаль для обычных поверхностей
@@ -28,7 +29,7 @@ public class Bullet : MyTools {
 
         RaycastHit hit;
 
-        if(Physics.Linecast(lastPos, transform.position, out hit))
+        if(Physics.Linecast(lastPos, transform.position, out hit, ~ignoreMask))
         {
             PhysicMaterial pm;
             if(ContainsPhisicsMaterial(hit.collider, out pm))

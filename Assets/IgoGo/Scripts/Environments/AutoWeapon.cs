@@ -102,6 +102,7 @@ public class AutoWeapon : MyTools {
         GameObject progectile = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
         Bullet bulletConfig = progectile.GetComponent<Bullet>();
         bulletConfig.damage = damage;
+        bulletConfig.ignoreMask = ignoreMask;
         Destroy(progectile, bulletConfig.lifeTime);
     }
 }

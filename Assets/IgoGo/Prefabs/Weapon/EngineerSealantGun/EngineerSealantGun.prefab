@@ -357,12 +357,24 @@ MonoBehaviour:
   shootPoint: {fileID: 4167920287383636}
   targetLook: {fileID: 0}
   leftHandTarget: {fileID: 4729487466380904}
-  cameraMain: {fileID: 0}
-  bullet: {fileID: 1042803971557042, guid: 8ff41971bb7f62b40a011946f892f128, type: 2}
-  delayTime: 0.5
-  rayColor: {r: 0, g: 0, b: 0, a: 0}
   muzzleFlash: {fileID: 198622652435099732}
   shootClip: {fileID: 8300000, guid: 702c77e26f00046b6acd4ecfbf672619, type: 3}
+  removeDestruct: 0
+  cameraMain: {fileID: 0}
+  ignoreMask:
+    serializedVersion: 2
+    m_Bits: 14340
+  bullet: {fileID: 1042803971557042, guid: 8ff41971bb7f62b40a011946f892f128, type: 2}
+  thermalStep: 0
+  thermalFrize: 0
+  thermalTime: 0
+  coolingsSpeed: 0
+  delayTime: 0.5
+  sniperCam: {fileID: 0}
+  ammoSlider: {fileID: 0}
+  shotgun: 0
+  bulletCount: 0
+  angel: 0
 --- !u!198 &198622652435099732
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -899,7 +899,6 @@ MonoBehaviour:
   minY: -5
   errorMultiplicator: 1
   patrol: 0
-  currentYRot: 0
 --- !u!114 &114300318507690064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -915,7 +914,7 @@ MonoBehaviour:
   damage: 5
   ignoreMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4100
   type: 2
   aud: {fileID: 82737823573464438}
   removeDestructive: 0
@@ -940,12 +939,13 @@ MonoBehaviour:
   actionObjects:
   - {fileID: 0}
   debug: 0
-  healt: 50
+  health: 100
   removeTime: 1
   particle: {fileID: 198069716585445270}
   ofterDeadPrefab: {fileID: 0}
   model: {fileID: 1595330685769604}
   shock: 0
+  clip: {fileID: 0}
 --- !u!135 &135440565576360746
 SphereCollider:
   m_ObjectHideFlags: 1

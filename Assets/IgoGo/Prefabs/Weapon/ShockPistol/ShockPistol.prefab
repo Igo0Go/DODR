@@ -494,6 +494,9 @@ MonoBehaviour:
   shootClip: {fileID: 8300000, guid: 65a8e1f13143c47ab9b96881eac40dff, type: 3}
   removeDestruct: 0
   cameraMain: {fileID: 0}
+  ignoreMask:
+    serializedVersion: 2
+    m_Bits: 14340
   bullet: {fileID: 1679938103135308, guid: 433aca04ab32add4f98d5bc03373f037, type: 2}
   thermalStep: 40
   thermalFrize: 0.5
@@ -504,6 +507,7 @@ MonoBehaviour:
   ammoSlider: {fileID: 0}
   shotgun: 0
   bulletCount: 0
+  angel: 0
 --- !u!198 &198060206470103884
 ParticleSystem:
   m_ObjectHideFlags: 1
