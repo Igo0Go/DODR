@@ -130,6 +130,17 @@
         <e p="Menem" t="Include">
           <e p="Scripts" t="Include">
             <e p="GroupBotsController.cs" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="ModeScript.cs" t="Include" />
+              <e p="ObstacleScript.cs" t="Include" />
+              <e p="Scripts_from_other_projects" t="Include">
+                <e p="DemonController.cs" t="Include" />
+                <e p="EnemyDamage.cs" t="Include" />
+                <e p="ForceReactor.cs" t="Include" />
+                <e p="Move_Script.cs" t="Include" />
+              </e>
+              <e p="Spavn.cs" t="Include" />
+            </e>
             <e p="SimpleRangeBotController.cs" t="Include" />
             <e p="SuperBotController.cs" t="Include" />
             <e p="TargetScript.cs" t="Include" />

@@ -6,12 +6,14 @@ using UnityEngine.AI;
 public class SimpleRangeBotController : MonoBehaviour
 {
     public Transform Target;
-    
+    public Vector3 LastPosition;
+    public Vector3 StandardPosition;
     public float Distance;
     [Range(0,50)]
     public float RangePursuit;
     [Range(0,50)]
     public float RangeShoot;
+    public float AngleVision;
     
     public NavMeshAgent NavAgent;
 
@@ -21,31 +23,40 @@ public class SimpleRangeBotController : MonoBehaviour
     void Start()
     {
         NavAgent = NavObject.GetComponent<NavMeshAgent>();
+        LastPosition = new Vector3(1000f, 1000f, 1000f);
+        StandardPosition = LastPosition;
     }
+    //угол зрения, реагирование на действия в зоне
 
     void Update()
     {
         if (Target != null)
         {
             Distance = Vector3.Distance(transform.position, Target.position);
-            
-            if (Distance< RangePursuit && Distance > RangeShoot)
+            Quaternion look = Quaternion.LookRotation(Target.transform.position - transform.position);
+            float angle = Quaternion.Angle(transform.rotation, look);
+            if (Distance< RangePursuit && Distance > RangeShoot && angle < AngleVision)
             {
             
                 NavAgent.destination = Target.position;
                 ShockTurret.GetComponent<TurretScriptController>().target = Target;
+                LastPosition = Target.position;
 
             }
-            else if (Distance <= RangeShoot)
+            else if (Distance <= RangeShoot && angle < AngleVision)
             {
                 NavAgent.destination = transform.position;
                 ShockTurret.GetComponent<TurretScriptController>().target = Target;
-                
+                LastPosition = Target.position;
             }
             else
             {
-                NavAgent.destination = transform.position;
-                Debug.Log("wat");
+                if (LastPosition != null && LastPosition != StandardPosition)
+                {
+                    
+                    NavAgent.destination = LastPosition;
+                }
+                
                 ShockTurret.GetComponent<TurretScriptController>().target = null;
             }
         } 

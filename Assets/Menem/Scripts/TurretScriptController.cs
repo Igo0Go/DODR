@@ -56,7 +56,7 @@ public Transform xAxis;
         else
         {
             weapon.active = false;
-            Debug.Log("aaa");
+            
             Patrol();
         }
        
@@ -69,7 +69,7 @@ public Transform xAxis;
 
     private void Patrol()
     {
-        Debug.Log("ya");
+            
         xAxis.rotation = Quaternion.Lerp(start, end, Mathf.PingPong(xSpeed*Time.deltaTime, 1f));
     }
 

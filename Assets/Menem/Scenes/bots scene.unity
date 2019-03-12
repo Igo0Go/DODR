@@ -799,9 +799,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 1514082575}
+  LastPosition: {x: 1000, y: 1000, z: 1000}
+  StandardPosition: {x: 1000, y: 1000, z: 1000}
   Distance: 0
-  RangePursuit: 30.8
+  RangePursuit: 22.7
   RangeShoot: 17.8
+  AngleVision: 10
   NavAgent: {fileID: 0}
   NavObject: {fileID: 1508252055}
   ShockTurret: {fileID: 568611466}
