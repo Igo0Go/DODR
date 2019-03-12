@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 4741506785105108}
   - component: {fileID: 33183168655200508}
   - component: {fileID: 23968315095020612}
+  - component: {fileID: 65430755585300762}
   m_Layer: 0
   m_Name: AutoDoor
   m_TagString: Untagged
@@ -800,6 +801,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65430755585300762
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1164156924322886}
+  m_Material: {fileID: 13400000, guid: 2dc15d774823a39499ac4ace0880e668, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 1.5000004, z: 2.5000005}
+  m_Center: {x: 0, y: -0.000015258789, z: 1.2500002}
 --- !u!65 &65609168394362478
 BoxCollider:
   m_ObjectHideFlags: 1

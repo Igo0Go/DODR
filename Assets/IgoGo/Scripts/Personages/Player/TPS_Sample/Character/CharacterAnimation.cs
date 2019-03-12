@@ -71,7 +71,7 @@ public class CharacterAnimation : MyTools, IPlayerPart {
         if (characterStatus.isGround)
         {
             anim.SetFloat("JumpLeg", jumpLeg);
-            anim.SetFloat("Jump", 0);
+            anim.SetFloat("Jump", 0, 0.1f, Time.deltaTime);
             jumpTime = SmoothlyChange(jumpTime,0,Time.deltaTime*10);
             airKey = true;
             return;

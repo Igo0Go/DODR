@@ -73,7 +73,7 @@ public class CameraHandler : MonoBehaviour, IPlayerPart {
     private Quaternion targetRot;
     #endregion
 
-    private void Update()
+    private void LateUpdate()
     {
         Tick();
         TargetLook();
