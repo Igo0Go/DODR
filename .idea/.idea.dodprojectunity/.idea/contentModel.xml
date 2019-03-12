@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Менем\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_dodprojectunity.1419804745.00" t="ExcludeRecursive" />
+    <e p="E:\Progjects\додвесна2019\dodprojectunity" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="IgoGo" t="Include">
+          <e p="Prefabs" t="Include">
+            <e p="EffectExamples" t="Include">
+              <e p="Magic Effects" t="Include">
+                <e p="Shaders" t="Include">
+                  <e p="Ice.shader" t="Include" />
+                </e>
+              </e>
+              <e p="Misc Effects" t="Include">
+                <e p="Prefabs" t="Include">
+                  <e p="Readme_Dissolve_Respawn_.txt" t="Include" />
+                </e>
+                <e p="Scripts" t="Include">
+                  <e p="SpawnEffect.cs" t="Include" />
+                </e>
+                <e p="Shaders" t="Include">
+                  <e p="Dissolve.shader" t="Include" />
+                  <e p="FireFly.shader" t="Include" />
+                  <e p="Respawn.shader" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Personages" t="Include">
+              <e p="Enemies" t="Include">
+                <e p="SecurityBot" t="Include">
+                  <e p="SecurityBot.cs" t="Include" />
+                  <e p="SecurityBotsSystem.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Relictus" t="Include">
+                <e p="Properties" t="Include">
+                  <e p="FreedomCamera.cs" t="Include" />
+                  <e p="Test.cs" t="Include" />
+                </e>
+                <e p="Suits" t="Include">
+                  <e p="EngineerSuit" t="Include">
+                    <e p="RollerCamera.cs" t="Include" />
+                    <e p="RollerConroller.cs" t="Include" />
+                  </e>
+                  <e p="SpecKit.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Weapon" t="Include">
+              <e p="Bullet.cs" t="Include" />
+              <e p="EnergyReactor.cs" t="Include" />
+              <e p="FightWeapon.cs" t="Include" />
+              <e p="ShootWeapon.cs" t="Include" />
+              <e p="WeaponConfig.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Environments" t="Include">
+              <e p="AutoWeapon.cs" t="Include" />
+              <e p="Climb" t="Include">
+                <e p="ClimbPoint.cs" t="Include" />
+                <e p="ClimbStarter.cs" t="Include" />
+              </e>
+              <e p="ComputerSistem.cs" t="Include" />
+              <e p="DestructibleObject.cs" t="Include" />
+              <e p="EngineerDronObject.cs" t="Include" />
+              <e p="Stels" t="Include">
+                <e p="Shelter.cs" t="Include" />
+              </e>
+            </e>
+            <e p="GameSystems" t="Include">
+              <e p="ActionNode.cs" t="Include" />
+              <e p="ActionObject.cs" t="Include" />
+              <e p="AnimActivator.cs" t="Include" />
+              <e p="LocationReactor.cs" t="Include" />
+              <e p="MusicChanger.cs" t="Include" />
+              <e p="MusicManager.cs" t="Include" />
+              <e p="ObjectTranslateManager.cs" t="Include" />
+              <e p="WeaponReactor.cs" t="Include" />
+            </e>
+            <e p="Personages" t="Include">
+              <e p="Enemies" t="Include">
+                <e p="TurretScript.cs" t="Include" />
+              </e>
+              <e p="Player" t="Include">
+                <e p="ComputerController.cs" t="Include" />
+                <e p="FightController.cs" t="Include" />
+                <e p="Item.cs" t="Include" />
+                <e p="Menu" t="Include">
+                  <e p="MenuObject.cs" t="Include" />
+                  <e p="MenuScript.cs" t="Include" />
+                </e>
+                <e p="PlayerController.cs" t="Include" />
+                <e p="PlayerKit.cs" t="Include" />
+                <e p="TPS_Sample" t="Include">
+                  <e p="CameraHandler.cs" t="Include" />
+                  <e p="Character" t="Include">
+                    <e p="CharacterAnimation.cs" t="Include" />
+                    <e p="CharacterClimb.cs" t="Include" />
+                    <e p="CharacterFight.cs" t="Include" />
+                    <e p="CharacterIK.cs" t="Include" />
+                    <e p="CharacterInput.cs" t="Include" />
+                    <e p="CharacterInventory.cs" t="Include" />
+                    <e p="CharacterMovement.cs" t="Include" />
+                    <e p="CharacterReactions.cs" t="Include" />
+                    <e p="CharacterStels.cs" t="Include" />
+                    <e p="SampleController.cs" t="Include" />
+                  </e>
+                  <e p="Crosshair.cs" t="Include" />
+                  <e p="Properties" t="Include">
+                    <e p="CameraConfig.cs" t="Include" />
+                    <e p="CharacterStatus.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="Textures" t="Include">
+            <e p="1 WinterMountains" t="Include">
+              <e p="IceMaterial" t="Include">
+                <e p="Shader" t="Include">
+                  <e p="Ice.shader" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Menem" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="GroupBotsController.cs" t="Include" />
+            <e p="SimpleRangeBotController.cs" t="Include" />
+            <e p="SuperBotController.cs" t="Include" />
+            <e p="TargetScript.cs" t="Include" />
+            <e p="TurretScriptController.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="dodprojectunity.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
