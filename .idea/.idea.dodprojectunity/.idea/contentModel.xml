@@ -143,6 +143,7 @@
             </e>
             <e p="SimpleRangeBotController.cs" t="Include" />
             <e p="SuperBotController.cs" t="Include" />
+            <e p="SuperTurretScriptController.cs" t="Include" />
             <e p="TargetScript.cs" t="Include" />
             <e p="TurretScriptController.cs" t="Include" />
           </e>

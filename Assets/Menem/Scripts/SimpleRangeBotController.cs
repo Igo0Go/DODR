@@ -35,7 +35,10 @@ public class SimpleRangeBotController : MonoBehaviour
             Distance = Vector3.Distance(transform.position, Target.position);
             Quaternion look = Quaternion.LookRotation(Target.transform.position - transform.position);
             float angle = Quaternion.Angle(transform.rotation, look);
-            if (Distance< RangePursuit && Distance > RangeShoot && angle < AngleVision)
+            RaycastHit hit;
+            Ray ray =new Ray(transform.position+Vector3.up, Target.transform.position - transform.position);
+            if (Distance< RangePursuit && Distance > RangeShoot && angle < AngleVision &&
+                Physics.Raycast(ray, out hit, RangePursuit) && hit.transform.gameObject == Target)
             {
             
                 NavAgent.destination = Target.position;
@@ -43,7 +46,8 @@ public class SimpleRangeBotController : MonoBehaviour
                 LastPosition = Target.position;
 
             }
-            else if (Distance <= RangeShoot && angle < AngleVision)
+            else if (Distance <= RangeShoot && angle < AngleVision &&
+                     Physics.Raycast(ray, out hit, RangePursuit) && hit.transform.gameObject == Target)
             {
                 NavAgent.destination = transform.position;
                 ShockTurret.GetComponent<TurretScriptController>().target = Target;
@@ -51,7 +55,7 @@ public class SimpleRangeBotController : MonoBehaviour
             }
             else
             {
-                if (LastPosition != null && LastPosition != StandardPosition)
+                if (LastPosition != StandardPosition)
                 {
                     
                     NavAgent.destination = LastPosition;
