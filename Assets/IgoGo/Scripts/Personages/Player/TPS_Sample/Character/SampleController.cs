@@ -80,6 +80,7 @@ public class SampleController : MonoBehaviour {
         characterClimb.Initiolize(this);
         characterStels.Initiolize(this);
         ammoSlider.value = 0;
+        Safe();
 
         StandartStats();
     }

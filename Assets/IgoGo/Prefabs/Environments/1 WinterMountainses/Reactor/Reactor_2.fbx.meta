@@ -1,55 +1,45 @@
 fileFormatVersion: 2
-guid: d3241de7445bcf348a17d9e832f7662c
+guid: 38c8321e84190014dbb71c475d9ea205
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Cylinder009
-    100002: Cylinder010
-    100004: //RootNode
-    100006: Object030
-    100008: Object031
-    100010: Object032
-    100012: Object033
-    100014: Object034
-    100016: Object035
-    100018: Working Pivot002
-    400000: Cylinder009
-    400002: Cylinder010
-    400004: //RootNode
-    400006: Object030
-    400008: Object031
-    400010: Object032
-    400012: Object033
-    400014: Object034
-    400016: Object035
-    400018: Working Pivot002
+    100000: //RootNode
+    100002: ReactorFin
+    100004: ReactorSub1
+    100006: ReactorSub2
+    100008: ReactorSub3
+    100010: ReactorSub4
+    100012: ReactorSub5
+    100014: Working Pivot002
+    400000: //RootNode
+    400002: ReactorFin
+    400004: ReactorSub1
+    400006: ReactorSub2
+    400008: ReactorSub3
+    400010: ReactorSub4
+    400012: ReactorSub5
+    400014: Working Pivot002
     2100000: 'Material #106'
-    2100002: 'Material #107'
-    2100004: 'Material #108'
-    2300000: Cylinder009
-    2300002: Cylinder010
-    2300004: Object030
-    2300006: Object031
-    2300008: Object032
-    2300010: Object033
-    2300012: Object034
-    2300014: Object035
-    3300000: Cylinder009
-    3300002: Cylinder010
-    3300004: Object030
-    3300006: Object031
-    3300008: Object032
-    3300010: Object033
-    3300012: Object034
-    3300014: Object035
-    4300000: Cylinder009
-    4300002: Object035
-    4300004: Object034
-    4300006: Object033
-    4300008: Object032
-    4300010: Cylinder010
-    4300012: Object030
-    4300014: Object031
+    2100002: 'Material #108'
+    2100004: 'Material #107'
+    2300000: ReactorFin
+    2300002: ReactorSub1
+    2300004: ReactorSub2
+    2300006: ReactorSub3
+    2300008: ReactorSub4
+    2300010: ReactorSub5
+    3300000: ReactorFin
+    3300002: ReactorSub1
+    3300004: ReactorSub2
+    3300006: ReactorSub3
+    3300008: ReactorSub4
+    3300010: ReactorSub5
+    4300000: ReactorFin
+    4300002: ReactorSub1
+    4300004: ReactorSub2
+    4300006: ReactorSub3
+    4300008: ReactorSub4
+    4300010: ReactorSub5
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -81,7 +71,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 6
+    globalScale: 3
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
