@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: d7ced4a75ed2f89488867d8ded6b28f0
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bone001
+    100002: Bone002
+    100004: Bone003
+    100006: Bone004
+    100008: Bone005
+    100010: Bone006
+    100012: RoboChest
+    100014: //RootNode
+    100016: RoboHead
+    100018: RoboHip
+    100020: RoboLBigGun
+    100022: RoboLCalf
+    100024: RoboLCubit
+    100026: RoboLFoot
+    100028: RoboLForearm
+    100030: RoboLow
+    100032: RoboLSub
+    100034: RoboLSub2
+    100036: RoboLThigh
+    100038: RoboLUpperArm
+    100040: RoboNeck
+    100042: RoboRCalf
+    100044: RoboRCubit
+    100046: RoboRFoot
+    100048: RoboRForearm
+    100050: RoboRSub
+    100052: RoboRSub2
+    100054: RoboRThigh
+    100056: RoboRUpperArm
+    100058: RoboSpine
+    100060: Working Pivot002
+    400000: Bone001
+    400002: Bone002
+    400004: Bone003
+    400006: Bone004
+    400008: Bone005
+    400010: Bone006
+    400012: RoboChest
+    400014: //RootNode
+    400016: RoboHead
+    400018: RoboHip
+    400020: RoboLBigGun
+    400022: RoboLCalf
+    400024: RoboLCubit
+    400026: RoboLFoot
+    400028: RoboLForearm
+    400030: RoboLow
+    400032: RoboLSub
+    400034: RoboLSub2
+    400036: RoboLThigh
+    400038: RoboLUpperArm
+    400040: RoboNeck
+    400042: RoboRCalf
+    400044: RoboRCubit
+    400046: RoboRFoot
+    400048: RoboRForearm
+    400050: RoboRSub
+    400052: RoboRSub2
+    400054: RoboRThigh
+    400056: RoboRUpperArm
+    400058: RoboSpine
+    400060: Working Pivot002
+    2100000: 'Material #106'
+    2100002: 'Material #107'
+    2100004: 'Material #108'
+    2300000: RoboChest
+    2300002: RoboHead
+    2300004: RoboHip
+    2300006: RoboLBigGun
+    2300008: RoboLCalf
+    2300010: RoboLCubit
+    2300012: RoboLFoot
+    2300014: RoboLForearm
+    2300016: RoboLSub
+    2300018: RoboLSub2
+    2300020: RoboLThigh
+    2300022: RoboLUpperArm
+    2300024: RoboRCalf
+    2300026: RoboRCubit
+    2300028: RoboRFoot
+    2300030: RoboRForearm
+    2300032: RoboRSub
+    2300034: RoboRSub2
+    2300036: RoboRThigh
+    2300038: RoboRUpperArm
+    3300000: RoboChest
+    3300002: RoboHead
+    3300004: RoboHip
+    3300006: RoboLBigGun
+    3300008: RoboLCalf
+    3300010: RoboLCubit
+    3300012: RoboLFoot
+    3300014: RoboLForearm
+    3300016: RoboLSub
+    3300018: RoboLSub2
+    3300020: RoboLThigh
+    3300022: RoboLUpperArm
+    3300024: RoboRCalf
+    3300026: RoboRCubit
+    3300028: RoboRFoot
+    3300030: RoboRForearm
+    3300032: RoboRSub
+    3300034: RoboRSub2
+    3300036: RoboRThigh
+    3300038: RoboRUpperArm
+    4300000: RoboHip
+    4300002: RoboSpine
+    4300004: RoboRSub2
+    4300006: RoboRThigh
+    4300008: RoboRCalf
+    4300010: RoboRFoot
+    4300012: RoboLSub2
+    4300014: RoboLThigh
+    4300016: RoboLCalf
+    4300018: RoboLFoot
+    4300020: RoboChest
+    4300022: RoboRSub
+    4300024: RoboRUpperArm
+    4300026: RoboRCubit
+    4300028: RoboRForearm
+    4300030: RoboNeck
+    4300032: RoboLSub
+    4300034: RoboLUpperArm
+    4300036: RoboLCubit
+    4300038: RoboLForearm
+    4300040: RoboLBigGun
+    4300042: RoboHead
+    9500000: //RootNode
+    13700000: RoboNeck
+    13700002: RoboSpine
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
