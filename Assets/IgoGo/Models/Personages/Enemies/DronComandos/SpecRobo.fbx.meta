@@ -1,0 +1,262 @@
+fileFormatVersion: 2
+guid: 8ac5196967824aa4db3d1b8884d6964a
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bone007
+    100002: Bone008
+    100004: Bone009
+    100006: Cylinder011
+    100008: Cylinder012
+    100010: Cylinder013
+    100012: Cylinder014
+    100014: Cylinder015
+    100016: Cylinder016
+    100018: GeoSphere001
+    100020: //RootNode
+    100022: SpecRobo
+    100024: SpecRoboBladeL
+    100026: SpecRoboBody
+    100028: SpecRoboHeadSub1
+    100030: SpecRoboHeadSubL
+    100032: SpecRoboHeadSubR
+    100034: SpecRoboLArmSub
+    100036: SpecRoboLArmSub2
+    100038: SpecRoboLCalf
+    100040: SpecRoboLCalf2
+    100042: SpecRoboLF1
+    100044: SpecRoboLF2
+    100046: SpecRoboLF3
+    100048: SpecRoboLFoot
+    100050: SpecRoboLForearm
+    100052: SpecRoboLThigh
+    100054: SpecRoboLUpperArm
+    100056: SpecRoboRArmSub
+    100058: SpecRoboRArmSub2
+    100060: SpecRoboRCalf
+    100062: SpecRoboRCalf2
+    100064: SpecRoboRFoot
+    100066: SpecRoboRForearm
+    100068: SpecRoboRThigh
+    100070: SpecRoboRUpperArm
+    100072: Working Pivot002
+    400000: Bone007
+    400002: Bone008
+    400004: Bone009
+    400006: Cylinder011
+    400008: Cylinder012
+    400010: Cylinder013
+    400012: Cylinder014
+    400014: Cylinder015
+    400016: Cylinder016
+    400018: GeoSphere001
+    400020: //RootNode
+    400022: SpecRobo
+    400024: SpecRoboBladeL
+    400026: SpecRoboBody
+    400028: SpecRoboHeadSub1
+    400030: SpecRoboHeadSubL
+    400032: SpecRoboHeadSubR
+    400034: SpecRoboLArmSub
+    400036: SpecRoboLArmSub2
+    400038: SpecRoboLCalf
+    400040: SpecRoboLCalf2
+    400042: SpecRoboLF1
+    400044: SpecRoboLF2
+    400046: SpecRoboLF3
+    400048: SpecRoboLFoot
+    400050: SpecRoboLForearm
+    400052: SpecRoboLThigh
+    400054: SpecRoboLUpperArm
+    400056: SpecRoboRArmSub
+    400058: SpecRoboRArmSub2
+    400060: SpecRoboRCalf
+    400062: SpecRoboRCalf2
+    400064: SpecRoboRFoot
+    400066: SpecRoboRForearm
+    400068: SpecRoboRThigh
+    400070: SpecRoboRUpperArm
+    400072: Working Pivot002
+    2100000: 'Material #106'
+    2100002: 'Material #107'
+    2100004: 'Material #108'
+    2100006: No Name
+    2300000: Cylinder011
+    2300002: Cylinder012
+    2300004: Cylinder013
+    2300006: Cylinder014
+    2300008: Cylinder015
+    2300010: Cylinder016
+    2300012: GeoSphere001
+    2300014: SpecRoboBladeL
+    2300016: SpecRoboHeadSub1
+    2300018: SpecRoboHeadSubL
+    2300020: SpecRoboHeadSubR
+    2300022: SpecRoboLArmSub
+    2300024: SpecRoboLArmSub2
+    2300026: SpecRoboLCalf
+    2300028: SpecRoboLCalf2
+    2300030: SpecRoboLF1
+    2300032: SpecRoboLF2
+    2300034: SpecRoboLF3
+    2300036: SpecRoboLFoot
+    2300038: SpecRoboLForearm
+    2300040: SpecRoboLThigh
+    2300042: SpecRoboLUpperArm
+    2300044: SpecRoboRArmSub
+    2300046: SpecRoboRArmSub2
+    2300048: SpecRoboRCalf
+    2300050: SpecRoboRCalf2
+    2300052: SpecRoboRFoot
+    2300054: SpecRoboRForearm
+    2300056: SpecRoboRThigh
+    2300058: SpecRoboRUpperArm
+    3300000: Cylinder011
+    3300002: Cylinder012
+    3300004: Cylinder013
+    3300006: Cylinder014
+    3300008: Cylinder015
+    3300010: Cylinder016
+    3300012: GeoSphere001
+    3300014: SpecRoboBladeL
+    3300016: SpecRoboHeadSub1
+    3300018: SpecRoboHeadSubL
+    3300020: SpecRoboHeadSubR
+    3300022: SpecRoboLArmSub
+    3300024: SpecRoboLArmSub2
+    3300026: SpecRoboLCalf
+    3300028: SpecRoboLCalf2
+    3300030: SpecRoboLF1
+    3300032: SpecRoboLF2
+    3300034: SpecRoboLF3
+    3300036: SpecRoboLFoot
+    3300038: SpecRoboLForearm
+    3300040: SpecRoboLThigh
+    3300042: SpecRoboLUpperArm
+    3300044: SpecRoboRArmSub
+    3300046: SpecRoboRArmSub2
+    3300048: SpecRoboRCalf
+    3300050: SpecRoboRCalf2
+    3300052: SpecRoboRFoot
+    3300054: SpecRoboRForearm
+    3300056: SpecRoboRThigh
+    3300058: SpecRoboRUpperArm
+    4300000: SpecRoboBody
+    4300002: SpecRoboRThigh
+    4300004: SpecRoboRCalf
+    4300006: SpecRoboRCalf2
+    4300008: SpecRoboRFoot
+    4300010: SpecRoboLThigh
+    4300012: SpecRoboLCalf
+    4300014: SpecRoboLCalf2
+    4300016: SpecRoboLFoot
+    4300018: SpecRoboLUpperArm
+    4300020: SpecRoboLArmSub
+    4300022: SpecRoboLArmSub2
+    4300024: SpecRoboLForearm
+    4300026: SpecRoboLF3
+    4300028: SpecRoboLF2
+    4300030: SpecRoboLF1
+    4300032: SpecRoboBladeL
+    4300034: SpecRoboRUpperArm
+    4300036: SpecRoboRArmSub
+    4300038: SpecRoboRArmSub2
+    4300040: SpecRoboRForearm
+    4300042: Cylinder015
+    4300044: Cylinder014
+    4300046: Cylinder013
+    4300048: Cylinder016
+    4300050: Cylinder012
+    4300052: Cylinder011
+    4300054: SpecRoboHeadSubR
+    4300056: SpecRoboHeadSubL
+    4300058: SpecRoboHeadSub1
+    4300060: GeoSphere001
+    9500000: //RootNode
+    13700000: SpecRoboBody
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
