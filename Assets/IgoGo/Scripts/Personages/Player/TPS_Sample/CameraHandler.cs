@@ -81,7 +81,7 @@ public class CameraHandler : MonoBehaviour, IPlayerPart {
 
     private void TargetLook()
     {
-        Ray ray = new Ray(cameraTransform.position, cameraTransform.forward * 2000);
+        Ray ray = new Ray(cameraTransform.position, cameraTransform.forward * 100);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 2000, noPlayerMask))
         {
