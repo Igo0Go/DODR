@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraHandler : MonoBehaviour, IPlayerPart {
+public class CameraHandler : MyTools, IPlayerPart {
 
     public Transform cameraTransform;
     public Transform pivot;
@@ -20,6 +20,8 @@ public class CameraHandler : MonoBehaviour, IPlayerPart {
     public bool leftPivot;
     [HideInInspector] public bool rotateMode;
     public bool noObstacles;
+    [HideInInspector]
+    public bool smoothyCam;
 
     public float smoothX;
     public float smoothY;
@@ -61,6 +63,7 @@ public class CameraHandler : MonoBehaviour, IPlayerPart {
     private float mouseX;
     private float mouseY;
     private float angelBufer;
+    private float fieldBufer;
     private int ignoreLayer;
     private bool obstacle;
     private bool _staticCam;
@@ -73,10 +76,16 @@ public class CameraHandler : MonoBehaviour, IPlayerPart {
     private Quaternion targetRot;
     #endregion
 
+    private void Start()
+    {
+        fieldBufer = cam.fieldOfView;
+    }
+
     private void LateUpdate()
     {
         Tick();
         TargetLook();
+        CameraAngel();
     }
 
     private void TargetLook()
@@ -206,6 +215,17 @@ public class CameraHandler : MonoBehaviour, IPlayerPart {
     public void EnabledCamera(bool value)
     {
         cam.gameObject.SetActive(enabled);
+    }
+    public void CameraAngel()
+    {
+        if(smoothyCam)
+        {
+            cam.fieldOfView = SmoothlyChange(cam.fieldOfView, 40, 100 * Time.deltaTime);
+        }
+        else
+        {
+            cam.fieldOfView = SmoothlyChange(cam.fieldOfView, fieldBufer, 100 * Time.deltaTime);
+        }
     }
 
     public void Initiolize(SampleController sampleController)

@@ -70,30 +70,22 @@ public class CharacterAnimation : MyTools, IPlayerPart {
         anim.SetBool("OnGround", characterStatus.isGround);
         if (characterStatus.isGround)
         {
-            if(jumpTime == 0)
+            if(jumpTime > 0)
+            {
+                jumpTime = 0;
+            }
+            else
             {
                 anim.SetFloat("JumpLeg", jumpLeg);
             }
-            anim.SetFloat("Jump", 0, 0.1f, Time.deltaTime);
             jumpTime = SmoothlyChange(jumpTime, 0, Time.deltaTime * 10);
+            anim.SetFloat("Jump", jumpTime);
             airKey = true;
             return;
         }
         else
         {
-            if(airKey)
-            {
-                if (characterStatus.isJump)
-                {
-                    jumpTime = 0;
-                }
-                else
-                {
-                    jumpTime = 8;
-                }
-                airKey = false;
-            }
-            jumpTime += Time.deltaTime * 20;
+            jumpTime += Time.deltaTime * 15;
             anim.SetFloat("Jump", jumpTime);
         }
     }

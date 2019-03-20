@@ -94,8 +94,6 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
     private void InputAiming()
     {
         RaycastAiming();
-       
-        
 
         if(anim.GetInteger("WeaponType") != 0)
         {
@@ -122,6 +120,7 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
                     if(flyKey)
                     {
                         cameraHandler.StaticCam = true;
+                        cameraHandler.smoothyCam = true;
                         flyKey = false;
                     }
                 }
@@ -130,6 +129,7 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
                     Time.timeScale = 1f;
                     flyKey = true;
                     cameraHandler.StaticCam = false;
+                    cameraHandler.smoothyCam = false;
                     aud.Stop();
                 }
                 characterStatus.isAiming = true;
@@ -143,6 +143,7 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
                 Time.timeScale = 1f;
                 aud.Stop();
                 cameraHandler.StaticCam = false;
+                cameraHandler.smoothyCam = false;
                 characterStatus.isAiming = false;
                 characterStatus.isAimingMove = true;
                 characterFight.weapon.StopProtect();
@@ -162,6 +163,7 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
             if(!characterStatus.isBehindCover && !characterStatus.onWall)
             {
                 cameraHandler.StaticCam = false;
+                cameraHandler.smoothyCam = false;
             }
             aud.Stop();
             characterStatus.isAiming = false;
