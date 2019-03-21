@@ -530,8 +530,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4224343039544566}
-  m_Father: {fileID: 1333347538458663030}
-  m_RootOrder: 1
+  m_Father: {fileID: 4128791284297112}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1405314034460386
 GameObject:
@@ -1000,7 +1000,6 @@ GameObject:
   - component: {fileID: 4737740509803686}
   - component: {fileID: 20269028424644682}
   - component: {fileID: 81667286176886612}
-  - component: {fileID: 114291872084929674}
   m_Layer: 0
   m_Name: EngineerDronCamera
   m_TagString: Untagged
@@ -1072,33 +1071,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566356890212920}
   m_Enabled: 1
---- !u!114 &114291872084929674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566356890212920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ee4724fe55bd4b41bc7b1f599a7f7ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 4224343039544566}
-  camOffset: {x: 0, y: 0, z: 0}
-  noTargetMask:
-    serializedVersion: 2
-    m_Bits: 823
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 512
-  camSpeed: 1
-  xSpeed: 240
-  ySpeed: 120
-  angelLimit: 0
-  minDistance: 1.5
-  noTargetDistance: 0.4
-  maxDistance: 0
 --- !u!1 &1594724697541384
 GameObject:
   m_ObjectHideFlags: 0
@@ -10115,6 +10087,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4377584506993346}
   - {fileID: 1333347538458663030}
   m_Father: {fileID: 4672990976434298}
   m_RootOrder: 0
@@ -10207,14 +10180,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterReactions: {fileID: 0}
   speed: 15
-  cam: {fileID: 4737740509803686}
   remoteControl: {fileID: 4377584506993346}
-  camPivot: {fileID: 1333347538458663030}
   anim:
   - {fileID: 95467433079329348}
   - {fileID: 95597088287503688}
   - {fileID: 95155985015968850}
   - {fileID: 95450046169880076}
+  camTransform: {fileID: 4737740509803686}
+  camPivot: {fileID: 1333347538458663030}
+  angelLimit: 30
+  maxCamDistance: 5
+  noTargetDistance: 0.3
+  camSpeed: 1
+  noTargetMask:
+    serializedVersion: 2
+    m_Bits: 15159
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 3585
 --- !u!114 &114241234739265298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10720,7 +10703,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1333347538458663030}
-  - component: {fileID: 3754100258967674241}
   m_Layer: 10
   m_Name: CamPivot
   m_TagString: Untagged
@@ -10740,23 +10722,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4737740509803686}
-  - {fileID: 4377584506993346}
   m_Father: {fileID: 4128791284297112}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &3754100258967674241
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 569801618653858861}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0

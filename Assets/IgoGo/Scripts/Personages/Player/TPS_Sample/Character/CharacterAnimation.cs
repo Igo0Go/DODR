@@ -8,8 +8,6 @@ public class CharacterAnimation : MyTools, IPlayerPart {
     public CharacterStatus characterStatus;
     public CharacterMovement characterMovement;
 
-    private bool airKey;
-
     [Range(0,1)][SerializeField] private float m_RunCycleLegOffset;
     private float jumpTime;
     private float jumpLeg;
@@ -80,7 +78,6 @@ public class CharacterAnimation : MyTools, IPlayerPart {
             }
             jumpTime = SmoothlyChange(jumpTime, 0, Time.deltaTime * 10);
             anim.SetFloat("Jump", jumpTime);
-            airKey = true;
             return;
         }
         else

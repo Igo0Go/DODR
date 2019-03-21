@@ -2,28 +2,55 @@
 
 public class RollerConroller : MyTools {
 
+    #region Настройки дрона
+    [Header("Настройки дрона")]
     [HideInInspector]
     public CharacterReactions characterReactions;
     public float speed;
-    public Transform cam;
     public Transform remoteControl;
     [Tooltip("0 - фанарик, 1 - рука, 2 - паяльник, 3 пила")]
     public Animator[] anim;
+    #endregion
 
+    #region Настройки камеры
+    [Space(20)]
+    [Header("Настройки камеры")]
+    public Transform camTransform;
+    public Transform camPivot;
+    public float noTargetDistance;
+    public float camSpeed;
+    public LayerMask noTargetMask;
+    public LayerMask obstacleMask;
+    #endregion
 
- 
-    private RollerCamera rollerCamera;
+    #region Вспомогательные
+    private Quaternion camRotation;
     private Vector3 moveVector;
     private Rigidbody rb;
+    private Camera cam;
+    private LayerMask camOrigin;
+    private float maxCamDistance;
     private bool isMoving;
+    #endregion
 
-    // Use this for initialization
+    private float Distance
+    {
+        get
+        {
+            return Vector3.Distance(camTransform.position, transform.position);
+        }
+    }
+
+    #region События
     void Start () {
         isMoving = true;
         Cursor.lockState = CursorLockMode.Locked;
+        cam = camTransform.GetComponent<Camera>();
+        maxCamDistance = Distance;
+        camOrigin = cam.cullingMask;
         moveVector = remoteControl.forward;
         rb = GetComponent<Rigidbody>();
-        rollerCamera = cam.gameObject.GetComponent<RollerCamera>();
+        camRotation = camPivot.rotation;
         ResetArm();
 	}
     private void Update()
@@ -40,12 +67,20 @@ public class RollerConroller : MyTools {
             UpdateMove();
         }
     }
+    private void LateUpdate()
+    {
+        ObstacleReaction();
+        TargetReaction();
+        CamRotation();
+    }
+    #endregion
 
     public void Initioze(CharacterReactions reactions)
     {
         characterReactions = reactions;
     }
 
+    #region Основные методы
     private void UpdateMove()
     {
         float x, z;
@@ -54,14 +89,56 @@ public class RollerConroller : MyTools {
 
         if(x != 0 || z != 0)
         {
-            moveVector = cam.right * x + cam.forward * z;
+            moveVector = camTransform.right * x + camTransform.forward * z;
             moveVector.y = 0;
 
             rb.AddForce(moveVector * speed * Time.fixedDeltaTime, ForceMode.Impulse);
         }
         remoteControl.forward = moveVector;
-        cam.position = transform.position - rollerCamera.camOffset;
     }
+    private void CamRotation()
+    {
+        camPivot.rotation = camRotation;
+        float mx;
+        mx = Input.GetAxis("Mouse X");
+
+        if (mx != 0)
+        {
+            camRotation.eulerAngles = new Vector3(0, camRotation.eulerAngles.y + mx * camSpeed * Time.deltaTime, 0);
+            camPivot.rotation = camRotation;
+        }
+        camTransform.LookAt(transform.position);
+    }
+    private void ObstacleReaction()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, camTransform.position - transform.position, out hit, Distance, obstacleMask))
+        {
+            camTransform.position = hit.point;
+        }
+        else if (Distance <= maxCamDistance && Physics.Raycast(camTransform.position, -camTransform.forward, 0.1f, obstacleMask))
+        {
+            camTransform.position = Vector3.Slerp(camTransform.position, camPivot.position - camTransform.forward * maxCamDistance, camSpeed * Time.deltaTime);
+        }
+        else if (Distance > maxCamDistance)
+        {
+            camTransform.position = Vector3.Slerp(camTransform.position, camPivot.position, camSpeed * Time.deltaTime);
+        }
+    }
+    private void TargetReaction()
+    {
+        if (Distance < noTargetDistance)
+        {
+            cam.cullingMask = noTargetMask;
+        }
+        else
+        {
+            cam.cullingMask = camOrigin;
+        }
+    }
+    #endregion
+
+    #region Функци дрона
     private void CheckLight()
     {
         if (Input.GetKeyDown(KeyCode.Q))
@@ -114,7 +191,9 @@ public class RollerConroller : MyTools {
         rb.isKinematic = false;
         isMoving = true;
     }
+    #endregion
 
+    #region Триггеры
     private void OnTriggerEnter(Collider other)
     {
         AnimActivator anim;
@@ -177,4 +256,5 @@ public class RollerConroller : MyTools {
             }
         }
     }
+    #endregion
 }
