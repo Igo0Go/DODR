@@ -1014,13 +1014,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566356890212920}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.55099964, z: -0.8349991}
+  m_LocalRotation: {x: 0.25332803, y: -0, z: -0, w: 0.96738046}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1333347538458663030}
+  m_Father: {fileID: 5425623574632896191}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 29.349, y: 0, z: 0}
 --- !u!20 &20269028424644682
 Camera:
   m_ObjectHideFlags: 0
@@ -10187,9 +10187,8 @@ MonoBehaviour:
   - {fileID: 95155985015968850}
   - {fileID: 95450046169880076}
   camTransform: {fileID: 4737740509803686}
-  camPivot: {fileID: 1333347538458663030}
-  angelLimit: 30
-  maxCamDistance: 5
+  camRotTransform: {fileID: 0}
+  camPosTransform: {fileID: 0}
   noTargetDistance: 0.3
   camSpeed: 1
   noTargetMask:
@@ -10704,7 +10703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1333347538458663030}
   m_Layer: 10
-  m_Name: CamPivot
+  m_Name: CamRotPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10721,7 +10720,38 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4737740509803686}
+  - {fileID: 5425623574632896191}
   m_Father: {fileID: 4128791284297112}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4345907527242442088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5425623574632896191}
+  m_Layer: 10
+  m_Name: CamPosPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5425623574632896191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345907527242442088}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.265, z: -0.673}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4737740509803686}
+  m_Father: {fileID: 1333347538458663030}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -16,7 +16,8 @@ public class RollerConroller : MyTools {
     [Space(20)]
     [Header("Настройки камеры")]
     public Transform camTransform;
-    public Transform camPivot;
+    public Transform camRotTransform;
+    public Transform camPosTransform;
     public float noTargetDistance;
     public float camSpeed;
     public LayerMask noTargetMask;
@@ -29,15 +30,21 @@ public class RollerConroller : MyTools {
     private Rigidbody rb;
     private Camera cam;
     private LayerMask camOrigin;
-    private float maxCamDistance;
     private bool isMoving;
     #endregion
 
-    private float Distance
+    private float DistanceToCenter
     {
         get
         {
             return Vector3.Distance(camTransform.position, transform.position);
+        }
+    }
+    private float DistanceToCamPoint
+    {
+        get
+        {
+            return Vector3.Distance(camTransform.position, camPosTransform.position);
         }
     }
 
@@ -46,11 +53,10 @@ public class RollerConroller : MyTools {
         isMoving = true;
         Cursor.lockState = CursorLockMode.Locked;
         cam = camTransform.GetComponent<Camera>();
-        maxCamDistance = Distance;
         camOrigin = cam.cullingMask;
         moveVector = remoteControl.forward;
         rb = GetComponent<Rigidbody>();
-        camRotation = camPivot.rotation;
+        camRotation = camRotTransform.rotation;
         ResetArm();
 	}
     private void Update()
@@ -98,36 +104,40 @@ public class RollerConroller : MyTools {
     }
     private void CamRotation()
     {
-        camPivot.rotation = camRotation;
+        camRotTransform.rotation = camRotation;
         float mx;
         mx = Input.GetAxis("Mouse X");
 
         if (mx != 0)
         {
             camRotation.eulerAngles = new Vector3(0, camRotation.eulerAngles.y + mx * camSpeed * Time.deltaTime, 0);
-            camPivot.rotation = camRotation;
+            camRotTransform.rotation = camRotation;
         }
         camTransform.LookAt(transform.position);
     }
     private void ObstacleReaction()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, camTransform.position - transform.position, out hit, Distance, obstacleMask))
+        if (Physics.Raycast(transform.position, camTransform.position - transform.position, out hit, DistanceToCenter, obstacleMask))
         {
-            camTransform.position = hit.point;
+            camTransform.position = Vector3.Slerp(camTransform.position, hit.point, 15 * Time.deltaTime);
         }
-        else if (Distance <= maxCamDistance && Physics.Raycast(camTransform.position, -camTransform.forward, 0.1f, obstacleMask))
+        else if (camTransform.position != camPosTransform.position)
         {
-            camTransform.position = Vector3.Slerp(camTransform.position, camPivot.position - camTransform.forward * maxCamDistance, camSpeed * Time.deltaTime);
-        }
-        else if (Distance > maxCamDistance)
-        {
-            camTransform.position = Vector3.Slerp(camTransform.position, camPivot.position, camSpeed * Time.deltaTime);
+           // Physics.Raycast(camTransform.position, -camTransform.forward, 0.3f, obstacleMask)
+            if (DistanceToCamPoint > 0.02)
+            {
+                camTransform.position = Vector3.Slerp(camTransform.position, camPosTransform.position, 10 * Time.deltaTime);
+            }
+            else
+            {
+                camTransform.position = camPosTransform.position;
+            }
         }
     }
     private void TargetReaction()
     {
-        if (Distance < noTargetDistance)
+        if (DistanceToCenter < noTargetDistance)
         {
             cam.cullingMask = noTargetMask;
         }
