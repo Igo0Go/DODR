@@ -41,7 +41,6 @@
                 </e>
                 <e p="Suits" t="Include">
                   <e p="EngineerSuit" t="Include">
-                    <e p="RollerCamera.cs" t="Include" />
                     <e p="RollerConroller.cs" t="Include" />
                   </e>
                   <e p="SpecKit.cs" t="Include" />
@@ -78,6 +77,7 @@
               <e p="MusicChanger.cs" t="Include" />
               <e p="MusicManager.cs" t="Include" />
               <e p="ObjectTranslateManager.cs" t="Include" />
+              <e p="TimlineActivator.cs" t="Include" />
               <e p="WeaponReactor.cs" t="Include" />
             </e>
             <e p="Personages" t="Include">
@@ -143,6 +143,7 @@
             </e>
             <e p="SimpleRangeBotController.cs" t="Include" />
             <e p="SuperBotController.cs" t="Include" />
+            <e p="SuperBotControllerChanged.cs" t="Include" />
             <e p="SuperTurretScriptController.cs" t="Include" />
             <e p="TargetScript.cs" t="Include" />
             <e p="TurretScriptController.cs" t="Include" />
