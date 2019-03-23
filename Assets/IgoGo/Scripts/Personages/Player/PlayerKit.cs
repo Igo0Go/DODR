@@ -183,7 +183,7 @@ public class PlayerKit : MyTools
             roller.transform.localPosition = Vector3.zero + transform.right * 1.5f + transform.up * 0.4f;
             roller.transform.parent = null; 
             rollerModel.SetActive(false);
-            roller.transform.GetChild(1).GetComponent<RollerConroller>().Initioze(gameObject.GetComponent<CharacterReactions>());
+            roller.transform.GetChild(0).GetComponent<RollerConroller>().Initioze(gameObject.GetComponent<CharacterReactions>());
         }
     }
     private void SniperAction()

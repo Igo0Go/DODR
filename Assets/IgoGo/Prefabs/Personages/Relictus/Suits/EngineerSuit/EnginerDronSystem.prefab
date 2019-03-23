@@ -10187,8 +10187,8 @@ MonoBehaviour:
   - {fileID: 95155985015968850}
   - {fileID: 95450046169880076}
   camTransform: {fileID: 4737740509803686}
-  camRotTransform: {fileID: 0}
-  camPosTransform: {fileID: 0}
+  camRotTransform: {fileID: 1333347538458663030}
+  camPosTransform: {fileID: 5425623574632896191}
   noTargetDistance: 0.3
   camSpeed: 1
   noTargetMask:
