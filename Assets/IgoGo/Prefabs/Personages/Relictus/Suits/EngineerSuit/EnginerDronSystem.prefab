@@ -10190,7 +10190,7 @@ MonoBehaviour:
   camRotTransform: {fileID: 1333347538458663030}
   camPosTransform: {fileID: 5425623574632896191}
   noTargetDistance: 0.3
-  camSpeed: 1
+  camSpeed: 50
   noTargetMask:
     serializedVersion: 2
     m_Bits: 15159

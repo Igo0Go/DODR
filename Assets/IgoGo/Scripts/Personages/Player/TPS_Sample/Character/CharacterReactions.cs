@@ -201,19 +201,27 @@ public class CharacterReactions : MyTools, IAlive {
             }
         }
 
-        LocationReactor reactor;
+        UsingObject reactor;
         if (MyGetComponent(other.gameObject, out reactor))
         {
             reactor.Use();
             return;
         }
 
-        MusicChanger changer;
-        if (MyGetComponent(other.gameObject, out changer))
-        {
-            changer.Use();
-            return;
-        }
+
+        //LocationReactor reactor;
+        //if (MyGetComponent(other.gameObject, out reactor))
+        //{
+        //    reactor.Use();
+        //    return;
+        //}
+
+        //MusicChanger changer;
+        //if (MyGetComponent(other.gameObject, out changer))
+        //{
+        //    changer.Use();
+        //    return;
+        //}
 
         TurretScript turret;
         if (MyGetComponent(other.gameObject, out turret))
