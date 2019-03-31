@@ -108,6 +108,7 @@ public class SampleController : MonoBehaviour {
         characterStatus.isSprint = false;
         characterStatus.onWall = false;
         characterStatus.sniper = false;
+		crosshair.Initiolize(characterStatus);
     }
 
     public void CheckState(PlayerState state)

@@ -19,6 +19,7 @@ public class ReplicSystem : UsingObject
 {
     public GameObject subsPanel;
     public Text subs;
+	public bool playOnAwake;
     [Space(20)]
     public Replic[] replics;
 
@@ -38,6 +39,10 @@ public class ReplicSystem : UsingObject
         {
             source.Stop();
         }
+		if(playOnAwake)
+		{
+			Use();
+		}
     }
 
     // Update is called once per frame

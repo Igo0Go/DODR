@@ -29,7 +29,8 @@ public class Crosshair : MonoBehaviour {
 
     public Part[] parts;
     public CharacterMovement characterMovement;
-
+	
+	private CharacterStatus characterStatus;
     private Part part;
     private float t;
     private float curSpread;
@@ -37,7 +38,12 @@ public class Crosshair : MonoBehaviour {
 
 
 	void Update () {
-        if(characterMovement.moveAmounth > 0)
+        
+		if(characterStatus.isAiming)
+		{
+			currentSpread = 20;
+		}
+		else if(characterMovement.moveAmounth > 0)
         {
             currentSpread = 20 * (5 + characterMovement.moveAmounth);
         }
@@ -48,7 +54,12 @@ public class Crosshair : MonoBehaviour {
 
         CrosslineUpdate();
 	}
-
+	
+	public void Initiolize(CharacterStatus status)
+	{
+		characterStatus = status;
+	}
+	
     private void CrosslineUpdate()
     {
         t = Time.deltaTime * speedSpread;
