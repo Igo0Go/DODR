@@ -17,16 +17,21 @@ public class Replic
 [RequireComponent(typeof (AudioSource))]
 public class ReplicSystem : UsingObject
 {
+	
     public GameObject subsPanel;
     public Text subs;
 	public bool playOnAwake;
     [Space(20)]
     public Replic[] replics;
 
+	private SimpleHandler onCompleteEvent;
     private AudioSource source;
     private int currentNumber;
     private bool isReplic;
 
+	[Header("для загрузки сцен")]
+	[Space(20)]
+	public ReplicSceneLoader sceneLoader;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +40,12 @@ public class ReplicSystem : UsingObject
         source = GetComponent<AudioSource>();
         source.playOnAwake = false;
         source.loop = false;
+		
+		if(sceneLoader != null)
+		{
+			onCompleteEvent += sceneLoader.CompleteReplic;
+		}
+		
         if (source.isPlaying)
         {
             source.Stop();
@@ -80,6 +91,10 @@ public class ReplicSystem : UsingObject
         if(currentNumber >= replics.Length)
         {
             subsPanel.SetActive(false);
+			if(onCompleteEvent != null)
+			{
+				onCompleteEvent.Invoke();
+			}
             Destroy(gameObject);
         }
         else

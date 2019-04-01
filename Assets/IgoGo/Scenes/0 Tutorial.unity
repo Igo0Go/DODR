@@ -4040,6 +4040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subsPanel: {fileID: 1842105680}
   subs: {fileID: 1305588361}
+  playOnAwake: 0
   replics:
   - text: "\u0417\u0434\u0440\u0430\u0432\u0441\u0442\u0432\u0443\u0439\u0442\u0435,
       \u0434\u043E\u043A\u0442\u043E\u0440 \u041C\u0438\u044F. \u042F \u043D\u0430\u0441\u043B\u044B\u0448\u0430\u043D
@@ -4091,7 +4092,7 @@ MonoBehaviour:
       \u043C\u044B\u0448\u0446\u0430\u043C\u0438 \u043E\u0442\u0434\u0430\u0447\u0443
       \u043E\u0440\u0443\u0436\u0438\u044F."
     color: {r: 1, g: 0.29803923, b: 0.5294118, a: 1}
-    clip: {fileID: 8300000, guid: a24f1eec52ce2854898eb456133c8e65, type: 3}
+    clip: {fileID: 8300000, guid: 0dfc89a2c01e45349b71bec89de3369d, type: 3}
   - text: "\u0427\u0443\u0434\u043D\u043E."
     color: {r: 0.03137255, g: 0.54901963, b: 0.9607844, a: 1}
     clip: {fileID: 8300000, guid: acb6826ca43dd7746afb83094cebbe97, type: 3}
@@ -4116,7 +4117,7 @@ MonoBehaviour:
       \u043E\u043D \u0441\u043B\u0443\u0448\u0430\u043B\u0441\u044F \u0432\u0430\u0441
       \u0431\u0435\u0441\u043F\u0440\u0435\u043A\u043E\u0441\u043B\u043E\u0432\u043D\u043E."
     color: {r: 1, g: 0.29803923, b: 0.5294118, a: 1}
-    clip: {fileID: 8300000, guid: e18b4115870b7b94886342ef96858c13, type: 3}
+    clip: {fileID: 8300000, guid: 92e7c18102b6f084e8238742e154765d, type: 3}
   - text: "\u0418 \u0442\u043E \u0432\u0435\u0440\u043D\u043E...  "
     color: {r: 0.03137255, g: 0.54901963, b: 0.9607844, a: 1}
     clip: {fileID: 8300000, guid: 93ee83c29866f434f8d4ce26770e5bf7, type: 3}
@@ -4158,7 +4159,7 @@ MonoBehaviour:
       \u041A\u043E\u0433\u0434\u0430 \u0447\u0435\u0433\u043E-\u0442\u043E \u0431\u043E\u0438\u0442\u0441\u044F,
       \u0433\u043B\u0430\u0437\u0430 \u0441\u0435\u0440\u044B\u0435. "
     color: {r: 1, g: 0.29803923, b: 0.5294118, a: 1}
-    clip: {fileID: 8300000, guid: 9709122b831150d4882a3ae54d339d68, type: 3}
+    clip: {fileID: 8300000, guid: facc316725c47f44aa2e58ea7e2cde8b, type: 3}
   - text: "\u042D\u0442\u043E \u0432\u0441\u0451, \u043A\u043E\u043D\u0435\u0447\u043D\u043E,
       \u0437\u0430\u043C\u0435\u0447\u0430\u0442\u0435\u043B\u044C\u043D\u043E, \u043D\u043E
       \u0430 \u0447\u0442\u043E \u0441 \u0435\u0433\u043E \u0431\u043E\u0435\u0432\u044B\u043C
@@ -4209,7 +4210,7 @@ MonoBehaviour:
       \u041D\u043E \u0432\u043C\u0435\u0441\u0442\u0435 \u0441 \u043D\u0438\u043C\u0438
       \u0438 \u0432\u043E\u043B\u044E\u2026 "
     color: {r: 1, g: 0.29803923, b: 0.5294118, a: 1}
-    clip: {fileID: 8300000, guid: 84d0a7aa90f52244a8be22b18d01cf84, type: 3}
+    clip: {fileID: 8300000, guid: 79972325f98c61846afc138dc7f54609, type: 3}
   - text: "\u042D\u0442\u043E \u043D\u0430\u043C \u043D\u0435 \u043F\u043E\u0434\u0445\u043E\u0434\u0438\u0442.
       \u0414\u0435\u043B\u0430\u0435\u043C \u0442\u0430\u043A. \u0423 \u0432\u0430\u0441
       \u043F\u043E \u0433\u0440\u0430\u0444\u0438\u043A\u0443 \u0435\u0449\u0451 \u0442\u0440\u0438
@@ -4218,14 +4219,11 @@ MonoBehaviour:
       \u043E \u0442\u043E\u043C, \u0447\u0442\u043E \u0432\u0441\u0451 \u0433\u043E\u0442\u043E\u0432\u043E,
       \u043D\u043E \u0444\u0438\u043D\u0430\u043B\u044C\u043D\u044B\u0439 \u043E\u0442\u0447\u0451\u0442
       \u0432 \u0448\u0442\u0430\u0431 \u0441\u043E\u0441\u0442\u0430\u0432\u043B\u044F\u044E
-      \u044F."
-    color: {r: 0.03137255, g: 0.54901963, b: 0.9607844, a: 1}
-    clip: {fileID: 8300000, guid: 782ede9bbdf0fa844949a44988215f66, type: 3}
-  - text: "\u0423 \u0432\u0430\u0441 \u0442\u0440\u0438 \u0434\u043D\u044F. \u0418\u0449\u0438\u0442\u0435,
+      \u044F. \u0423 \u0432\u0430\u0441 \u0442\u0440\u0438 \u0434\u043D\u044F. \u0418\u0449\u0438\u0442\u0435,
       \u043A\u0430\u043A \u043D\u0430\u043C \u0438 \u0437\u0430\u0434\u0430\u043D\u0438\u0435
       \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u044C, \u0438 \u043D\u0435
       \u043E\u0442\u043D\u0438\u043C\u0430\u0442\u044C \u0443 \u043D\u0435\u0433\u043E
-      \u0441\u0432\u043E\u0431\u043E\u0434\u0443. "
+      \u0441\u0432\u043E\u0431\u043E\u0434\u0443."
     color: {r: 0.03137255, g: 0.54901963, b: 0.9607844, a: 1}
     clip: {fileID: 8300000, guid: 782ede9bbdf0fa844949a44988215f66, type: 3}
   - text: "\u0425\u043E\u0440\u043E\u0448\u043E, \u0430\u0434\u043C\u0438\u0440\u0430\u043B.
@@ -4257,7 +4255,7 @@ MonoBehaviour:
       \u0432\u043E\u0438\u043D\u043E\u0432, \u0433\u043E\u0442\u043E\u0432\u044B\u0445
       \u043E\u0442\u0434\u0430\u0442\u044C \u0436\u0438\u0437\u043D\u0438\u2026 \u043B\u044E\u0434\u0435\u0439."
     color: {r: 0.03137255, g: 0.54901963, b: 0.9607844, a: 1}
-    clip: {fileID: 8300000, guid: 94ac62a9efd712a4ab01e26d029c6176, type: 3}
+    clip: {fileID: 8300000, guid: 3a6ae4150dc45014fbf6742d6e23ff32, type: 3}
   - text: "\u0427\u044C\u0438\u0445-\u0442\u043E \u0441\u044B\u043D\u043E\u0432\u0435\u0439,
       \u0431\u0440\u0430\u0442\u044C\u0435\u0432, \u043C\u0443\u0436\u0435\u0439 \u0438
       \u043E\u0442\u0446\u043E\u0432. \u0418 \u044D\u0442\u043E \u043D\u0443\u0436\u043D\u043E
@@ -4267,13 +4265,13 @@ MonoBehaviour:
       \u043F\u043E\u0442\u0435\u0440\u044F\u043B\u043E \u0441\u0435\u0431\u044F \u043D\u0430
       \u041D\u0410\u0428\u0415\u0419 \u0432\u043E\u0439\u043D\u0435. "
     color: {r: 0.03137255, g: 0.54901963, b: 0.9607844, a: 1}
-    clip: {fileID: 8300000, guid: 94ac62a9efd712a4ab01e26d029c6176, type: 3}
+    clip: {fileID: 8300000, guid: e0353b77677cf6a408f6fc72cfbd901c, type: 3}
   - text: "\u042F \u0443\u0436 \u0431\u043E\u044F\u043B\u0430\u0441\u044C, \u0447\u0442\u043E
       \u0432\u044B\u2026 \u0438\u0437\u0432\u0438\u043D\u0438\u0442\u0435. \u041F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E
       \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u044E \u0432\u0430\u0441,
       \u0430\u0434\u043C\u0438\u0440\u0430\u043B."
-    color: {r: 1, g: 0.29803923, b: 0.5294118, a: 1}
-    clip: {fileID: 8300000, guid: 3a6ae4150dc45014fbf6742d6e23ff32, type: 3}
+    color: {r: 0.8745099, g: 0.25882354, b: 0.46274513, a: 1}
+    clip: {fileID: 8300000, guid: 94ac62a9efd712a4ab01e26d029c6176, type: 3}
   - text: "\u0412\u0430\u043C \u043D\u0435\u0447\u0435\u0433\u043E \u0438\u0437\u0432\u0438\u043D\u044F\u0442\u044C\u0441\u044F.
       \u0421 \u0441\u0430\u043C\u043E\u0433\u043E \u043D\u0430\u0447\u0430\u043B\u0430
       \u0432\u043E\u0439\u043D\u044B \u044F \u043E\u0442\u043F\u0440\u0430\u0432\u0438\u043B
@@ -35724,6 +35722,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224945412936040750, guid: b9752ef6fc21760409128bc29089995c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 224080548248661330, guid: b9752ef6fc21760409128bc29089995c,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -35758,6 +35761,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82560076573687432, guid: b9752ef6fc21760409128bc29089995c,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9752ef6fc21760409128bc29089995c, type: 3}
