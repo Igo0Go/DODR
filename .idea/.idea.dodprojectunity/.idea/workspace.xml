@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa101944-a980-4253-b93a-29b43f263d58" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.dodprojectunity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dodprojectunity/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.dodprojectunity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dodprojectunity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DenisMine/Mat/Sub.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DenisMine/Mat/Sub.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Models/Environments/3 SandWar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Environments/1 WinterMountainses/Reactor/Anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Environments/3 SandWar/InfinitaStudio - Mountains/Obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Environments/3 SandWar/InfinitaStudio - Mountains/Prefabs/Obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Weapon/LazerRifle/LazerRifle 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Weapon/LazerRifle/LazerRifle 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Scenarios/0 Tutorial.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Environments/AutoWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Environments/AutoWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Personages/Enemies/ComandosBot/Anim/ComandorDronDefault2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Personages/Enemies/ComandosBot/Anim/ComandorDronDefault2.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Personages/Enemies/ComandosBot/Anim/ComandosDron.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Personages/Enemies/ComandosBot/Anim/ComandosDron.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Personages/Enemies/ComandosBot/Anim/ComandosDronDamage.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Personages/Enemies/ComandosBot/Anim/ComandosDronDamage.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Personages/Enemies/ComandosBot/Anim/ComandosDronDead.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Personages/Enemies/ComandosBot/Anim/ComandosDronDead.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Personages/Enemies/ComandosBot/Anim/ComandosDronFight.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Personages/Enemies/ComandosBot/Anim/ComandosDronFight.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Personages/Enemies/ComandosBot/Anim/ComandosDronShoot.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Personages/Enemies/ComandosBot/Anim/ComandosDronShoot.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Personages/Enemies/ComandosBot/Anim/ComandosDronToShoot.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Personages/Enemies/ComandosBot/Anim/ComandosDronToShoot.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Personages/Enemies/ComandosBot/Anim/ComandosDronWalk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Personages/Enemies/ComandosBot/Anim/ComandosDronWalk.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Personages/Enemies/ComandosBot/Anim/SpecRobo.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Personages/Enemies/ComandosBot/Anim/SpecRobo.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Menem/Scenes/bots scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Menem/Scenes/bots scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Menem/Scripts/SuperBotControllerChanged.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Menem/Scripts/SuperBotControllerChanged.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -86,7 +84,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Menem/Scripts/SuperBotControllerChanged.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1245">
-              <caret line="203" column="50" lean-forward="true" selection-start-line="203" selection-start-column="50" selection-end-line="203" selection-end-column="50" />
+              <caret line="203" column="50" selection-start-line="203" selection-start-column="50" selection-end-line="203" selection-end-column="50" />
               <folding>
                 <marker date="1554209996924" expanded="false" signature="6:100" ph="..." />
                 <marker date="1554209996924" expanded="true" signature="124:186" ph="{...}" />
@@ -388,12 +386,12 @@
       <workItem from="1553316516543" duration="13265000" />
       <workItem from="1553677782905" duration="73000" />
       <workItem from="1554022342201" duration="10543000" />
-      <workItem from="1554202613820" duration="7372000" />
+      <workItem from="1554202613820" duration="7973000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75418000" />
+    <option name="totallyTimeSpent" value="76019000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1491,7 +1489,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Menem/Scripts/SuperBotControllerChanged.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1245">
-          <caret line="203" column="50" lean-forward="true" selection-start-line="203" selection-start-column="50" selection-end-line="203" selection-end-column="50" />
+          <caret line="203" column="50" selection-start-line="203" selection-start-column="50" selection-end-line="203" selection-end-column="50" />
           <folding>
             <marker date="1554209996924" expanded="false" signature="6:100" ph="..." />
             <marker date="1554209996924" expanded="true" signature="124:186" ph="{...}" />
