@@ -92,10 +92,19 @@ public class SuperBotControllerChanged : MonoBehaviour
 
     }
 
+	#region Обработчики событий анимаций
+	
     public void Shoot()
     {
         gun.shootDelegate();
     }
+	
+	public void CorrecteShootPoint()
+	{
+		gun.shootPoint.LookAt(Target.position + Vector3.up);
+	}
+
+	#endregion
 
     public virtual EnemyState StateSolver
     {
