@@ -19,7 +19,7 @@ public class AutoWeapon : MyTools {
     [Tooltip("Только для автоматического и oneShoot")] public Transform shootPoint;
     [Tooltip("Только для автоматического и oneShoot")] public ParticleSystem muzzleFlash;
     [Tooltip("Только для автоматического и oneShoot")] public AudioClip shootClip;
-    [Tooltip("Только для автоматического и oneShoot")] public Animator anim;
+    [Tooltip("Только для автоматического")] public Animator anim;
     [Tooltip("Только для автоматического и oneShoot")] public bool recoil;
     
 
@@ -40,6 +40,12 @@ public class AutoWeapon : MyTools {
                 aud.loop = false;
                 aud.enabled = true;
                 recoil = false;
+                break;
+            case WeaponType.OneShoot:
+                shootDelegate = OneShoot;
+                aud.playOnAwake = false;
+                aud.loop = false;
+                aud.enabled = true;
                 break;
         }
 	}
@@ -84,7 +90,7 @@ public class AutoWeapon : MyTools {
         lineRenderer.enabled = true;
         aud.enabled = true;
     }
-    public void AutoShoot()
+    private void AutoShoot()
     {
         if (!recoil)
         {
@@ -94,6 +100,12 @@ public class AutoWeapon : MyTools {
             recoil = true;
             anim.SetTrigger("Recoil");
         }
+    }
+    private void OneShoot()
+    {
+        InstanceBullet();
+        aud.PlayOneShot(shootClip);
+        muzzleFlash.Play();
     }
 
 

@@ -181,6 +181,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c97e660a447d5c9429e237a542fc9337, type: 3}
+--- !u!1 &111503152 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2646650551974013324, guid: c97e660a447d5c9429e237a542fc9337,
+    type: 3}
+  m_PrefabInstance: {fileID: 111503151}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &158703382 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2646650551974013322, guid: c97e660a447d5c9429e237a542fc9337,
@@ -203,6 +209,7 @@ MonoBehaviour:
   LastPosition: {x: 0, y: 0, z: 0}
   StandardPosition: {x: 0, y: 0, z: 0}
   Distance: 0
+  HP: 0
   RangePursuit: 11.7
   RangeShoot: 0
   RangeMeleeAttack: 0
@@ -215,9 +222,11 @@ MonoBehaviour:
   MainCamera: {fileID: 732959532}
   IsMeleeAttack: 0
   wait: 0
+  alive: 0
   Version: 0
   State: 0
   Anim: {fileID: 0}
+  Geosphere: {fileID: 111503152}
 --- !u!195 &158703384
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -55,6 +55,9 @@
               <e p="WeaponConfig.cs" t="Include" />
             </e>
           </e>
+          <e p="Scenarios" t="Include">
+            <e p="ReplicSystem.cs" t="Include" />
+          </e>
           <e p="Scripts" t="Include">
             <e p="Environments" t="Include">
               <e p="AutoWeapon.cs" t="Include" />
@@ -77,6 +80,7 @@
               <e p="MusicChanger.cs" t="Include" />
               <e p="MusicManager.cs" t="Include" />
               <e p="ObjectTranslateManager.cs" t="Include" />
+              <e p="ReplicSceneLoader.cs" t="Include" />
               <e p="TimlineActivator.cs" t="Include" />
               <e p="WeaponReactor.cs" t="Include" />
             </e>
