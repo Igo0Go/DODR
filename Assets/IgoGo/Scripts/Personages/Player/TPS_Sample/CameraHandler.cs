@@ -78,6 +78,7 @@ public class CameraHandler : MyTools, IPlayerPart {
 
     private void Start()
     {
+		cam = cameraTransform.GetComponent<Camera>();
         fieldBufer = cam.fieldOfView;
     }
 
@@ -232,7 +233,6 @@ public class CameraHandler : MyTools, IPlayerPart {
     {
         rotateMode = true;
         step = Time.fixedDeltaTime * cameraConfig.pivotSpeed;
-        cam = cameraTransform.GetComponent<Camera>();
         defaultMask = cam.cullingMask;
         characterStatus = sampleController.characterStatus;
         characterInput = sampleController.characterInput;
