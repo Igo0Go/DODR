@@ -81,7 +81,14 @@ public class SuperBotControllerChanged : MonoBehaviour
 
     private void Attack() // кооод
     {
-        //else
+        Quaternion look = Quaternion.LookRotation(Target.transform.position - transform.position);
+        float anglevis = Quaternion.Angle(transform.rotation, look); //угол между ботом и персом
+        if (anglevis > AngleShhotingForBot)
+        {
+            Vector3 relativePos = Target.position - transform.position;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(relativePos), Time.deltaTime * 5);
+        }
+        else
         {
             if (IsMeleeAttack || Distance <= RangeMeleeAttack)
             {
@@ -91,24 +98,22 @@ public class SuperBotControllerChanged : MonoBehaviour
                     Anim.SetBool("Shoot",false);
                 }
                 NavAgent.destination = transform.position;
-                Anim.SetTrigger("Fight");
-                Anim.SetFloat("Xstate",0);
-                Anim.SetFloat("Ystate",-1);
-                //State = EnemyState.Fight;
+                
+                    Anim.SetTrigger("Fight");
+                    Anim.SetFloat("Xstate",0);
+                    Anim.SetFloat("Ystate",-1);
+                    //State = EnemyState.Fight;
+                
+                
             }
             else
             {
-                Quaternion look = Quaternion.LookRotation(Target.transform.position - transform.position);
-                float anglevis = Quaternion.Angle(transform.rotation, look); //угол между ботом и персом
-                if (anglevis > AngleShhotingForBot)
-                {
-                    Quaternion.Slerp(transform.localRotation, look, 2 * Time.deltaTime);
-                }
-                else
-                {
+               
+               
+               
                     NavAgent.destination = transform.position;
                     Anim.SetBool("Shoot", true);
-                }
+                
 
                         
                 
