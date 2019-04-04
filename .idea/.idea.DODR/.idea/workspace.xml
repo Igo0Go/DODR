@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d37b2b18-ce9d-4a84-9a64-83d9c3751367" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Scenes/0 Tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Scenes/0 Tutorial.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Scripts/GameSystems/ReplicSceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Scripts/GameSystems/ReplicSceneLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/Menu/MenuObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/Menu/MenuObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/Menu/MenuScript.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1553620675014" expanded="false" signature="6:78" ph="..." />
+                <marker date="1553620675014" expanded="true" signature="120:686" ph="{...}" />
+                <marker date="1553620675014" expanded="true" signature="309:354" ph="{...}" />
+                <marker date="1553620675014" expanded="true" signature="409:416" ph="{...}" />
+                <marker date="1553620675014" expanded="true" signature="463:684" ph="{...}" />
+                <marker date="1553620675014" expanded="true" signature="611:678" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/Menu/MenuObject.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="34" />
+              <folding>
+                <marker date="1554369766002" expanded="true" signature="6:113" ph="..." />
+                <marker date="1554369766002" expanded="true" signature="136:159" ph="{...}" />
+                <marker date="1554369766002" expanded="true" signature="200:1065" ph="{...}" />
+                <marker date="1554369766002" expanded="true" signature="345:772" ph="{...}" />
+                <marker date="1554369766002" expanded="true" signature="382:766" ph="{...}" />
+                <marker date="1554369766002" expanded="true" signature="810:840" ph="{...}" />
+                <marker date="1554369766002" expanded="true" signature="873:960" ph="{...}" />
+                <marker date="1554369766002" expanded="true" signature="994:1063" ph="{...}" />
+                <marker date="1554369766002" expanded="true" signature="1098:1154" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/GameSystems/ReplicSceneLoader.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+              <folding>
+                <marker date="1554371609337" expanded="false" signature="6:113" ph="..." />
+                <marker date="1554371609337" expanded="true" signature="159:829" ph="{...}" />
+                <marker date="1554371609337" expanded="true" signature="353:490" ph="{...}" />
+                <marker date="1554371609337" expanded="true" signature="521:571" ph="{...}" />
+                <marker date="1554371609337" expanded="true" signature="609:675" ph="{...}" />
+                <marker date="1554371609337" expanded="true" signature="644:672" ph="{...}" />
+                <marker date="1554371609337" expanded="true" signature="707:751" ph="{...}" />
+                <marker date="1554371609337" expanded="true" signature="780:823" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/Menu/Loader.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="13" column="61" lean-forward="true" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
+              <folding>
+                <marker date="1554368589468" expanded="false" signature="6:78" ph="..." />
+                <marker date="1554368589468" expanded="true" signature="172:428" ph="{...}" />
+                <marker date="1554368589468" expanded="true" signature="253:350" ph="{...}" />
+                <marker date="1554368589468" expanded="true" signature="374:426" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/IgoGo/Scenarios/ReplicSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/GameSystems/ObjectTranslateManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/GameSystems/ActionObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/GameSystems/LocationReactor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/GameSystems/ReplicSceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/Menu/MenuScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/Menu/Loader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/Menu/MenuObject.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/Menu/Loader.cs" />
+        <option value="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/Menu/MenuObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/IgoGo/Scripts/GameSystems/ReplicSceneLoader.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="UnityExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="UnityExplorer">
+        <option name="show-hidden-items" value="false" />
+        <option name="show-project-names" value="true" />
+      </pane>
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="27573">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" value="27573" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d37b2b18-ce9d-4a84-9a64-83d9c3751367" name="Default Changelist" comment="" />
+      <created>1554367400944</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554367400944</updated>
+      <workItem from="1554367404546" duration="3529000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3529000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unity" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.22244897" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/Menu/MenuScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1553620675014" expanded="false" signature="6:78" ph="..." />
+            <marker date="1553620675014" expanded="true" signature="120:686" ph="{...}" />
+            <marker date="1553620675014" expanded="true" signature="309:354" ph="{...}" />
+            <marker date="1553620675014" expanded="true" signature="409:416" ph="{...}" />
+            <marker date="1553620675014" expanded="true" signature="463:684" ph="{...}" />
+            <marker date="1553620675014" expanded="true" signature="611:678" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/GameSystems/ObjectTranslateManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1333">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+          <folding>
+            <marker date="1553620675012" expanded="false" signature="6:78" ph="..." />
+            <marker date="1553620675012" expanded="true" signature="169:2846" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="625:849" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="643:843" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="750:808" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="902:1190" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="1020:1079" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="1092:1151" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="1248:1283" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="1315:1360" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="1392:1715" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="1428:1709" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="1464:1579" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="1596:1699" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="1746:2118" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="1782:2112" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="1818:1982" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="1999:2102" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="2151:2455" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="2195:2252" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="2265:2322" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="2486:2676" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="2513:2563" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="2576:2623" ph="{...}" />
+            <marker date="1553620675012" expanded="true" signature="2718:2844" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/Menu/Loader.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="13" column="61" lean-forward="true" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
+          <folding>
+            <marker date="1554368589468" expanded="false" signature="6:78" ph="..." />
+            <marker date="1554368589468" expanded="true" signature="172:428" ph="{...}" />
+            <marker date="1554368589468" expanded="true" signature="253:350" ph="{...}" />
+            <marker date="1554368589468" expanded="true" signature="374:426" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/GameSystems/ActionObject.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding>
+            <marker date="1553620675011" expanded="false" signature="6:100" ph="..." />
+            <marker date="1553620675011" expanded="true" signature="144:180" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="229:917" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="327:915" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="351:909" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="406:899" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="469:552" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="597:681" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="725:810" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="959:2390" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="1198:1444" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="1255:1438" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="1302:1392" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="1610:1689" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="1740:2013" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="1774:1826" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="1884:1936" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="1949:2007" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="2045:2202" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="2087:2196" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="2227:2320" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="2273:2314" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="2352:2387" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/GameSystems/LocationReactor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="4" column="36" lean-forward="true" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          <folding>
+            <marker date="1553620675011" expanded="false" signature="6:78" ph="..." />
+            <marker date="1553620675011" expanded="true" signature="122:371" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="206:369" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="252:293" ph="{...}" />
+            <marker date="1553620675011" expanded="true" signature="310:363" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/Menu/MenuObject.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="34" />
+          <folding>
+            <marker date="1554369766002" expanded="true" signature="6:113" ph="..." />
+            <marker date="1554369766002" expanded="true" signature="136:159" ph="{...}" />
+            <marker date="1554369766002" expanded="true" signature="200:1065" ph="{...}" />
+            <marker date="1554369766002" expanded="true" signature="345:772" ph="{...}" />
+            <marker date="1554369766002" expanded="true" signature="382:766" ph="{...}" />
+            <marker date="1554369766002" expanded="true" signature="810:840" ph="{...}" />
+            <marker date="1554369766002" expanded="true" signature="873:960" ph="{...}" />
+            <marker date="1554369766002" expanded="true" signature="994:1063" ph="{...}" />
+            <marker date="1554369766002" expanded="true" signature="1098:1154" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scenarios/ReplicSystem.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+          <folding>
+            <marker date="1554201407383" expanded="false" signature="6:100" ph="..." />
+            <marker date="1554201407383" expanded="true" signature="143:311" ph="{...}" />
+            <marker date="1554201407383" expanded="true" signature="393:2273" ph="{...}" />
+            <marker date="1554201407383" expanded="true" signature="809:1171" ph="{...}" />
+            <marker date="1554201407383" expanded="true" signature="991:1049" ph="{...}" />
+            <marker date="1554201407383" expanded="true" signature="1082:1129" ph="{...}" />
+            <marker date="1554201407383" expanded="true" signature="1147:1165" ph="{...}" />
+            <marker date="1554201407383" expanded="true" signature="1229:1309" ph="{...}" />
+            <marker date="1554201407383" expanded="true" signature="1256:1303" ph="{...}" />
+            <marker date="1554201407383" expanded="true" signature="1355:1497" ph="{...}" />
+            <marker date="1554201407383" expanded="true" signature="1528:1611" ph="{...}" />
+            <marker date="1554201407383" expanded="true" signature="1565:1605" ph="{...}" />
+            <marker date="1554201407383" expanded="true" signature="1635:2090" ph="{...}" />
+            <marker date="1554201407383" expanded="true" signature="1671:1748" ph="{...}" />
+            <marker date="1554201407383" expanded="true" signature="1793:1957" ph="{...}" />
+            <marker date="1554201407383" expanded="true" signature="1874:1914" ph="{...}" />
+            <marker date="1554201407383" expanded="true" signature="1970:2084" ph="{...}" />
+            <marker date="1554201407383" expanded="true" signature="2122:2271" ph="{...}" />
+            <marker date="1554201407383" expanded="true" signature="2158:2205" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/GameSystems/ReplicSceneLoader.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+          <folding>
+            <marker date="1554371609337" expanded="false" signature="6:113" ph="..." />
+            <marker date="1554371609337" expanded="true" signature="159:829" ph="{...}" />
+            <marker date="1554371609337" expanded="true" signature="353:490" ph="{...}" />
+            <marker date="1554371609337" expanded="true" signature="521:571" ph="{...}" />
+            <marker date="1554371609337" expanded="true" signature="609:675" ph="{...}" />
+            <marker date="1554371609337" expanded="true" signature="644:672" ph="{...}" />
+            <marker date="1554371609337" expanded="true" signature="707:751" ph="{...}" />
+            <marker date="1554371609337" expanded="true" signature="780:823" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

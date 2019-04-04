@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/IgoGo/Scenes/Menu.unity
+    guid: bc25079f7bca701409689d9309d34eb0
+  - enabled: 1
+    path: Assets/IgoGo/Scenes/Load.unity
+    guid: f2234a1b7844d44e1a57b1d6d6c4c397
+  - enabled: 1
+    path: Assets/IgoGo/Scenes/0 Tutorial.unity
+    guid: 23a6cb6f5696f814caac2605613286d0
+  - enabled: 1
+    path: Assets/IgoGo/Scenes/0-1 tranzite.unity
+    guid: cdf0c15b20557564ebbb2ae0f8d775c9
+  - enabled: 1
+    path: Assets/IgoGo/Scenes/1 Mountance.unity
+    guid: 1439ea8052e202b4ab5b68b71337c290
   m_configObjects: {}

@@ -1,28 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class ReplicSceneLoader : MonoBehaviour
+public class ReplicSceneLoader : UsingObject
 {
-	public int sceneIndex;
+	[SerializeField]
+	private string sceneName = "Menu";
 	
 	
 	private bool replicComplete;
-	private bool scenLoadComplete;
-   
+	[SerializeField]
+	private bool trigger = false;
+	private AsyncOperation loader;
+
+	private void Start()
+	{
+		LoadManager.NameSceneForLoad = sceneName;
+		loader = SceneManager.LoadSceneAsync("Load");
+		loader.allowSceneActivation = false;
+	}
+
 	public void CompleteReplic()
 	{
 		replicComplete = true;
+		CheckComplete();
 	}
    
-	public void CompleteSceneLoad()
-	{
-		scenLoadComplete = true;
-	}
    
 	private void CheckComplete()
 	{
-		if(replicComplete && scenLoadComplete)
+		if(replicComplete && trigger)
 		{
 			LoadNextScene();
 		}
@@ -30,6 +38,14 @@ public class ReplicSceneLoader : MonoBehaviour
 	
 	private void LoadNextScene()
 	{
-		//Логика для загрузки уже прогруженной сцены
+		loader.allowSceneActivation = true;
 	}
+
+	public override void Use()
+	{
+		trigger = true;
+		CheckComplete();
+	}
+	
+	
 }
