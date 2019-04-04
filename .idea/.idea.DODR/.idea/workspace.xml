@@ -56,7 +56,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/GameSystems/ReplicSceneLoader.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
+            <state relative-caret-position="363">
               <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
               <folding>
                 <marker date="1554371609337" expanded="false" signature="6:113" ph="..." />
@@ -67,21 +67,6 @@
                 <marker date="1554371609337" expanded="true" signature="644:672" ph="{...}" />
                 <marker date="1554371609337" expanded="true" signature="707:751" ph="{...}" />
                 <marker date="1554371609337" expanded="true" signature="780:823" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/Menu/Loader.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="13" column="61" lean-forward="true" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
-              <folding>
-                <marker date="1554368589468" expanded="false" signature="6:78" ph="..." />
-                <marker date="1554368589468" expanded="true" signature="172:428" ph="{...}" />
-                <marker date="1554368589468" expanded="true" signature="253:350" ph="{...}" />
-                <marker date="1554368589468" expanded="true" signature="374:426" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -174,12 +159,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554367400944</updated>
-      <workItem from="1554367404546" duration="3529000" />
+      <workItem from="1554367404546" duration="3866000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3529000" />
+    <option name="totallyTimeSpent" value="3866000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -210,7 +195,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.22244897" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.22244897" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -282,19 +267,6 @@
             <marker date="1553620675012" expanded="true" signature="2513:2563" ph="{...}" />
             <marker date="1553620675012" expanded="true" signature="2576:2623" ph="{...}" />
             <marker date="1553620675012" expanded="true" signature="2718:2844" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/Menu/Loader.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="13" column="61" lean-forward="true" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
-          <folding>
-            <marker date="1554368589468" expanded="false" signature="6:78" ph="..." />
-            <marker date="1554368589468" expanded="true" signature="172:428" ph="{...}" />
-            <marker date="1554368589468" expanded="true" signature="253:350" ph="{...}" />
-            <marker date="1554368589468" expanded="true" signature="374:426" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -391,9 +363,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/Menu/Loader.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="61" lean-forward="true" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
+          <folding>
+            <marker date="1554368589468" expanded="true" signature="6:135" ph="..." />
+            <marker date="1554368589468" expanded="true" signature="172:428" ph="{...}" />
+            <marker date="1554368589468" expanded="true" signature="253:350" ph="{...}" />
+            <marker date="1554368589468" expanded="true" signature="374:426" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/GameSystems/ReplicSceneLoader.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
+        <state relative-caret-position="363">
           <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
           <folding>
             <marker date="1554371609337" expanded="false" signature="6:113" ph="..." />
