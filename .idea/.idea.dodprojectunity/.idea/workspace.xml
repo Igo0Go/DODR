@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa101944-a980-4253-b93a-29b43f263d58" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dodprojectunity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dodprojectunity/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dodprojectunity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dodprojectunity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Menem/Scenes/bots scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Menem/Scenes/bots scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Menem/Scripts/Scripts/Scripts_from_other_projects/DemonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Menem/Scripts/Scripts/Scripts_from_other_projects/DemonController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Menem/Scripts/SuperBotControllerChanged.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Menem/Scripts/SuperBotControllerChanged.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Scenes/1 Mountance.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Scenes/1 Mountance.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -77,8 +76,8 @@
       <file leaf-file-name="SuperBotControllerChanged.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Menem/Scripts/SuperBotControllerChanged.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="287" column="17" lean-forward="true" selection-start-line="287" selection-start-column="17" selection-end-line="287" selection-end-column="17" />
+            <state relative-caret-position="360">
+              <caret line="100" column="106" lean-forward="true" selection-start-line="100" selection-start-column="106" selection-end-line="100" selection-end-column="106" />
               <folding>
                 <marker date="1554371953274" expanded="false" signature="6:100" ph="..." />
                 <marker date="1554371953274" expanded="true" signature="124:186" ph="{...}" />
@@ -389,12 +388,12 @@
       <workItem from="1554288202587" duration="1211000" />
       <workItem from="1554351012431" duration="5295000" />
       <workItem from="1554368683164" duration="935000" />
-      <workItem from="1554370088609" duration="1865000" />
+      <workItem from="1554370088609" duration="3182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85325000" />
+    <option name="totallyTimeSpent" value="86642000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1486,8 +1485,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Menem/Scripts/SuperBotControllerChanged.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="287" column="17" lean-forward="true" selection-start-line="287" selection-start-column="17" selection-end-line="287" selection-end-column="17" />
+        <state relative-caret-position="360">
+          <caret line="100" column="106" lean-forward="true" selection-start-line="100" selection-start-column="106" selection-end-line="100" selection-end-column="106" />
           <folding>
             <marker date="1554371953274" expanded="false" signature="6:100" ph="..." />
             <marker date="1554371953274" expanded="true" signature="124:186" ph="{...}" />

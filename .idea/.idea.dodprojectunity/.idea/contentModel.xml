@@ -93,6 +93,7 @@
                 <e p="FightController.cs" t="Include" />
                 <e p="Item.cs" t="Include" />
                 <e p="Menu" t="Include">
+                  <e p="Loader.cs" t="Include" />
                   <e p="MenuObject.cs" t="Include" />
                   <e p="MenuScript.cs" t="Include" />
                 </e>
