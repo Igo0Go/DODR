@@ -248,6 +248,7 @@ public class SuperBotControllerChanged : MonoBehaviour
                     {
                         Anim.SetBool("Shoot",false);
                     }
+                    CaseMethod(false, UnityEngine.Random.Range(-1, 1.1f), -1,  Target.transform.position);
                     NavAgent.destination = transform.position;
                     //стоп
                     StateSolver = EnemyState.Stay;
