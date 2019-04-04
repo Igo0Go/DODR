@@ -10,6 +10,8 @@ public class PlayerKit : MyTools
     private GameObject _pult;
     private Animator anim;
 
+	//hi
+
     public Transform helmetPos;
     public Transform beltPos;
     public Transform suitPos;

@@ -13,7 +13,8 @@ public class CharacterInventory : MyTools, IPlayerPart {
 
     [Space(10)]
     public Text itemText;
-
+	
+	//hi
 
     [HideInInspector]
     public Camera sniperCam;

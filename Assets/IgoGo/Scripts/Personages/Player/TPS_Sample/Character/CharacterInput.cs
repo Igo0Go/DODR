@@ -13,6 +13,8 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
     [HideInInspector] public ShootWeapon shootWeapon;
     [HideInInspector] public FightWeapon fightWeapon;
 
+	//hi
+
     public bool opportunityToAim;
     public bool isAiming;
     public bool debugAim;
