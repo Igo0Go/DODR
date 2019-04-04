@@ -8,8 +8,6 @@ public class CharacterAnimation : MyTools, IPlayerPart {
     public CharacterStatus characterStatus;
     public CharacterMovement characterMovement;
 
-	//hi
-
     [Range(0,1)][SerializeField] private float m_RunCycleLegOffset;
     private float jumpTime;
     private float jumpLeg;

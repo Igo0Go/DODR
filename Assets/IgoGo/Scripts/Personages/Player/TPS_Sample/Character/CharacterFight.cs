@@ -12,8 +12,6 @@ public class CharacterFight : MonoBehaviour, IPlayerPart {
     [Range(0,3)]
     private int impuctNumber;
 
-	//hi
-
     public void SwordInput()
     {
         if(!delay)

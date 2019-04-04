@@ -19,8 +19,6 @@ public class CharacterStels : MyTools, IPlayerPart {
     private CameraHandler cameraHandler;
     private Animator anim;
 
-	//hi
-
     private Collider currentCollider;
     private Shelter currentShelter;
     private Vector3 dir;

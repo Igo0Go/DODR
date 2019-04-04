@@ -11,7 +11,6 @@ public class CharacterClimb : MyTools, IPlayerPart {
     [Space(20)]
     public bool debug;
 
-	//hi
 
     private CharacterStatus characterStatus;
     private CharacterInventory characterInventory;

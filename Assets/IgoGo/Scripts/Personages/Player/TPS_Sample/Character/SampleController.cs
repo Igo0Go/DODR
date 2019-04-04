@@ -11,8 +11,6 @@ public interface IPlayerPart
 
 public class SampleController : MonoBehaviour {
 
-    //hi
-
     public CharacterStatus characterStatus;
     public CameraHandler cameraHandler;
     [Space(10)]
