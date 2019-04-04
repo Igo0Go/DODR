@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 
 namespace Al_AI.Scripts.Scripts_from_other_projects
 {
@@ -28,6 +29,7 @@ namespace Al_AI.Scripts.Scripts_from_other_projects
             //      _NRC = Player.GetComponent<NewRelictusController>();
             //     _NRC.ShootSound += ListenShoot;
         }
+
 	
 	
         void Update () {
