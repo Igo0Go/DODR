@@ -164,6 +164,7 @@ public class PlayerKit : MyTools
         Kit = KitType.NoSuit;
         anim = null;
         armorPoint = 0;
+        active = false;
     }
     private void ComandorAction()
     {
