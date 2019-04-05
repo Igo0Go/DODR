@@ -4,19 +4,20 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f516a30c161b87e44847884ab94ae553, type: 3}
   m_Name: PlasmPistol
   m_EditorClassIdentifier: 
-  damage: 12
+  damage: 16
   type: 1
-  itemPrefab: {fileID: 1970077175296442, guid: 65f0600671129844393a5224f0da929e, type: 2}
+  itemPrefab: {fileID: 1970077175296442, guid: 65f0600671129844393a5224f0da929e, type: 3}
   rHandPos: {x: 0.08, y: 0.06, z: 0.411}
   rHandRot: {x: -8.98, y: 15, z: -90.52}
   weaponPrefab: {fileID: 1598710541097034, guid: 5485ba1dab9931e4ba2238681b72e045,
-    type: 2}
+    type: 3}
   weaponPos: {x: -0.007, y: -0.027, z: 0.044}
   weaponRot: {x: -2.317, y: -18.947, z: 5.602}

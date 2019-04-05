@@ -4042,6 +4042,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpecRobo 1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3871552004375753885, guid: 15761e08b36a12e4f9efbbc846d0d215,
+        type: 3}
+      propertyPath: m_TagString
+      value: EnemySword
+      objectReference: {fileID: 0}
     - target: {fileID: 3871552004375652529, guid: 15761e08b36a12e4f9efbbc846d0d215,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4391,11 +4396,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9392141
-      objectReference: {fileID: 0}
-    - target: {fileID: 3871552004375753885, guid: 15761e08b36a12e4f9efbbc846d0d215,
-        type: 3}
-      propertyPath: m_TagString
-      value: EnemySword
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15761e08b36a12e4f9efbbc846d0d215, type: 3}
@@ -12703,7 +12703,7 @@ PrefabInstance:
         type: 3}
       propertyPath: loader
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 863347186}
     - target: {fileID: 4259326262566170, guid: b9752ef6fc21760409128bc29089995c, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
@@ -12735,6 +12735,61 @@ PrefabInstance:
     - target: {fileID: 4259326262566170, guid: b9752ef6fc21760409128bc29089995c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 269.349
+      objectReference: {fileID: 0}
+    - target: {fileID: 114529433079212324, guid: b9752ef6fc21760409128bc29089995c,
+        type: 3}
+      propertyPath: musicBoxes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114529433079212324, guid: b9752ef6fc21760409128bc29089995c,
+        type: 3}
+      propertyPath: musicBoxes.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ce46d48f7520fdb49b1c506e4a4ffff1, type: 3}
+    - target: {fileID: 114529433079212324, guid: b9752ef6fc21760409128bc29089995c,
+        type: 3}
+      propertyPath: musicBoxes.Array.data[1].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114529433079212324, guid: b9752ef6fc21760409128bc29089995c,
+        type: 3}
+      propertyPath: musicBoxes.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: aadbac831cb9be546af90d2dde04567e, type: 3}
+    - target: {fileID: 114529433079212324, guid: b9752ef6fc21760409128bc29089995c,
+        type: 3}
+      propertyPath: musicBoxes.Array.data[2].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114529433079212324, guid: b9752ef6fc21760409128bc29089995c,
+        type: 3}
+      propertyPath: musicBoxes.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e94b17fb9447974f95ed56c6f9584a5, type: 3}
+    - target: {fileID: 114529433079212324, guid: b9752ef6fc21760409128bc29089995c,
+        type: 3}
+      propertyPath: musicBoxes.Array.data[3].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114529433079212324, guid: b9752ef6fc21760409128bc29089995c,
+        type: 3}
+      propertyPath: musicBoxes.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: aadbac831cb9be546af90d2dde04567e, type: 3}
+    - target: {fileID: 114529433079212324, guid: b9752ef6fc21760409128bc29089995c,
+        type: 3}
+      propertyPath: musicBoxes.Array.data[1].hide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114529433079212324, guid: b9752ef6fc21760409128bc29089995c,
+        type: 3}
+      propertyPath: musicBoxes.Array.data[2].hide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82560076573687432, guid: b9752ef6fc21760409128bc29089995c,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9752ef6fc21760409128bc29089995c, type: 3}
@@ -19158,6 +19213,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpecRobo 1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3871552004375753885, guid: 15761e08b36a12e4f9efbbc846d0d215,
+        type: 3}
+      propertyPath: m_TagString
+      value: EnemySword
+      objectReference: {fileID: 0}
     - target: {fileID: 3871552004375652529, guid: 15761e08b36a12e4f9efbbc846d0d215,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19507,11 +19567,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9392141
-      objectReference: {fileID: 0}
-    - target: {fileID: 3871552004375753885, guid: 15761e08b36a12e4f9efbbc846d0d215,
-        type: 3}
-      propertyPath: m_TagString
-      value: EnemySword
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15761e08b36a12e4f9efbbc846d0d215, type: 3}
@@ -21050,6 +21105,25 @@ Transform:
   m_Father: {fileID: 866662684}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &779993264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1869498767162748, guid: 16cf758fafa402747b5ecb9fc503e3f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2092120892}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &779993269
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779993264}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 1.5000004, z: 2.5000005}
+  m_Center: {x: 0, y: -0.000015258789, z: 1.2500002}
 --- !u!1001 &781839719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23720,6 +23794,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpecRobo 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3871552004375753885, guid: 15761e08b36a12e4f9efbbc846d0d215,
+        type: 3}
+      propertyPath: m_TagString
+      value: EnemySword
+      objectReference: {fileID: 0}
     - target: {fileID: 3871552004375652529, guid: 15761e08b36a12e4f9efbbc846d0d215,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24069,11 +24148,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9392141
-      objectReference: {fileID: 0}
-    - target: {fileID: 3871552004375753885, guid: 15761e08b36a12e4f9efbbc846d0d215,
-        type: 3}
-      propertyPath: m_TagString
-      value: EnemySword
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15761e08b36a12e4f9efbbc846d0d215, type: 3}
@@ -28605,6 +28679,25 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b51aeb17874a02c4d8ace7051fd050e7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47d4ba11c3c93e44a95836bb1e3447cd, type: 3}
+--- !u!1 &1035779812 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1869498767162748, guid: 16cf758fafa402747b5ecb9fc503e3f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 364574770}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1035779817
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035779812}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.30000007, y: 1.5000007, z: 2.5000005}
+  m_Center: {x: 0.000015258789, y: 0.0000076293945, z: 1.250004}
 --- !u!1 &1037325310
 GameObject:
   m_ObjectHideFlags: 0
@@ -44850,6 +44943,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpecRobo 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3871552004375753885, guid: 15761e08b36a12e4f9efbbc846d0d215,
+        type: 3}
+      propertyPath: m_TagString
+      value: EnemySword
+      objectReference: {fileID: 0}
     - target: {fileID: 3871552004375652529, guid: 15761e08b36a12e4f9efbbc846d0d215,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -45199,11 +45297,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9392141
-      objectReference: {fileID: 0}
-    - target: {fileID: 3871552004375753885, guid: 15761e08b36a12e4f9efbbc846d0d215,
-        type: 3}
-      propertyPath: m_TagString
-      value: EnemySword
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15761e08b36a12e4f9efbbc846d0d215, type: 3}
@@ -48321,6 +48414,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpecRobo 1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3871552004375753885, guid: 15761e08b36a12e4f9efbbc846d0d215,
+        type: 3}
+      propertyPath: m_TagString
+      value: EnemySword
+      objectReference: {fileID: 0}
     - target: {fileID: 3871552004375652529, guid: 15761e08b36a12e4f9efbbc846d0d215,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -48670,11 +48768,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9392141
-      objectReference: {fileID: 0}
-    - target: {fileID: 3871552004375753885, guid: 15761e08b36a12e4f9efbbc846d0d215,
-        type: 3}
-      propertyPath: m_TagString
-      value: EnemySword
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15761e08b36a12e4f9efbbc846d0d215, type: 3}

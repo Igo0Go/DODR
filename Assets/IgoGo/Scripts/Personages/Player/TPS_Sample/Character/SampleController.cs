@@ -11,6 +11,7 @@ public interface IPlayerPart
 
 public class SampleController : MonoBehaviour
 {
+	public PauseScript pauseScript;
     public CharacterStatus characterStatus;
     public CameraHandler cameraHandler;
     [Space(10)] public CharacterMovement characterMovement;
@@ -32,13 +33,13 @@ public class SampleController : MonoBehaviour
 
     [HideInInspector] public AudioSource aud;
     [HideInInspector] public CharacterController characterController;
-
+	
 
     private Vector3 safePoint;
     private Quaternion safeRot;
 
     private bool _enabled;
-
+	
     private bool Enabled
     {
         get { return _enabled; }
@@ -80,16 +81,21 @@ public class SampleController : MonoBehaviour
 
     private void Update()
     {
-        characterMovement.MoveUpdate();
-        if (!characterStatus.onWall)
-        {
-            characterInventory.InventoryUpdate();
-            characterInput.InputUpdate();
-            if (!characterStatus.isBehindCover)
-            {
-                characterAnimation.UpdateAnimation();
-            }
-        }
+		if(!pauseScript.pausePanel.activeSelf)
+		{
+			characterMovement.MoveUpdate();
+			if (!characterStatus.onWall)
+			{
+				characterInventory.InventoryUpdate();
+				characterInput.InputUpdate();
+				if (!characterStatus.isBehindCover)
+				{
+					characterAnimation.UpdateAnimation();
+				}
+			}
+		}
+		
+        
     }
 
     private void StandartStats()

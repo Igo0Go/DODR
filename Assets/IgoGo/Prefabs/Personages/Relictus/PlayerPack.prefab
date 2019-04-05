@@ -5574,16 +5574,7 @@ MonoBehaviour:
   source: {fileID: 82560076573687432}
   anim: {fileID: 95019559906979412}
   musicBoxes:
-  - clip: {fileID: 8300000, guid: aadbac831cb9be546af90d2dde04567e, type: 3}
-    loop: 1
-    hide: 0
-  - clip: {fileID: 8300000, guid: ce46d48f7520fdb49b1c506e4a4ffff1, type: 3}
-    loop: 0
-    hide: 1
-  - clip: {fileID: 8300000, guid: aadbac831cb9be546af90d2dde04567e, type: 3}
-    loop: 1
-    hide: 1
-  - clip: {fileID: 8300000, guid: 7e94b17fb9447974f95ed56c6f9584a5, type: 3}
+  - clip: {fileID: 8300000, guid: 17ab4884a66dc0c42b034ad57ff3c6db, type: 3}
     loop: 1
     hide: 0
   debug: 0
@@ -6208,8 +6199,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362432168017894}
-  m_LocalRotation: {x: 0, y: 0.8610176, z: 0, w: -0.50857514}
-  m_LocalPosition: {x: 542.31, y: 368.04, z: 105.53}
+  m_LocalRotation: {x: -0.026927713, y: 0.074290335, z: -0.002007261, w: -0.996871}
+  m_LocalPosition: {x: 1.2102509, y: -1.5584221, z: -1.0354457}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4582837891142488}
@@ -6250,6 +6241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73b8466152abfa5468787c1df9346383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseScript: {fileID: 1747393965213469638}
   characterStatus: {fileID: 11400000, guid: 439e49fe9b9950b44adb5bb4065b4752, type: 2}
   cameraHandler: {fileID: 114002092666769382}
   characterMovement: {fileID: 114499223917947044}
@@ -19559,3 +19551,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 7112681138777317229}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1747393965213469638 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8830059418986255531, guid: 0d2cb6d0aa4f27840903c965a50fc608,
+    type: 3}
+  m_PrefabInstance: {fileID: 7112681138777317229}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 493632b44c4733f449cf0a90a98c71c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
