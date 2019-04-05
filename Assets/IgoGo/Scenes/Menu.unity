@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872692, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5438,6 +5438,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848567437383988, guid: 4fe9f9f525b7c0645a94a5b240a7ce8d,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4140388243045708, guid: 4fe9f9f525b7c0645a94a5b240a7ce8d, type: 3}
       propertyPath: m_LocalScale.x
@@ -13070,6 +13075,26 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.032707386
       objectReference: {fileID: 0}
+    - target: {fileID: 114848567437383988, guid: 4fe9f9f525b7c0645a94a5b240a7ce8d,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848567437383988, guid: 4fe9f9f525b7c0645a94a5b240a7ce8d,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848567437383988, guid: 4fe9f9f525b7c0645a94a5b240a7ce8d,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848567437383988, guid: 4fe9f9f525b7c0645a94a5b240a7ce8d,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 4140388243045708, guid: 4fe9f9f525b7c0645a94a5b240a7ce8d, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -15899,7 +15924,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2110097532}
   m_LocalRotation: {x: 0.082379885, y: -0, z: -0, w: 0.996601}
-  m_LocalPosition: {x: 0, y: 1.593, z: -2.299}
+  m_LocalPosition: {x: 0, y: 1.65, z: -2.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 863453783}
