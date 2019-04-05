@@ -10,7 +10,7 @@ public class ReplicSceneLoader : UsingObject
 
     private bool replicComplete;
     [SerializeField] private bool trigger = false;
-    private AsyncOperation loader;
+    public AsyncOperation loader;
 
     private void Start()
     {

@@ -153,6 +153,13 @@
             <e p="TurretScriptController.cs" t="Include" />
           </e>
         </e>
+        <e p="Pause" t="Include">
+          <e p="Menu" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="PauseScript.cs" t="Include" />
+            </e>
+          </e>
+        </e>
       </e>
       <e p="DODR.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />

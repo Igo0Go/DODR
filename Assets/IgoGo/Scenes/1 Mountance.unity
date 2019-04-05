@@ -12349,11 +12349,20 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.9392434
       objectReference: {fileID: 0}
+    - target: {fileID: 1836942127296322, guid: b9752ef6fc21760409128bc29089995c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114553962455157640, guid: b9752ef6fc21760409128bc29089995c,
         type: 3}
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1747393965213469638, guid: b9752ef6fc21760409128bc29089995c,
+        type: 3}
+      propertyPath: loader
+      value: 
+      objectReference: {fileID: 154052044}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9752ef6fc21760409128bc29089995c, type: 3}
 --- !u!114 &471114346 stripped
