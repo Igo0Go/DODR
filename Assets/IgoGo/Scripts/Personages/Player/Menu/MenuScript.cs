@@ -14,6 +14,7 @@ public class MenuScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
+        Cursor.lockState = CursorLockMode.None;
 	}
 	
 	// Update is called once per frame

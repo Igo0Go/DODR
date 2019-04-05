@@ -14,12 +14,11 @@ public enum EnemyState
 
 public class SuperBotControllerChanged : MonoBehaviour
 {
-
-
     public Transform Target;
 
     public Vector3 LastPosition;
     public Vector3 StandardPosition;
+    
     public AutoWeapon gun;
     
     public float Distance; //дистанция до цели
@@ -29,10 +28,13 @@ public class SuperBotControllerChanged : MonoBehaviour
     public float RangeMeleeAttack; // радиус мили атаки
     public float RangeAttack; // радиус атаки в момент времени
     public float AngleVision; // угол обзора бота
+    public float AngleVisionAlert; // alert
+    public float AngleVisionStandart; //standart
     public float AngleCamera; // угол обзора камеры
     public float anglecam; // угол между фронтом камеры и ботом
     public float Camshooting; // угол при котором можно сказать что игрок целится в нас
-
+    public float AngleShhotingForBot;
+   
     public NavMeshAgent NavAgent;
 
     public Camera MainCamera;
@@ -40,6 +42,7 @@ public class SuperBotControllerChanged : MonoBehaviour
     public bool IsMeleeAttack;
     public bool wait;
     public bool alive;
+    public bool Alert;
 
     public Version Version; //енум
 
@@ -57,6 +60,8 @@ public class SuperBotControllerChanged : MonoBehaviour
         LastPosition = new Vector3(1000f, 1000f, 1000f);
         StandardPosition = LastPosition;
         wait = false;
+        AngleVisionStandart = AngleVision;
+        AngleVisionAlert = 360f;
     }
 
     void Update()
@@ -66,29 +71,55 @@ public class SuperBotControllerChanged : MonoBehaviour
             DistanceTP = Vector3.Distance(transform.position, Target.position);
         }
     }
+    protected virtual IEnumerator Alarm()////почему он не ждет двух секунд и отключает сразу?
+    {
+        
+        yield return new WaitForSeconds(2);
+        Alert = false;
+
+    }
 
     private void Attack() // кооод
     {
-        if (IsMeleeAttack || Distance <= RangeMeleeAttack)
+        Quaternion look = Quaternion.LookRotation(Target.transform.position - transform.position);
+        float anglevis = Quaternion.Angle(transform.rotation, look); //угол между ботом и персом
+        if (anglevis > AngleShhotingForBot)
         {
-            
-            if (Anim.GetBool("Shoot"))
-            {
-                Anim.SetBool("Shoot",false);
-            }
-            NavAgent.destination = transform.position;
-            Anim.SetTrigger("Fight");
-            Anim.SetFloat("Xstate",0);
-            Anim.SetFloat("Ystate",-1);
-            //State = EnemyState.Fight;
+            Vector3 relativePos = Target.position - transform.position;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(relativePos), Time.deltaTime * 5);
         }
         else
         {
-            NavAgent.destination = transform.position;
-           Anim.SetBool("Shoot", true); 
+            if (IsMeleeAttack || Distance <= RangeMeleeAttack)
+            {
             
-            
+                if (Anim.GetBool("Shoot"))
+                {
+                    Anim.SetBool("Shoot",false);
+                }
+                NavAgent.destination = transform.position;
+                
+                    Anim.SetTrigger("Fight");
+                    Anim.SetFloat("Xstate",0);
+                    Anim.SetFloat("Ystate",-1);
+                    //State = EnemyState.Fight;
+                
+                
+            }
+            else
+            {
+               
+               
+               
+                    NavAgent.destination = transform.position;
+                    Anim.SetBool("Shoot", true);
+                
+
+                        
+                
+            } 
         }
+        
 
     }
 
@@ -122,25 +153,17 @@ public class SuperBotControllerChanged : MonoBehaviour
                         CaseMethod(false, UnityEngine.Random.Range(-1, 1.1f), -1,  Target.transform.position);
                         StartCoroutine(GetRandomStayState());
                     }
-
                     break;
-
+                
                 case EnemyState.Walk:
-                    //PlayThisClip(audioSource, Moves[1]);
                     CaseMethod(true, 0, 1, Target.transform.position);
                     break;
-
-                case EnemyState.Attack:
-                    //GetAttackDistance();
-                    //PlayThisClip(audioSource, Moves[0]);
-                     // подкорректить 
-                    break;
+                
                 case EnemyState.Fight:
                     Debug.Log("1234");
                     Anim.SetTrigger("Fight");
                     break;
-                case EnemyState.WaitAttack:
-                    break;
+
                     
             }
         }
@@ -193,6 +216,15 @@ public class SuperBotControllerChanged : MonoBehaviour
             {
                 RangeAttack = RangeShoot;
             }
+
+            if (Alert)
+            {
+                AngleVision = AngleVisionAlert;
+            }
+            else
+            {
+                AngleVision = AngleVisionStandart;
+            }
             
             if (Version == Version.Standart)
             {
@@ -205,10 +237,17 @@ public class SuperBotControllerChanged : MonoBehaviour
                         IsMeleeAttack = false;
                     }
 
+                    if (Alert)
+                    {
+                        StartCoroutine(Alarm());
+                    }
+
                     if (Anim.GetBool("Shoot"))
                     {
                         Anim.SetBool("Shoot",false);
                     }
+                    // переключалка опасности
+                    
                     NavAgent.destination = Target.transform.position;
                     StateSolver = EnemyState.Walk;
                     LastPosition = Target.position;
@@ -225,22 +264,32 @@ public class SuperBotControllerChanged : MonoBehaviour
                     }
                     else // код атаки
                     {
-                        //подготовка к стрельбе 
-                        // стрельба = карутин с ключом
                         LastPosition = Target.position;
                         NavAgent.destination = transform.position;
+                        if (!Alert)
+                        {
+                            Alert = true;
+                            //StartCoroutine(Alarm()); куда бы его переместить? 
+                            
+                        }
                         Attack(); // делать код к атаке полностью в этом методе
 
                     }
 
                 }
-                else if (LastPosition != StandardPosition)
+                else if (LastPosition != StandardPosition )
                 {
+                    
                     if (Anim.GetBool("Shoot"))
                     {
                         Anim.SetBool("Shoot",false);
                     }
                     NavAgent.destination = LastPosition;
+                    if (LastPosition.x == transform.position.x &&LastPosition.z == transform.position.z)
+                    {
+                        
+                        LastPosition = StandardPosition;
+                    }
                 }
                 else
                 {
@@ -248,9 +297,16 @@ public class SuperBotControllerChanged : MonoBehaviour
                     {
                         Anim.SetBool("Shoot",false);
                     }
+                    if (!wait)
+                    {
+                        wait = true;
+                        CaseMethod(false, UnityEngine.Random.Range(-1, 1.1f), -1,  Target.transform.position);
+                        StartCoroutine(GetRandomStayState());
+                    }
+                    
                     NavAgent.destination = transform.position;
                     //стоп
-                    StateSolver = EnemyState.Stay;
+                    //StateSolver = EnemyState.Stay;
                 }
             }
             else if (Version == Version.Meele)
