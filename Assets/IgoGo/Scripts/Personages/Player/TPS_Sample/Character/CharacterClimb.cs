@@ -197,7 +197,7 @@ public class CharacterClimb : MyTools, IPlayerPart {
         anim.SetBool("OnGround", true);
     }
 
-    public void Initiolize(SampleController sampleController)
+    public void Initialize(SampleController sampleController)
     {
         fall = false;
         characterInventory = sampleController.characterInventory;

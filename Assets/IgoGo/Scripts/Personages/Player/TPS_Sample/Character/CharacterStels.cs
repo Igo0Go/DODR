@@ -43,7 +43,7 @@ public class CharacterStels : MyTools, IPlayerPart {
         }
     }
 
-    public void Initiolize(SampleController sampleController)
+    public void Initialize(SampleController sampleController)
     {
         cameraHandler = sampleController.cameraHandler;
         characterStatus = sampleController.characterStatus;

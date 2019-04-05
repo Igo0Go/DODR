@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27c6926b-f4b6-4624-adc6-1aa811cbfe23" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DODR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DODR/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Personages/Relictus/PlayerPack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Prefabs/Personages/Relictus/PlayerPack.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Scenes/0 Tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Scenes/0 Tutorial.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Scenes/1 Mountance.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Scenes/1 Mountance.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Scripts/GameSystems/ReplicSceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Scripts/GameSystems/ReplicSceneLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Menem/Scenes/bots scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Menem/Scenes/bots scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/CameraHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/CameraHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/CharacterAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/CharacterAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/CharacterClimb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/CharacterClimb.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/CharacterFight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/CharacterFight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/CharacterIK.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/CharacterIK.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/CharacterInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/CharacterInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/CharacterInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/CharacterInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/CharacterMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/CharacterMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/CharacterStels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/CharacterStels.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/SampleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/SampleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pause/Menu/Scripts/PauseScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pause/Menu/Scripts/PauseScript.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,111 +25,36 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/GameSystems/ReplicSceneLoader.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-              <folding>
-                <marker date="1554444726042" expanded="false" signature="6:113" ph="..." />
-                <marker date="1554444726042" expanded="true" signature="159:946" ph="{...}" />
-                <marker date="1554444726042" expanded="true" signature="363:524" ph="{...}" />
-                <marker date="1554444726042" expanded="true" signature="558:626" ph="{...}" />
-                <marker date="1554444726042" expanded="true" signature="661:761" ph="{...}" />
-                <marker date="1554444726042" expanded="true" signature="706:755" ph="{...}" />
-                <marker date="1554444726042" expanded="true" signature="795:851" ph="{...}" />
-                <marker date="1554444726042" expanded="true" signature="883:944" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Pause/Menu/Scripts/PauseScript.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+            <state relative-caret-position="608">
+              <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
               <folding>
-                <marker date="1554444898060" expanded="false" signature="6:113" ph="..." />
-                <marker date="1554444898060" expanded="true" signature="155:1798" ph="{...}" />
-                <marker date="1554444898060" expanded="true" signature="321:439" ph="{...}" />
-                <marker date="1554444898060" expanded="true" signature="497:960" ph="{...}" />
-                <marker date="1554444898060" expanded="true" signature="549:954" ph="{...}" />
-                <marker date="1554444898060" expanded="true" signature="598:665" ph="{...}" />
-                <marker date="1554444898060" expanded="true" signature="667:785" ph="/* if (settingPanel.activeSelf) ... */" />
-                <marker date="1554444898060" expanded="true" signature="999:1158" ph="{...}" />
-                <marker date="1554444898060" expanded="true" signature="1195:1361" ph="{...}" />
-                <marker date="1554444898060" expanded="true" signature="1399:1490" ph="{...}" />
-                <marker date="1554444898060" expanded="true" signature="1525:1663" ph="{...}" />
-                <marker date="1554444898060" expanded="true" signature="1705:1796" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/CameraHandler.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="80" selection-start-line="80" selection-end-line="80" />
-              <folding>
-                <marker date="1554436108515" expanded="false" signature="6:78" ph="..." />
-                <marker date="1554436108515" expanded="true" signature="130:6513" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="836:1071" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="854:905" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="917:1065" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="987:1055" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="1194:1271" ph="{...}" />
-                <marker date="1554436108515" expanded="false" signature="1574:1786" ph="Служебные переменные" />
-                <marker date="1554436108515" expanded="true" signature="1812:1862" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="1893:1966" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="1997:2459" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="2174:2295" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="2308:2453" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="2484:2684" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="2718:4265" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="2886:2938" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="2978:3229" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="3014:3088" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="3105:3178" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="3575:3664" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="3677:3923" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="4040:4115" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="4128:4259" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="4299:5436" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="4479:4705" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="4718:4798" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="4915:5057" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="5474:5735" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="5500:5729" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="5777:5832" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="5862:6136" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="5891:6000" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="6013:6130" ph="{...}" />
-                <marker date="1554436108515" expanded="true" signature="6199:6511" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/Menu/MenuScript.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <marker date="1554440391508" expanded="false" signature="6:78" ph="..." />
-                <marker date="1554440391508" expanded="true" signature="119:650" ph="{...}" />
-                <marker date="1554440391508" expanded="true" signature="278:379" ph="{...}" />
-                <marker date="1554440391508" expanded="true" signature="427:648" ph="{...}" />
-                <marker date="1554440391508" expanded="true" signature="575:642" ph="{...}" />
+                <marker date="1554457675830" expanded="false" signature="6:113" ph="..." />
+                <marker date="1554457675830" expanded="true" signature="155:1836" ph="{...}" />
+                <marker date="1554457675830" expanded="true" signature="321:439" ph="{...}" />
+                <marker date="1554457675830" expanded="true" signature="497:989" ph="{...}" />
+                <marker date="1554457675830" expanded="true" signature="549:983" ph="{...}" />
+                <marker date="1554457675830" expanded="true" signature="598:689" ph="{...}" />
+                <marker date="1554457675830" expanded="true" signature="691:809" ph="/* if (settingPanel.activeSelf) ... */" />
+                <marker date="1554457675830" expanded="true" signature="1028:1196" ph="{...}" />
+                <marker date="1554457675830" expanded="true" signature="1233:1399" ph="{...}" />
+                <marker date="1554457675830" expanded="true" signature="1437:1528" ph="{...}" />
+                <marker date="1554457675830" expanded="true" signature="1563:1701" ph="{...}" />
+                <marker date="1554457675830" expanded="true" signature="1743:1834" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>initi</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -128,6 +63,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/CameraHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/GameSystems/ReplicSceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Pause/Menu/Scripts/PauseScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/SampleController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/Menu/MenuScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -135,6 +71,8 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/Menu/MenuScript.cs" />
         <option value="$PROJECT_DIR$/Assets/IgoGo/Scripts/GameSystems/ReplicSceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/SampleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/CameraHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Pause/Menu/Scripts/PauseScript.cs" />
       </list>
     </option>
@@ -151,12 +89,12 @@
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
       </pane>
-      <pane id="FileSystemExplorer" />
-      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -185,10 +123,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="96767">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="96767" />
       <method v="2" />
     </configuration>
   </component>
@@ -202,12 +140,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554439212082</updated>
-      <workItem from="1554439215955" duration="3120000" />
+      <workItem from="1554439215955" duration="3358000" />
+      <workItem from="1554455942573" duration="989000" />
+      <workItem from="1554457304621" duration="499000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3120000" />
+    <option name="totallyTimeSpent" value="4846000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -222,32 +162,32 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22283272" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22771673" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="NuGet" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unity" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.24795918" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Unity" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Unit Tests" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="13" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Errors In Solution" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +206,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Pause/Menu/Scripts/SettingScript.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/Menu/MenuScript.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -279,9 +220,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Pause/Menu/Scripts/SettingScript.cs">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/GameSystems/ReplicSceneLoader.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -300,66 +238,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Pause/Menu/Scripts/PauseScript.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/CameraHandler.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+        <state relative-caret-position="1113">
+          <caret line="240" selection-start-line="240" selection-end-line="240" />
           <folding>
-            <marker date="1554444898060" expanded="false" signature="6:113" ph="..." />
-            <marker date="1554444898060" expanded="true" signature="155:1798" ph="{...}" />
-            <marker date="1554444898060" expanded="true" signature="321:439" ph="{...}" />
-            <marker date="1554444898060" expanded="true" signature="497:960" ph="{...}" />
-            <marker date="1554444898060" expanded="true" signature="549:954" ph="{...}" />
-            <marker date="1554444898060" expanded="true" signature="598:665" ph="{...}" />
-            <marker date="1554444898060" expanded="true" signature="667:785" ph="/* if (settingPanel.activeSelf) ... */" />
-            <marker date="1554444898060" expanded="true" signature="999:1158" ph="{...}" />
-            <marker date="1554444898060" expanded="true" signature="1195:1361" ph="{...}" />
-            <marker date="1554444898060" expanded="true" signature="1399:1490" ph="{...}" />
-            <marker date="1554444898060" expanded="true" signature="1525:1663" ph="{...}" />
-            <marker date="1554444898060" expanded="true" signature="1705:1796" ph="{...}" />
+            <marker date="1554457187726" expanded="false" signature="6:78" ph="..." />
+            <marker date="1554457187726" expanded="true" signature="129:6424" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="809:1017" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="862:1011" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="933:1001" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="1140:1217" ph="{...}" />
+            <marker date="1554457187726" expanded="false" signature="1521:1735" ph="Служебные переменные" />
+            <marker date="1554457187726" expanded="true" signature="1761:1811" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="1842:1915" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="1946:2424" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="2123:2244" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="2257:2418" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="2449:2649" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="2684:4230" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="2852:2904" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="2944:3197" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="2981:3055" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="3072:3145" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="3545:3634" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="3647:3893" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="4005:4080" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="4093:4224" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="4265:5396" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="4446:4672" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="4685:4765" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="4882:5040" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="5434:5696" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="5461:5690" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="5739:5794" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="5825:6100" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="5855:5964" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="5977:6094" ph="{...}" />
+            <marker date="1554457187726" expanded="true" signature="6163:6422" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/CameraHandler.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/IgoGo/Scripts/Personages/Player/TPS_Sample/Character/SampleController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        <state relative-caret-position="520">
+          <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
           <folding>
-            <marker date="1554436108515" expanded="false" signature="6:78" ph="..." />
-            <marker date="1554436108515" expanded="true" signature="130:6513" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="836:1071" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="854:905" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="917:1065" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="987:1055" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="1194:1271" ph="{...}" />
-            <marker date="1554436108515" expanded="false" signature="1574:1786" ph="Служебные переменные" />
-            <marker date="1554436108515" expanded="true" signature="1812:1862" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="1893:1966" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="1997:2459" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="2174:2295" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="2308:2453" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="2484:2684" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="2718:4265" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="2886:2938" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="2978:3229" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="3014:3088" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="3105:3178" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="3575:3664" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="3677:3923" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="4040:4115" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="4128:4259" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="4299:5436" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="4479:4705" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="4718:4798" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="4915:5057" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="5474:5735" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="5500:5729" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="5777:5832" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="5862:6136" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="5891:6000" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="6013:6130" ph="{...}" />
-            <marker date="1554436108515" expanded="true" signature="6199:6511" ph="{...}" />
+            <marker date="1554457183475" expanded="false" signature="6:129" ph="..." />
+            <marker date="1554457183475" expanded="true" signature="159:219" ph="{...}" />
+            <marker date="1554457183475" expanded="true" signature="266:4082" ph="{...}" />
+            <marker date="1554457183475" expanded="true" signature="1206:1652" ph="{...}" />
+            <marker date="1554457183475" expanded="true" signature="1257:1646" ph="{...}" />
+            <marker date="1554457183475" expanded="true" signature="1302:1636" ph="{...}" />
+            <marker date="1554457183475" expanded="true" signature="1678:2375" ph="{...}" />
+            <marker date="1554457183475" expanded="true" signature="2402:2733" ph="{...}" />
+            <marker date="1554457183475" expanded="true" signature="2485:2727" ph="{...}" />
+            <marker date="1554457183475" expanded="true" signature="2635:2717" ph="{...}" />
+            <marker date="1554457183475" expanded="true" signature="2767:3124" ph="{...}" />
+            <marker date="1554457183475" expanded="true" signature="3171:3586" ph="{...}" />
+            <marker date="1554457183475" expanded="true" signature="3200:3538" ph="{...}" />
+            <marker date="1554457183475" expanded="true" signature="3610:3700" ph="{...}" />
+            <marker date="1554457183475" expanded="true" signature="3728:3932" ph="{...}" />
+            <marker date="1554457183475" expanded="true" signature="3964:4080" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Pause/Menu/Scripts/PauseScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+          <folding>
+            <marker date="1554457675830" expanded="false" signature="6:113" ph="..." />
+            <marker date="1554457675830" expanded="true" signature="155:1836" ph="{...}" />
+            <marker date="1554457675830" expanded="true" signature="321:439" ph="{...}" />
+            <marker date="1554457675830" expanded="true" signature="497:989" ph="{...}" />
+            <marker date="1554457675830" expanded="true" signature="549:983" ph="{...}" />
+            <marker date="1554457675830" expanded="true" signature="598:689" ph="{...}" />
+            <marker date="1554457675830" expanded="true" signature="691:809" ph="/* if (settingPanel.activeSelf) ... */" />
+            <marker date="1554457675830" expanded="true" signature="1028:1196" ph="{...}" />
+            <marker date="1554457675830" expanded="true" signature="1233:1399" ph="{...}" />
+            <marker date="1554457675830" expanded="true" signature="1437:1528" ph="{...}" />
+            <marker date="1554457675830" expanded="true" signature="1563:1701" ph="{...}" />
+            <marker date="1554457675830" expanded="true" signature="1743:1834" ph="{...}" />
           </folding>
         </state>
       </provider>

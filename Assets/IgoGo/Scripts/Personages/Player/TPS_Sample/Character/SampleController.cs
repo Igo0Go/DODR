@@ -6,17 +6,14 @@ using UnityEngine.UI;
 
 public interface IPlayerPart
 {
-    void Initiolize(SampleController sampleController);
+    void Initialize(SampleController sampleController);
 }
 
-public class SampleController : MonoBehaviour {
-
-    
-
+public class SampleController : MonoBehaviour
+{
     public CharacterStatus characterStatus;
     public CameraHandler cameraHandler;
-    [Space(10)]
-    public CharacterMovement characterMovement;
+    [Space(10)] public CharacterMovement characterMovement;
     public CharacterAnimation characterAnimation;
     public CharacterReactions characterReactions;
     public CharacterFight characterFight;
@@ -26,8 +23,7 @@ public class SampleController : MonoBehaviour {
     public CharacterClimb characterClimb;
     public CharacterStels characterStels;
 
-    [Space(20)]
-    public PlayableDirector deadPanel;
+    [Space(20)] public PlayableDirector deadPanel;
     public ParticleSystem respawn;
     public Crosshair crosshair;
     public Animator anim;
@@ -45,10 +41,7 @@ public class SampleController : MonoBehaviour {
 
     private bool Enabled
     {
-        get
-        {
-            return _enabled;
-        }
+        get { return _enabled; }
         set
         {
             if (value != _enabled)
@@ -68,17 +61,17 @@ public class SampleController : MonoBehaviour {
         characterController = GetComponent<CharacterController>();
         aud = GetComponent<AudioSource>();
         Cursor.lockState = CursorLockMode.Locked;
-
-        cameraHandler.Initiolize(this);
-        characterMovement.Initiolize(this);
-        characterAnimation.Initiolize(this);
+        Cursor.visible = false;
+        cameraHandler.Initialize(this);
+        characterMovement.Initialize(this);
+        characterAnimation.Initialize(this);
         characterReactions.Initiolize(this);
-        characterFight.Initiolize(this);
-        characterIK.Initiolize(this);
-        characterInventory.Initiolize(this);
-        characterInput.Initiolize(this);
-        characterClimb.Initiolize(this);
-        characterStels.Initiolize(this);
+        characterFight.Initialize(this);
+        characterIK.Initialize(this);
+        characterInventory.Initialize(this);
+        characterInput.Initialize(this);
+        characterClimb.Initialize(this);
+        characterStels.Initialize(this);
         ammoSlider.value = 0;
         Safe();
 
@@ -108,16 +101,16 @@ public class SampleController : MonoBehaviour {
         characterStatus.isSprint = false;
         characterStatus.onWall = false;
         characterStatus.sniper = false;
-		crosshair.Initiolize(characterStatus);
+        crosshair.Initiolize(characterStatus);
     }
 
     public void CheckState(PlayerState state)
     {
-        switch(state)
+        switch (state)
         {
             case PlayerState.dead:
                 NewLife();
-                Invoke("DarkMonitor",0.5f);
+                Invoke("DarkMonitor", 0.5f);
                 break;
             case PlayerState.disactive:
                 Enabled = false;
@@ -126,6 +119,7 @@ public class SampleController : MonoBehaviour {
                 Enabled = true;
                 break;
         }
+
         characterMovement.State = state;
     }
 
@@ -143,6 +137,7 @@ public class SampleController : MonoBehaviour {
         characterReactions.Health = 100;
         characterInventory.RemoveAllShootWeapon();
     }
+
     private void DarkMonitor()
     {
         deadPanel.Play();

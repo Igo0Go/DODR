@@ -87,7 +87,7 @@ public class CharacterAnimation : MyTools, IPlayerPart {
         }
     }
 
-    public void Initiolize(SampleController sampleController)
+    public void Initialize(SampleController sampleController)
     {
         anim = sampleController.anim;
         characterStatus = sampleController.characterStatus;

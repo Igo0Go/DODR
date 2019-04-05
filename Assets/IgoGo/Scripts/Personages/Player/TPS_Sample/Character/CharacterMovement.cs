@@ -66,7 +66,7 @@ public class CharacterMovement : MyTools, IPlayerPart {
 
 
 
-    public void Initiolize(SampleController sampleController)
+    public void Initialize(SampleController sampleController)
     {
         characterController = GetComponent<CharacterController>();
         characterStatus = sampleController.characterStatus;

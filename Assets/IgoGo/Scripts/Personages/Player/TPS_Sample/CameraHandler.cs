@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraHandler : MyTools, IPlayerPart {
-
+public class CameraHandler : MyTools, IPlayerPart
+{
     public Transform cameraTransform;
     public Transform pivot;
     public Transform character;
     public Transform mainTransform;
     public Transform targetLook;
 
-    [HideInInspector] public Camera cam;
+    public Camera cam;
     public LayerMask noPlayerMask;
     public LayerMask engineerMask;
 
@@ -20,12 +20,11 @@ public class CameraHandler : MyTools, IPlayerPart {
     public bool leftPivot;
     [HideInInspector] public bool rotateMode;
     public bool noObstacles;
-    [HideInInspector]
-    public bool smoothyCam;
+    [HideInInspector] public bool smoothyCam;
 
     public float smoothX;
     public float smoothY;
-    
+
     public float smoothXVelocity;
     public float smoothYVelocity;
 
@@ -35,15 +34,12 @@ public class CameraHandler : MyTools, IPlayerPart {
     [HideInInspector]
     public bool StaticCam
     {
-        get
-        {
-            return _staticCam;
-        }
+        get { return _staticCam; }
         set
         {
             _staticCam = value;
 
-            if(_staticCam)
+            if (_staticCam)
             {
                 angelBufer = lookAngel;
             }
@@ -57,6 +53,7 @@ public class CameraHandler : MyTools, IPlayerPart {
     {
         get { return character.position + character.up * 1.5f; }
     }
+
     private Vector3 standartCamLocalPos;
     private LayerMask defaultMask;
     private float step;
@@ -69,11 +66,13 @@ public class CameraHandler : MyTools, IPlayerPart {
     private bool _staticCam;
 
     #region Служебные переменные
+
     private Vector3 newCamPosition;
     private Vector3 dir;
     private Vector3 newPivotPosition;
     private Vector3 targetPosition;
     private Quaternion targetRot;
+
     #endregion
 
     private void Start()
@@ -98,7 +97,8 @@ public class CameraHandler : MyTools, IPlayerPart {
         }
         else
         {
-            targetLook.position = Vector3.Lerp(targetLook.position, targetLook.transform.forward * 200, Time.deltaTime * 5);
+            targetLook.position =
+                Vector3.Lerp(targetLook.position, targetLook.transform.forward * 200, Time.deltaTime * 5);
         }
     }
 
@@ -110,6 +110,7 @@ public class CameraHandler : MyTools, IPlayerPart {
         targetPosition = Vector3.Lerp(mainTransform.position, character.position, 1);
         mainTransform.position = targetPosition;
     }
+
     private void HandlePosition()
     {
         float targetX = cameraConfig.normalX;
@@ -124,7 +125,7 @@ public class CameraHandler : MyTools, IPlayerPart {
 
         if (characterStatus.isAiming)
         {
-            if(leftPivot)
+            if (leftPivot)
             {
                 targetX = -cameraConfig.aimX;
             }
@@ -132,20 +133,20 @@ public class CameraHandler : MyTools, IPlayerPart {
             {
                 targetX = cameraConfig.aimX;
             }
+
             targetZ = cameraConfig.aimZ;
         }
 
-        
 
         newPivotPosition = pivot.localPosition;
         newPivotPosition.x = targetX;
         newPivotPosition.y = targetY;
 
 
-
         dir = cameraTransform.position - CharacterPos;
         RaycastHit hit;
-        if (Physics.Raycast(CharacterPos, dir, out hit, Vector3.Distance(CharacterPos, cameraTransform.position), noPlayerMask))
+        if (Physics.Raycast(CharacterPos, dir, out hit, Vector3.Distance(CharacterPos, cameraTransform.position),
+            noPlayerMask))
         {
             newCamPosition = hit.point;
             obstacle = true;
@@ -156,9 +157,10 @@ public class CameraHandler : MyTools, IPlayerPart {
             newCamPosition = cameraTransform.localPosition;
             newCamPosition.z = targetZ;
             obstacle = false;
-        }       
+        }
+
         pivot.localPosition = Vector3.Lerp(pivot.localPosition, newPivotPosition, step);
-        if(obstacle)
+        if (obstacle)
         {
             cameraTransform.position = newCamPosition;
         }
@@ -167,6 +169,7 @@ public class CameraHandler : MyTools, IPlayerPart {
             cameraTransform.localPosition = Vector3.Lerp(cameraTransform.localPosition, newCamPosition, step);
         }
     }
+
     private void HandleRotation()
     {
         mouseX = Input.GetAxis("Mouse X");
@@ -174,7 +177,7 @@ public class CameraHandler : MyTools, IPlayerPart {
 
         characterStatus.currentXrot = mouseX;
 
-        if(cameraConfig.turnSmooth > 0)
+        if (cameraConfig.turnSmooth > 0)
         {
             smoothX = Mathf.SmoothDamp(smoothX, mouseX, ref smoothXVelocity, cameraConfig.turnSmooth);
             smoothY = Mathf.SmoothDamp(smoothY, mouseY, ref smoothYVelocity, cameraConfig.turnSmooth);
@@ -189,12 +192,13 @@ public class CameraHandler : MyTools, IPlayerPart {
 
         if (StaticCam)
         {
-            lookAngel = Mathf.Clamp(lookAngel, angelBufer + cameraConfig.minXAngel, angelBufer + cameraConfig.maxXAngel);
+            lookAngel = Mathf.Clamp(lookAngel, angelBufer + cameraConfig.minXAngel,
+                angelBufer + cameraConfig.maxXAngel);
         }
-       
-            targetRot = Quaternion.Euler(0, lookAngel, 0);
-            mainTransform.rotation = targetRot;
-        
+
+        targetRot = Quaternion.Euler(0, lookAngel, 0);
+        mainTransform.rotation = targetRot;
+
         titlAngel -= smoothY * characterInput.sniperMultiplicator * cameraConfig.yRotSpeed;
         titlAngel = Mathf.Clamp(titlAngel, cameraConfig.minYAngel, cameraConfig.maxYAngel);
         pivot.localRotation = Quaternion.Euler(titlAngel, 0, 0);
@@ -202,7 +206,7 @@ public class CameraHandler : MyTools, IPlayerPart {
 
     public void SetMask(KitType kit)
     {
-        switch(kit)
+        switch (kit)
         {
             case KitType.NoSuit:
                 cam.cullingMask = defaultMask;
@@ -212,13 +216,15 @@ public class CameraHandler : MyTools, IPlayerPart {
                 break;
         }
     }
+
     public void EnabledCamera(bool value)
     {
         cam.gameObject.SetActive(enabled);
     }
+
     public void CameraAngel()
     {
-        if(smoothyCam)
+        if (smoothyCam)
         {
             cam.fieldOfView = SmoothlyChange(cam.fieldOfView, 40, 100 * Time.deltaTime);
         }
@@ -228,11 +234,11 @@ public class CameraHandler : MyTools, IPlayerPart {
         }
     }
 
-    public void Initiolize(SampleController sampleController)
+    public void Initialize(SampleController sampleController)
     {
         rotateMode = true;
         step = Time.fixedDeltaTime * cameraConfig.pivotSpeed;
-        cam = cameraTransform.GetComponent<Camera>();
+
         defaultMask = cam.cullingMask;
         characterStatus = sampleController.characterStatus;
         characterInput = sampleController.characterInput;

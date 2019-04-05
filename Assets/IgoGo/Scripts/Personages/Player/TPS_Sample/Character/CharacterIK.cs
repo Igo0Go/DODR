@@ -73,7 +73,7 @@ public class CharacterIK : MonoBehaviour, IPlayerPart {
     //public bool showSolverDebug = true;
     //#endregion
 
-    public void Initiolize(SampleController sampleController)
+    public void Initialize(SampleController sampleController)
     {
         anim = sampleController.anim;
         characterStatus = sampleController.characterStatus;

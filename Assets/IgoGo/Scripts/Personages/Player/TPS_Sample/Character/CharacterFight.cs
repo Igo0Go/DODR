@@ -44,7 +44,7 @@ public class CharacterFight : MonoBehaviour, IPlayerPart {
         delay = false;
     }
 
-    public void Initiolize(SampleController sampleController)
+    public void Initialize(SampleController sampleController)
     {
         anim = sampleController.anim;
     }

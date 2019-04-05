@@ -27,13 +27,14 @@ public class PauseScript : MonoBehaviour
             if (pausePanel.activeSelf)
             {
                 ContinueButtonClick();
+                return;
             }
 
 //            if (settingPanel.activeSelf)
 //            {
 //                BackSettingButtonClick();
 //            }
-            Time.timeScale = 0;
+            Time.timeScale = 0.001f;
             pausePanel.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -46,6 +47,7 @@ public class PauseScript : MonoBehaviour
         pausePanel.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        
     }
 
     public void ReloadButtonClick()

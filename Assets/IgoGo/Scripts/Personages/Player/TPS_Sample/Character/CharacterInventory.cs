@@ -171,7 +171,7 @@ public class CharacterInventory : MyTools, IPlayerPart {
         secondWeapon = null;
     }
 
-    public void Initiolize(SampleController sampleController)
+    public void Initialize(SampleController sampleController)
     {
         characterStatus = sampleController.characterStatus;
         targetLook = sampleController.cameraHandler.targetLook;
