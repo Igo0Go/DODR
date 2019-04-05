@@ -244,7 +244,13 @@ public class CharacterReactions : MyTools, IAlive {
         {
             NoSuit();
         }
-    }
+    
+		if(other.tag.Equals("EnemySword"))
+		{
+			GetDamage(20);
+		}
+	
+	}
     private void OnTriggerStay(Collider other)
     {
         UsingObject obj;

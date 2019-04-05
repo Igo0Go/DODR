@@ -13,6 +13,7 @@ TagManager:
   - Shelter
   - Helper
   - Sword
+  - EnemySword
   layers:
   - Default
   - TransparentFX

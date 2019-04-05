@@ -72,7 +72,6 @@ public class SuperBotControllerChanged : MonoBehaviour, IAlive
         AngleVisionStandart = AngleVision;
         AngleVisionAlert = 360f;
 		charController = GetComponent<CharacterController>();
-		Debug.Log(charController);
     }
 
     void Update()
@@ -485,7 +484,7 @@ public class SuperBotControllerChanged : MonoBehaviour, IAlive
     {
 		if(other.tag.Equals("Sword"))
 		{
-			GetDamage(30);
+			GetDamage(5);
 		}			
     }
 }
