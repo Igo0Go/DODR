@@ -76,10 +76,14 @@ public class SuperBotControllerChanged : MonoBehaviour, IAlive
 
     void Update()
     {
-        if (Target != null)
-        {
-            DistanceTP = Vector3.Distance(transform.position, Target.position);
-        }
+		if(alive)
+		{
+			if (Target != null)
+			{
+				DistanceTP = Vector3.Distance(transform.position, Target.position);
+			}	
+		}
+        
     }
     protected virtual IEnumerator Alarm()////почему он не ждет двух секунд и отключает сразу?
     {
