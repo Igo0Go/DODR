@@ -1161,7 +1161,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 180, y: 0, z: 0}
+        value: {x: -180, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -1171,8 +1171,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.6666667
         value: {x: -180.242, y: 0, z: 0}
-        inSlope: {x: -229.18497, y: 0, z: 0}
-        outSlope: {x: -229.18497, y: 0, z: 0}
+        inSlope: {x: -0.7260132, y: 0, z: 0}
+        outSlope: {x: -0.7260132, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -1225,15 +1225,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 4
         value: {x: -180, y: 0, z: 0}
-        inSlope: {x: 23.492704, y: 0, z: 0}
-        outSlope: {x: 23.492704, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 12
-        value: {x: 180, y: 0, z: 0}
+        value: {x: -180, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -6117,7 +6117,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 180
+        value: -180
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -6127,8 +6127,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.6666667
         value: -180.242
-        inSlope: -229.18497
-        outSlope: -229.18497
+        inSlope: -0.7260132
+        outSlope: -0.7260132
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -6181,15 +6181,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 4
         value: -180
-        inSlope: 23.492704
-        outSlope: 23.492704
+        inSlope: 0
+        outSlope: 0
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 12
-        value: 180
+        value: -180
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -8253,7 +8253,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: SpecRobo/SpecRoboBody/SpecRoboLUpperArm/SpecRoboLArmSub/SpecRoboLArmSub2/SpecRoboLForearm
+    path: SpecRobo/SpecRoboBody/SpecRoboRUpperArm/SpecRoboRArmSub/SpecRoboRArmSub2/SpecRoboRForearm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -8263,7 +8263,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: SpecRobo/SpecRoboBody/SpecRoboLUpperArm/SpecRoboLArmSub/SpecRoboLArmSub2/SpecRoboLForearm
+    path: SpecRobo/SpecRoboBody/SpecRoboRUpperArm/SpecRoboRArmSub/SpecRoboRArmSub2/SpecRoboRForearm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -8273,7 +8273,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: SpecRobo/SpecRoboBody/SpecRoboLUpperArm/SpecRoboLArmSub/SpecRoboLArmSub2/SpecRoboLForearm
+    path: SpecRobo/SpecRoboBody/SpecRoboRUpperArm/SpecRoboRArmSub/SpecRoboRArmSub2/SpecRoboRForearm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -8433,7 +8433,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: SpecRobo/SpecRoboBody/SpecRoboRUpperArm/SpecRoboRArmSub/SpecRoboRArmSub2/SpecRoboRForearm
+    path: SpecRobo/SpecRoboBody/SpecRoboLUpperArm/SpecRoboLArmSub/SpecRoboLArmSub2/SpecRoboLForearm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -8443,7 +8443,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: SpecRobo/SpecRoboBody/SpecRoboRUpperArm/SpecRoboRArmSub/SpecRoboRArmSub2/SpecRoboRForearm
+    path: SpecRobo/SpecRoboBody/SpecRoboLUpperArm/SpecRoboLArmSub/SpecRoboLArmSub2/SpecRoboLForearm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -8453,7 +8453,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: SpecRobo/SpecRoboBody/SpecRoboRUpperArm/SpecRoboRArmSub/SpecRoboRArmSub2/SpecRoboRForearm
+    path: SpecRobo/SpecRoboBody/SpecRoboLUpperArm/SpecRoboLArmSub/SpecRoboLArmSub2/SpecRoboLForearm
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0

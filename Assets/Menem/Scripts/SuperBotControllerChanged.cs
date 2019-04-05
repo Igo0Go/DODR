@@ -12,7 +12,8 @@ public enum EnemyState
     WaitAttack
 }
 
-public class SuperBotControllerChanged : MonoBehaviour
+[RequireComponent(typeof(CharacterController))]
+public class SuperBotControllerChanged : MonoBehaviour, IAlive
 {
     public Transform Target;
 
@@ -22,7 +23,6 @@ public class SuperBotControllerChanged : MonoBehaviour
     public AutoWeapon gun;
     
     public float Distance; //дистанция до цели
-    [Range(0, 200)] public float HP;
     [Range(0, 50)] public float RangePursuit; // радиус преследования/обнаружения
     [Range(0, 50)] public float RangeShoot; //радиус стрельбы
     public float RangeMeleeAttack; // радиус мили атаки
@@ -52,9 +52,18 @@ public class SuperBotControllerChanged : MonoBehaviour
 
     public GameObject Geosphere; // rename to EyeGeosphere
 
+
+	[Range(0,300)]
+    public int health;
+	private CharacterController charController;
+	public LayerMask ignoreMask;
     
+	
+	
+	
     void Start()
     {
+		alive = true;
         NavAgent = GetComponent<NavMeshAgent>();
         Anim = GetComponent<Animator>();
         LastPosition = new Vector3(1000f, 1000f, 1000f);
@@ -62,6 +71,8 @@ public class SuperBotControllerChanged : MonoBehaviour
         wait = false;
         AngleVisionStandart = AngleVision;
         AngleVisionAlert = 360f;
+		charController = GetComponent<CharacterController>();
+		Debug.Log(charController);
     }
 
     void Update()
@@ -229,7 +240,7 @@ public class SuperBotControllerChanged : MonoBehaviour
             if (Version == Version.Standart)
             {
                 if (Distance < RangePursuit && Distance > RangeAttack && anglevis < AngleVision &&
-                    Physics.Raycast(ray, out hit, RangePursuit) &&
+                    Physics.Raycast(ray, out hit, RangePursuit, ignoreMask) &&
                     hit.transform.gameObject == Target.gameObject) // если он видит перса но не в дистанции атаки
                 {
                     if (anglecam < Camshooting)
@@ -253,7 +264,7 @@ public class SuperBotControllerChanged : MonoBehaviour
                     LastPosition = Target.position;
                 }
                 else if (Distance <= RangeAttack && anglevis < AngleVision &&
-                         Physics.Raycast(ray, out hit, RangePursuit) &&
+                         Physics.Raycast(ray, out hit, RangePursuit, ignoreMask) &&
                          hit.transform.gameObject == Target.gameObject) // если в ренже атаки
                 {
                     
@@ -313,14 +324,14 @@ public class SuperBotControllerChanged : MonoBehaviour
             {
                 IsMeleeAttack = true;
                 if (Distance < RangePursuit && Distance > RangeMeleeAttack && anglevis < AngleVision &&
-                    Physics.Raycast(ray, out hit, RangePursuit) && hit.transform.gameObject == Target)
+                    Physics.Raycast(ray, out hit, RangePursuit, ignoreMask) && hit.transform.gameObject == Target)
                 {
                     NavAgent.destination = Target.position;
                     LastPosition = Target.position;
                     // ShockTurret.GetComponent<TurretScriptController>().target = Target;
                 }
                 else if (Distance <= RangeMeleeAttack && anglevis < AngleVision &&
-                         Physics.Raycast(ray, out hit, RangePursuit))
+                         Physics.Raycast(ray, out hit, RangePursuit, ignoreMask))
                 {
                     IsMeleeAttack = true;
                     Attack();
@@ -341,7 +352,7 @@ public class SuperBotControllerChanged : MonoBehaviour
             {
                 IsMeleeAttack = false;
                 if (Distance < RangePursuit && Distance > RangeShoot && anglevis < AngleVision &&
-                    Physics.Raycast(ray, out hit, RangePursuit) && hit.transform.gameObject == Target)
+                    Physics.Raycast(ray, out hit, RangePursuit, ignoreMask) && hit.transform.gameObject == Target)
                 {
 
                     NavAgent.destination = Target.position;
@@ -374,46 +385,107 @@ public class SuperBotControllerChanged : MonoBehaviour
 
     #region Health Damage and Death
 
-    public virtual void GetDamage(float value)
-    {
-        if (alive)
-        {
+    //public virtual void GetDamage(float value)
+    //{
+      //  if (alive)
+        //{
             //Alarm = true; надо подумать как интегрировать получение урона и стоит ли вообще
-            NavAgent.enabled = false;
-            Health -= value;
-            Anim.SetInteger("Damage", (int)value);
-            Anim.SetTrigger("GetDamage");
-        }
+          //  NavAgent.enabled = false;
+            //Health -= value;
+            //Anim.SetInteger("Damage", (int)value);
+            //Anim.SetTrigger("GetDamage");
+        //}
+    //}
+	#endregion
+	
+	#region IAlive
+	
+	public void GetDamage(int damage)
+    {
+		if(alive)
+		{
+			if (Health > 0)
+            {
+				NavAgent.destination = transform.position;
+				Anim.SetTrigger("Damage");
+                Health -= damage;
+			}
+		}
     }
   
-    public virtual void Death()
+	public void ShockEffect(float time)
+    {
+        
+    }
+	
+	public void Dead()
     {
         alive = false;
-        NavAgent.enabled = false;
-        Anim.SetTrigger("Dead");
+        NavAgent.destination = transform.position;
+		Anim.SetInteger("Health", health);
+        Anim.SetTrigger("Damage");
     }
-    
-    public virtual float Health
+	
+	public void DestroyModel()
+	{
+		Destroy(gameObject);
+	}
+  
+	public float Health
     {
-        get { return HP; }
+        get
+        {
+            return health;
+        }
 
         set
         {
-            if (value <= 0 && alive)
+            health = (int)value;
+            if (health <= 0)
             {
-                Death();
-                alive = false;
-                HP = 0;
+				alive = false;
+                Dead();
             }
-
-            HP = value;
+			else
+			{
+				Anim.SetInteger("Health", health);
+			}
         }
     }
+  
+	#endregion
+  
+    //public virtual void Death()
+    //{
+      //  alive = false;
+       // NavAgent.enabled = false;
+        //Anim.SetTrigger("Dead");
+    //}
     
-    #endregion 
+    //public virtual float Health
+    //{
+      //  get { return HP; }
+
+        //set
+        //{
+          //  if (value <= 0 && alive)
+            //{
+              //  Death();
+                //alive = false;
+                //HP = 0;
+            //}
+
+            //HP = value;
+        //}
+    //}
+    
 
 
     protected virtual void OnTriggerEnter(Collider other)
     {
+		if(other.tag.Equals("Sword"))
+		{
+			GetDamage(30);
+		}			
     }
 }
