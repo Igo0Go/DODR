@@ -144,7 +144,10 @@ public class ShootWeapon : Weapon {
             if (!delay)
             {
                 InstanceBullet();
-                aud.PlayOneShot(shootClip);
+                if(aud.enabled)
+                {
+                    aud.PlayOneShot(shootClip);
+                }
                 muzzleFlash.Play();
                 delay = true;
                 Invoke("FinalDelay", delayTime);

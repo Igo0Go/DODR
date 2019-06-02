@@ -93,4 +93,11 @@ public class SecurityBot : MonoBehaviour {
             myMove = move;
         }
     }
+
+    public void ToDeault()
+    {
+        myMove = 0;
+        move = 0;
+        target = startPos;
+    }
 }

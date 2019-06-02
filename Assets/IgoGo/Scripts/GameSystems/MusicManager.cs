@@ -77,6 +77,11 @@ public abstract class MyTools : MonoBehaviour
             return target;
         }
     }
+
+    public void Invoke(SimpleHandler task, float time)
+    {
+        Invoke(task.Method.Name, time);
+    }
 }
 
 public class MusicManager : MyTools {

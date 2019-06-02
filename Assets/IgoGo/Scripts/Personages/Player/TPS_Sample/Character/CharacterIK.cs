@@ -51,28 +51,6 @@ public class CharacterIK : MonoBehaviour, IPlayerPart {
 
     #endregion
 
-
-    //#region IK служебное
-    //private Vector3 rightFootPosition, LeftFootPosition, RightFootIKPosition, LeftFootIKPosition;
-    //private Quaternion leftFootIKRotation, rightFootIKRotation;
-    //private float lastPelvisPositionY, LastRightFootPositionY, LastLeftFoorPositionY;
-
-    //[Header("Feet Grounder")]
-    //private bool enableFeetIK;
-    //[Range(0, 2)] [SerializeField] private float heightFromGroundRaycast = 1.14f;
-    //[Range(0, 2)] [SerializeField] private float raycastDownDistance = 1.5f;
-    //[SerializeField] private LayerMask environmentMask;
-    //[SerializeField] private float pelvisOffset = 0f;
-    //[Range(0, 1)] [SerializeField] private float pelvisUpAndDownSpeed = 0.28f;
-    //[Range(0, 1)] [SerializeField] private float feetToIKPositionSpeed = 0.5f;
-
-    //public string leftFootAnimVirableName = "LeftFootCurve";
-    //public string rightFootAnimVirableName = "RightFootCurve";
-
-    //public bool useProIKFeature = false;
-    //public bool showSolverDebug = true;
-    //#endregion
-
     public void Initialize(SampleController sampleController)
     {
         anim = sampleController.anim;
@@ -111,11 +89,11 @@ public class CharacterIK : MonoBehaviour, IPlayerPart {
             lHandWeight = 1;
             if (characterStatus.isAiming)
             {
-                rHandWeight += Time.deltaTime * 2;
+                rHandWeight += Time.deltaTime * 10;
             }
             else
             {
-                rHandWeight -= Time.deltaTime * 2;
+                rHandWeight -= Time.deltaTime * 10;
             }
             rHandWeight = Mathf.Clamp01(rHandWeight);
         }
@@ -123,13 +101,13 @@ public class CharacterIK : MonoBehaviour, IPlayerPart {
         {
             if (characterStatus.isAiming)
             {
-                rHandWeight += Time.deltaTime * 2;
-                lHandWeight += Time.deltaTime * 2;
+                rHandWeight += Time.deltaTime * 10;
+                lHandWeight += Time.deltaTime * 10;
             }
             else
             {
-                rHandWeight -= Time.deltaTime * 2;
-                lHandWeight -= Time.deltaTime * 2;
+                rHandWeight -= Time.deltaTime * 10;
+                lHandWeight -= Time.deltaTime * 10;
             }
             rHandWeight = Mathf.Clamp01(rHandWeight);
             lHandWeight = Mathf.Clamp01(lHandWeight);
@@ -225,92 +203,4 @@ public class CharacterIK : MonoBehaviour, IPlayerPart {
         anim.SetIKRotation(AvatarIKGoal.RightFoot, rightFootTargetRot);
 
     }
-
-    //private void IKforFeet()
-    //{
-    //    anim.SetIKPositionWeight(AvatarIKGoal.RightFoot, 1);
-    //    if (useProIKFeature)
-    //    {
-    //        anim.SetIKRotationWeight(AvatarIKGoal.RightFoot, anim.GetFloat(rightFootAnimVirableName));
-    //    }
-    //    MovefeetToIKPoint(AvatarIKGoal.RightFoot, RightFootIKPosition, rightFootIKRotation, ref LastRightFootPositionY);
-
-    //    anim.SetIKPositionWeight(AvatarIKGoal.LeftFoot, 1);
-    //    if (useProIKFeature)
-    //    {
-    //        anim.SetIKRotationWeight(AvatarIKGoal.LeftFoot, anim.GetFloat(leftFootAnimVirableName));
-    //    }
-    //    MovefeetToIKPoint(AvatarIKGoal.LeftFoot, LeftFootIKPosition, leftFootIKRotation, ref LastLeftFoorPositionY);
-    //}
-
-    //private void MovefeetToIKPoint(AvatarIKGoal foot, Vector3 positionIKHolder, Quaternion rotationIKHolder, ref float lastFootPositionY)
-    //{
-    //    Vector3 targetIKPos = anim.GetIKPosition(foot);
-
-    //    if(positionIKHolder != Vector3.zero)
-    //    {
-    //        targetIKPos = transform.InverseTransformPoint(targetIKPos);
-    //        positionIKHolder = transform.InverseTransformPoint(positionIKHolder);
-
-    //        float yVariable = Mathf.Lerp(lastFootPositionY, positionIKHolder.y, feetToIKPositionSpeed);
-    //        targetIKPos.y += yVariable;
-
-    //        lastFootPositionY = yVariable;
-
-    //        targetIKPos = transform.TransformPoint(targetIKPos);
-
-    //        anim.SetIKRotation(foot, rotationIKHolder);
-    //    }
-
-    //    anim.SetIKPosition(foot, targetIKPos);
-    //}
-
-    //private void MovePelvisHeight()
-    //{
-    //    if (RightFootIKPosition == Vector3.zero || LeftFootIKPosition == Vector3.zero || lastPelvisPositionY == 0)
-    //    {
-    //        lastPelvisPositionY = anim.bodyPosition.y;
-    //        return;
-    //    }
-
-    //    float lOffsetPosition = LeftFootIKPosition.y - transform.position.y;
-    //    float rOffsetPosition = RightFootIKPosition.y - transform.position.y;
-
-    //    float totalOffset = (lOffsetPosition < rOffsetPosition) ? lOffsetPosition : rOffsetPosition;
-
-    //    Vector3 newPelvisPos = anim.bodyPosition + Vector3.up * totalOffset;
-
-    //    newPelvisPos.y = Mathf.Lerp(lastPelvisPositionY, newPelvisPos.y, pelvisUpAndDownSpeed);
-
-    //    lastPelvisPositionY = anim.bodyPosition.y;
-    //}
-
-    //private void FeetPositionSolver(Vector3 fromSkyPosition, ref Vector3 feetIKPositions, ref Quaternion feetIKRotations)
-    //{
-    //    RaycastHit outHit;
-
-    //    if(showSolverDebug)
-    //    {
-    //        Debug.DrawLine(fromSkyPosition, fromSkyPosition +
-    //            Vector3.down * (raycastDownDistance + heightFromGroundRaycast), Color.yellow);
-    //    }
-
-    //    if(Physics.Raycast(fromSkyPosition, Vector3.down, out outHit, raycastDownDistance + heightFromGroundRaycast, environmentMask))
-    //    {
-    //        feetIKPositions = fromSkyPosition;
-    //        feetIKPositions.y = outHit.point.y + pelvisOffset;
-    //        feetIKRotations = Quaternion.FromToRotation(Vector3.up, outHit.normal) * transform.rotation;
-
-    //        return;
-    //    }
-
-    //    feetIKPositions = Vector3.zero;
-
-    //}
-
-    //private void AdjustFeetTurget(ref Vector3 feetPosition, HumanBodyBones foot)
-    //{
-    //    feetPosition = anim.GetBoneTransform(foot).position;
-    //    feetPosition.y = transform.position.y + heightFromGroundRaycast;
-    //}
 }

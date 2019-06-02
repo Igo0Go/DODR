@@ -21,6 +21,7 @@ public class CameraHandler : MyTools, IPlayerPart
     [HideInInspector] public bool rotateMode;
     public bool noObstacles;
     [HideInInspector] public bool smoothyCam;
+    [HideInInspector] public bool nearCam;
 
     public float smoothX;
     public float smoothY;
@@ -42,6 +43,20 @@ public class CameraHandler : MyTools, IPlayerPart
             if (_staticCam)
             {
                 angelBufer = lookAngel;
+            }
+        }
+    }
+    public float SmoothCamFieldOfView
+    {
+        get
+        {
+            return cam.fieldOfView;
+        }
+        set
+        {
+            if(smoothyCam)
+            {
+                cam.fieldOfView = value;
             }
         }
     }
@@ -84,7 +99,6 @@ public class CameraHandler : MyTools, IPlayerPart
     {
         Tick();
         TargetLook();
-        CameraAngel();
     }
 
     private void TargetLook()
@@ -156,6 +170,10 @@ public class CameraHandler : MyTools, IPlayerPart
             cameraTransform.localPosition = new Vector3(0, 0, cameraTransform.localPosition.z);
             newCamPosition = cameraTransform.localPosition;
             newCamPosition.z = targetZ;
+            if (nearCam)
+            {
+                newCamPosition.z += 1.5f;
+            }
             obstacle = false;
         }
 
@@ -222,23 +240,11 @@ public class CameraHandler : MyTools, IPlayerPart
         cam.gameObject.SetActive(enabled);
     }
 
-    public void CameraAngel()
-    {
-        if (smoothyCam)
-        {
-            cam.fieldOfView = SmoothlyChange(cam.fieldOfView, 40, 100 * Time.deltaTime);
-        }
-        else
-        {
-            cam.fieldOfView = SmoothlyChange(cam.fieldOfView, fieldBufer, 100 * Time.deltaTime);
-        }
-    }
-
     public void Initialize(SampleController sampleController)
     {
         rotateMode = true;
         step = Time.fixedDeltaTime * cameraConfig.pivotSpeed;
-
+        smoothyCam = true;
         defaultMask = cam.cullingMask;
         characterStatus = sampleController.characterStatus;
         characterInput = sampleController.characterInput;

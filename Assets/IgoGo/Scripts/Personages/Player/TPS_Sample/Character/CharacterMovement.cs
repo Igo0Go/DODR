@@ -20,6 +20,7 @@ public class CharacterMovement : MyTools, IPlayerPart {
 
     private Transform cameraTransform;
     private CharacterStatus characterStatus;
+    private CameraHandler cameraHandler;
 
     [HideInInspector] public float sprintValue;
     [HideInInspector] public float moveAmounth;
@@ -61,7 +62,8 @@ public class CharacterMovement : MyTools, IPlayerPart {
     private float grav;
     private float jumpForce;
     private float vertSpeed;
-
+    private float sprintForce;
+    private bool opportunityToSprint;
     #endregion
 
 
@@ -71,9 +73,11 @@ public class CharacterMovement : MyTools, IPlayerPart {
         characterController = GetComponent<CharacterController>();
         characterStatus = sampleController.characterStatus;
         cameraTransform = sampleController.cameraHandler.transform;
+        cameraHandler = sampleController.cameraHandler;
         JetPack = false;
         characterStatus.onWall = false;
         State = sampleController.characterReactions.State;
+        opportunityToSprint = true;
     }
     
 
@@ -94,6 +98,7 @@ public class CharacterMovement : MyTools, IPlayerPart {
                 {
                     characterStatus.isMove = false;
                 }
+
                 Sprint();
 
                 moveDir = cameraTransform.forward * vertical;
@@ -106,7 +111,6 @@ public class CharacterMovement : MyTools, IPlayerPart {
                 PlayerMove();
                 characterStatus.isGround = OnGround();
             }
-          
         }
     }
 
@@ -170,23 +174,58 @@ public class CharacterMovement : MyTools, IPlayerPart {
     }
     private void Sprint()
     {
-        if (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") > 0)
+        if(!characterStatus.isAiming)
         {
-            characterStatus.isSprint = true;
-        }
-        if (Input.GetKeyUp(KeyCode.LeftShift) || Input.GetAxis("Vertical") <= 0)
-        {
-            characterStatus.isSprint = false;
-        }
+            if (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") > 0)
+            {
+                characterStatus.isSprint = true;
+            }
+            if (Input.GetKeyUp(KeyCode.LeftShift) || Input.GetAxis("Vertical") <= 0)
+            {
+                characterStatus.isSprint = false;
+            }
 
-        if (characterStatus.isSprint)
-        {
-            sprintValue = SmoothlyChange(0,1,sprintValue,Time.deltaTime);
+            if (characterStatus.isGround && characterStatus.isSprint && opportunityToSprint)
+            {
+                cameraHandler.nearCam = true;
+                sprintForce += Time.deltaTime;
+                if (sprintForce >= 5)
+                {
+                    sprintForce = 5;
+                    opportunityToSprint = false;
+                    cameraHandler.SmoothCamFieldOfView = 120;
+                    sprintValue = 1;
+                }
+                else
+                {
+                    sprintValue = Mathf.Lerp(sprintValue, 1, Time.deltaTime * 100);
+                    cameraHandler.SmoothCamFieldOfView = Mathf.Lerp(cameraHandler.SmoothCamFieldOfView, 120, Time.deltaTime);
+                }
+            }
+            else if (characterStatus.isGround)
+            {
+                cameraHandler.nearCam = false;
+                sprintForce -= Time.deltaTime;
+                if (sprintForce <= 0)
+                {
+                    sprintForce = 0;
+                    opportunityToSprint = true;
+                    sprintValue = 0;
+                    cameraHandler.SmoothCamFieldOfView = 60;
+                }
+                else
+                {
+                    sprintValue = Mathf.Lerp(sprintValue, 0, Time.deltaTime * 100);
+                    cameraHandler.SmoothCamFieldOfView = Mathf.Lerp(cameraHandler.SmoothCamFieldOfView, 60, Time.deltaTime * 5);
+                }
+            }
         }
         else
         {
-            sprintValue = SmoothlyChange(0, 1, sprintValue, -Time.deltaTime);
+            cameraHandler.nearCam = false;
+            characterStatus.isSprint = false;
         }
+        
     }
     private bool OnGround()
     {

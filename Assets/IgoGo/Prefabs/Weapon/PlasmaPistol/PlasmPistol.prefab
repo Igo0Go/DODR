@@ -9786,7 +9786,7 @@ MonoBehaviour:
   sniperCam: {fileID: 0}
   ammoSlider: {fileID: 0}
   shotgun: 0
-  bulletCount: 0
+  bulletCount: 1
   angel: 0
 --- !u!1 &1607346049103680
 GameObject:

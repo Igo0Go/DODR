@@ -117,10 +117,10 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
                 {
                     Time.timeScale = 0.3f;
                     aud.Play();
-                    if(flyKey)
+                    cameraHandler.SmoothCamFieldOfView = Mathf.Lerp(cameraHandler.SmoothCamFieldOfView, 40, 10 * Time.deltaTime);
+                    if (flyKey)
                     {
                         cameraHandler.StaticCam = true;
-                        cameraHandler.smoothyCam = true;
                         flyKey = false;
                     }
                 }
@@ -129,7 +129,10 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
                     Time.timeScale = 1f;
                     flyKey = true;
                     cameraHandler.StaticCam = false;
-                    cameraHandler.smoothyCam = false;
+                    if(!characterStatus.isSprint)
+                    {
+                        cameraHandler.SmoothCamFieldOfView = Mathf.Lerp(cameraHandler.SmoothCamFieldOfView, 60, 10 * Time.deltaTime);
+                    }
                     aud.Stop();
                 }
                 characterStatus.isAiming = true;
@@ -143,7 +146,10 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
                 Time.timeScale = 1f;
                 aud.Stop();
                 cameraHandler.StaticCam = false;
-                cameraHandler.smoothyCam = false;
+                if (!characterStatus.isSprint)
+                {
+                    cameraHandler.SmoothCamFieldOfView = Mathf.Lerp(cameraHandler.SmoothCamFieldOfView, 60, 100 * Time.deltaTime);
+                }
                 characterStatus.isAiming = false;
                 characterStatus.isAimingMove = true;
                 characterFight.weapon.StopProtect();
@@ -163,7 +169,11 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
             if(!characterStatus.isBehindCover && !characterStatus.onWall)
             {
                 cameraHandler.StaticCam = false;
-                cameraHandler.smoothyCam = false;
+                if (!characterStatus.isSprint)
+                {
+                    cameraHandler.SmoothCamFieldOfView = Mathf.Lerp(cameraHandler.SmoothCamFieldOfView, 60, 100 * Time.deltaTime);
+                }
+
             }
             aud.Stop();
             characterStatus.isAiming = false;

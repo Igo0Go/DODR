@@ -32,6 +32,7 @@ public class CharacterReactions : MyTools, IAlive {
 
     public Slider healthSlider;
     public PlayerKit specKit;
+    public Transform damagePoint;
     public bool Protected;
 
     public PlayerState State
@@ -71,9 +72,9 @@ public class CharacterReactions : MyTools, IAlive {
     private Crosshair crosshair;
     private Animator anim;
     private Transform target;
+    private ParticleSystem damageParticle;
 
     private event SimpleHandler DeadEvent;
-
     public void Initiolize(SampleController sampleController)
     {
         this.sampleController = sampleController;
@@ -86,10 +87,16 @@ public class CharacterReactions : MyTools, IAlive {
         characterStels = sampleController.characterStels;
         anim = sampleController.anim;
         target = sampleController.target;
+        damageParticle = damagePoint.gameObject.GetComponent<ParticleSystem>();
     }
 
     public void Dead()
     {
+        if (DeadEvent != null)
+        {
+            DeadEvent.Invoke();
+            DeadEvent = null;
+        }
         anim.applyRootMotion = true;
         State = PlayerState.dead;
         characterStatus.isBehindCover = false;
@@ -99,11 +106,6 @@ public class CharacterReactions : MyTools, IAlive {
         anim.SetTrigger("DeadTrigger");
         Invoke("NoSuit", 3f);
         Invoke("ReturnActive", 3f);
-        if(DeadEvent != null)
-        {
-            DeadEvent.Invoke();
-        }
-        DeadEvent = null;
     }
     public void GetDamage(int damage)
     {
@@ -163,6 +165,11 @@ public class CharacterReactions : MyTools, IAlive {
             specKit.Action();
         }
     }
+    public void DamagePointer(Vector3 point)
+    {
+        damagePoint.position = point;
+        damageParticle.Play();
+    }
     private void NoSuit()
     {
         characterStatus.isAiming = false;
@@ -188,7 +195,6 @@ public class CharacterReactions : MyTools, IAlive {
         characterStatus.shock = false;
     }
 
-
     private void OnTriggerEnter(Collider other)
     {
         AnimActivator anim;
@@ -208,20 +214,20 @@ public class CharacterReactions : MyTools, IAlive {
             return;
         }
 
-
-        //LocationReactor reactor;
-        //if (MyGetComponent(other.gameObject, out reactor))
-        //{
-        //    reactor.Use();
-        //    return;
-        //}
-
-        //MusicChanger changer;
-        //if (MyGetComponent(other.gameObject, out changer))
-        //{
-        //    changer.Use();
-        //    return;
-        //}
+        SecurityBotsSystem bots;
+        if (MyGetComponent(other.gameObject, out bots))
+        {
+            DeadEvent += bots.DefaultActive;
+            bots.SetTarget(transform.position + Vector3.up * 1.5f, this);
+            if (Protected)
+            {
+                bots.SetActive(-1);
+            }
+            else
+            {
+                bots.SetActive(1);
+            }
+        }
 
         TurretScript turret;
         if (MyGetComponent(other.gameObject, out turret))
@@ -244,12 +250,10 @@ public class CharacterReactions : MyTools, IAlive {
         {
             NoSuit();
         }
-    
 		if(other.tag.Equals("EnemySword"))
 		{
 			GetDamage(20);
 		}
-	
 	}
     private void OnTriggerStay(Collider other)
     {
@@ -265,14 +269,9 @@ public class CharacterReactions : MyTools, IAlive {
         SecurityBotsSystem system;
         if (MyGetComponent(other.gameObject, out system))
         {
-            system.SetTarget(transform.position + Vector3.up * 1.5f, this);
-            if (Protected)
+            if (Health > 1)
             {
-                system.SetActive(-1);
-            }
-            else
-            {
-                system.SetActive(1);
+                system.SetTarget(transform.position + Vector3.up * 1.5f, this);
             }
         }
 
@@ -298,6 +297,7 @@ public class CharacterReactions : MyTools, IAlive {
         if (MyGetComponent(other.gameObject, out system))
         {
             system.SetActive(0);
+            DeadEvent -= system.DefaultActive;
             return;
         }
 

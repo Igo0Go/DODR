@@ -67,6 +67,10 @@ public class Bullet : MyTools {
                 }
                 else
                 {
+                    if (alive is CharacterReactions)
+                    {
+                        ((CharacterReactions)alive).DamagePointer(hit.point);
+                    }
                     if (shock)
                     {
                         alive.ShockEffect(lifeTime);

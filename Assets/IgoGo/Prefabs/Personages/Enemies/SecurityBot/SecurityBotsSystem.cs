@@ -14,7 +14,6 @@ public class SecurityBotsSystem : MonoBehaviour {
         InstanceBots();
     }
 
-    // Update is called once per frame
     void Update () {
 	}
 
@@ -59,6 +58,19 @@ public class SecurityBotsSystem : MonoBehaviour {
         }
     }
 
+    public void DefaultActive()
+    {
+        for (int i = 0; i < bots.GetLength(0); i++)
+        {
+            for (int j = 0; j < bots.GetLength(1); j++)
+            {
+                for (int k = 0; k < bots.GetLength(2); k++)
+                {
+                    bots[i, j, k].ToDeault(); ;
+                }
+            }
+        }
+    }
 
     public void SetActive(int value)
     {
