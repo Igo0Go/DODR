@@ -19,19 +19,22 @@ public abstract class UsingOrigin : UsingObject
         {
             foreach (var c in actionObjects)
             {
-                if (c is ObjectTranslateManager)
+                if(c != null)
                 {
-                    Gizmos.color = Color.blue;
+                    if (c is ObjectTranslateManager)
+                    {
+                        Gizmos.color = Color.blue;
+                    }
+                    else if (c is AnimActivator)
+                    {
+                        Gizmos.color = Color.green;
+                    }
+                    else if (c is ActionObject)
+                    {
+                        Gizmos.color = Color.yellow;
+                    }
+                    Gizmos.DrawLine(transform.position, c.transform.position);
                 }
-                else if (c is AnimActivator)
-                {
-                    Gizmos.color = Color.green;
-                }
-                else if (c is ActionObject)
-                {
-                    Gizmos.color = Color.yellow;
-                }
-                Gizmos.DrawLine(transform.position, c.transform.position);
             }
         }
     }
