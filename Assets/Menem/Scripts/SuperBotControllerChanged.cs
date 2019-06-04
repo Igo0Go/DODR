@@ -14,46 +14,47 @@ public enum EnemyState
 [RequireComponent(typeof(CharacterController))]
 public class SuperBotControllerChanged : MonoBehaviour, IAlive
 {
-    public Transform Target;
+    public Transform Target; //цель
 
-    public Vector3 LastPosition;
-    public Vector3 StandardPosition;
+    public Vector3 LastPosition; //последняя позиция цели
+    public Vector3 StandardPosition; //стандартная позиция для сравнивания с LastPosition
 
-    public AutoWeapon gun;
+    public AutoWeapon gun;//внешний класс стрельбы. Стрельба бота адаптирована под этот класс
 
-    public LayerMask ignoreMask;
+    public LayerMask ignoreMask;//маска позволяющая игнорировать некоторые препятствия в RaycastHit
 
-    [Range(0, 300)] public int health;
+    [Range(0, 300)] public int health;//значение Здоровья требуемое для метода Health и смежными
 
     public float Distance; //дистанция до цели
     [Range(0, 50)] public float RangePursuit; // радиус преследования/обнаружения
     [Range(0, 50)] public float RangeShoot; //радиус стрельбы
-    public float RangeMeleeAttack; // радиус мили атаки
-    public float RangeAttack; // радиус атаки в момент времени
-    public float AngleVision; // угол обзора бота
-    public float AngleVisionAlert; // alert
-    public float AngleVisionStandart; //standart
-    public float AngleCamera; // угол обзора камеры
-    public float anglecam; // угол между фронтом камеры и ботом
-    public float Camshooting; // угол при котором можно сказать что игрок целится в нас
-    public float AngleShhotingForBot;
+    public float RangeMeleeAttack; // радиус ближней атаки
+    public float RangeAttack; // радиус атаки в момент времени, сделан для упрощения кода
+    public float AngleVision; // угол обзора бота в  текущий момент времени, сделан для упрощения кода
+    public float AngleVisionAlert; // угол обзора бота во время alert
+    public float AngleVisionStandart; //угол обзора бота во время stay
+    public float AngleCamera; // угол обзора камеры, т.е предельное значение anglecam
+    public float anglecam; // угол между forward камеры и ботом, требуется для отслеживания игрока.
+    public float Camshooting; // угол, при котором можно сказать о том, что игрок целится в бота
+    public float AngleShhotingForBot;//угол, который является критерием для стрельбы бота, т.е. угол предельного прицела
 
-    public NavMeshAgent NavAgent;
+    public NavMeshAgent NavAgent;//переменная для компонента NavMeshAgent
 
-    public Camera MainCamera;
+    public Camera MainCamera;//переменная для компонента камеры игрока
 
-    public bool IsMeleeAttack;
-    public bool wait;
-    public bool alive;
-    public bool Alert;
+    public bool IsMeleeAttack;//ключ для переключения между атакой ближнего и дальнего действия
+    public bool wait;//ключ требуемый для задержки в анимациях
+    public bool alive;//ключ требуемый для определения, жив ли еще бот, или нет
+    public bool Alert;//ключ для тревоги
+    public bool stun;
 
-    public Version Version; //енум
+    public Version Version; //переменная енума переключающая версии бота
 
-    public EnemyState State;
+    public EnemyState State;//переменная енума переключающая состояния бота
 
-    public Animator Anim;
+    public Animator Anim;//переменная компонента аниматор - требуемый для логики анимаций
 
-    public GameObject Geosphere; // rename to EyeGeosphere
+    public GameObject Geosphere; // переменная для хранения "глаза" бота
 
     private CharacterController charController;
 
@@ -70,6 +71,7 @@ public class SuperBotControllerChanged : MonoBehaviour, IAlive
         AngleVisionStandart = AngleVision;
         AngleVisionAlert = 360f;
         charController = GetComponent<CharacterController>();
+        stun = false;
     }
 
     void Update()
@@ -147,139 +149,148 @@ public class SuperBotControllerChanged : MonoBehaviour, IAlive
                 AngleVision = AngleVisionStandart;
             }
 
-            if (Version == Version.Standart)
+            if (!stun)
             {
-                if (Distance < RangePursuit && Distance > RangeAttack && anglevis < AngleVision &&
-                    Physics.Raycast(ray, out hit, RangePursuit, ignoreMask) &&
-                    hit.transform.gameObject == Target.gameObject) 
+
+
+                if (Version == Version.Standart)
                 {
-                    if (anglecam < Camshooting)
+                    if (Distance < RangePursuit && Distance > RangeAttack && anglevis < AngleVision &&
+                        Physics.Raycast(ray, out hit, RangePursuit, ignoreMask) &&
+                        hit.transform.gameObject == Target.gameObject)
                     {
-                        IsMeleeAttack = false;
-                    }
-
-                    if (Alert)
-                    {
-                        StartCoroutine(Alarm());
-                    }
-
-                    if (Anim.GetBool("Shoot"))
-                    {
-                        Anim.SetBool("Shoot", false);
-                    }
-                    // переключалка опасности
-
-                    NavAgent.destination = Target.transform.position;
-                    StateSolver = EnemyState.Walk;
-                    LastPosition = Target.position;
-                }
-                else if (Distance <= RangeAttack && anglevis < AngleVision &&
-                         Physics.Raycast(ray, out hit, RangePursuit, ignoreMask) &&
-                         hit.transform.gameObject == Target.gameObject) 
-                {
-                    if (!IsMeleeAttack && anglecam > AngleCamera) // переключатель
-                    {
-                        IsMeleeAttack = true;
-                    }
-                    else // код атаки
-                    {
-                        LastPosition = Target.position;
-                        NavAgent.destination = transform.position;
-                        if (!Alert)
+                        if (anglecam < Camshooting)
                         {
-                            Alert = true;
-                            
+                            IsMeleeAttack = false;
                         }
 
-                        Attack(); 
-                    }
-                }
-                else if (LastPosition != StandardPosition)
-                {
-                    if (Anim.GetBool("Shoot"))
-                    {
-                        Anim.SetBool("Shoot", false);
-                    }
+                        if (Alert)
+                        {
+                            StartCoroutine(Alarm());
+                        }
 
-                    NavAgent.destination = LastPosition;
-                    if (LastPosition.x == transform.position.x && LastPosition.z == transform.position.z)
-                    {
-                        LastPosition = StandardPosition;
-                    }
-                }
-                else
-                {
-                    if (Anim.GetBool("Shoot"))
-                    {
-                        Anim.SetBool("Shoot", false);
-                    }
+                        if (Anim.GetBool("Shoot"))
+                        {
+                            Anim.SetBool("Shoot", false);
+                        }
+                        // переключалка опасности
 
-                    if (!wait)
-                    {
-                        wait = true;
-                        CaseMethod(false, UnityEngine.Random.Range(-1, 1.1f), -1, Target.transform.position);
-                        StartCoroutine(GetRandomStayState());
+                        NavAgent.destination = Target.transform.position;
+                        StateSolver = EnemyState.Walk;
+                        LastPosition = Target.position;
                     }
+                    else if (Distance <= RangeAttack && anglevis < AngleVision &&
+                             Physics.Raycast(ray, out hit, RangePursuit, ignoreMask) &&
+                             hit.transform.gameObject == Target.gameObject)
+                    {
+                        if (!IsMeleeAttack && anglecam > AngleCamera) // переключатель
+                        {
+                            IsMeleeAttack = true;
+                        }
+                        else // код атаки
+                        {
+                            LastPosition = Target.position;
+                            NavAgent.destination = transform.position;
+                            if (!Alert)
+                            {
+                                Alert = true;
 
-                    NavAgent.destination = transform.position;
-                    //стоп
-                    //StateSolver = EnemyState.Stay;
+                            }
+
+                            Attack();
+                        }
+                    }
+                    else if (LastPosition != StandardPosition)
+                    {
+                        if (Anim.GetBool("Shoot"))
+                        {
+                            Anim.SetBool("Shoot", false);
+                        }
+
+                        NavAgent.destination = LastPosition;
+                        if (LastPosition.x == transform.position.x && LastPosition.z == transform.position.z)
+                        {
+                            LastPosition = StandardPosition;
+                        }
+                    }
+                    else
+                    {
+                        if (Anim.GetBool("Shoot"))
+                        {
+                            Anim.SetBool("Shoot", false);
+                        }
+
+                        if (!wait)
+                        {
+                            wait = true;
+                            CaseMethod(false, UnityEngine.Random.Range(-1, 1.1f), -1, Target.transform.position);
+                            StartCoroutine(GetRandomStayState());
+                        }
+
+                        NavAgent.destination = transform.position;
+                        //стоп
+                        //StateSolver = EnemyState.Stay;
+                    }
                 }
-            }
-            else if (Version == Version.Meele)
-            {
-                IsMeleeAttack = true;
-                if (Distance < RangePursuit && Distance > RangeMeleeAttack && anglevis < AngleVision &&
-                    Physics.Raycast(ray, out hit, RangePursuit, ignoreMask) && hit.transform.gameObject == Target)
-                {
-                    NavAgent.destination = Target.position;
-                    LastPosition = Target.position;
-                    // ShockTurret.GetComponent<TurretScriptController>().target = Target;
-                }
-                else if (Distance <= RangeMeleeAttack && anglevis < AngleVision &&
-                         Physics.Raycast(ray, out hit, RangePursuit, ignoreMask))
+                else if (Version == Version.Meele)
                 {
                     IsMeleeAttack = true;
-                    Attack();
-                }
-                else if (LastPosition != StandardPosition)
-                {
-                    NavAgent.destination = LastPosition;
-                    // ShockTurret.GetComponent<SuperTurretScriptController>().target = null;
+                    if (Distance < RangePursuit && Distance > RangeMeleeAttack && anglevis < AngleVision &&
+                        Physics.Raycast(ray, out hit, RangePursuit, ignoreMask) && hit.transform.gameObject == Target)
+                    {
+                        NavAgent.destination = Target.position;
+                        LastPosition = Target.position;
+                        // ShockTurret.GetComponent<TurretScriptController>().target = Target;
+                    }
+                    else if (Distance <= RangeMeleeAttack && anglevis < AngleVision &&
+                             Physics.Raycast(ray, out hit, RangePursuit, ignoreMask))
+                    {
+                        IsMeleeAttack = true;
+                        Attack();
+                    }
+                    else if (LastPosition != StandardPosition)
+                    {
+                        NavAgent.destination = LastPosition;
+                        // ShockTurret.GetComponent<SuperTurretScriptController>().target = null;
+                    }
+                    else
+                    {
+                        NavAgent.destination = transform.position;
+                        //ShockTurret.GetComponent<SuperTurretScriptController>().target = null;
+                    }
                 }
                 else
                 {
-                    NavAgent.destination = transform.position;
-                    //ShockTurret.GetComponent<SuperTurretScriptController>().target = null;
+                    IsMeleeAttack = false;
+                    if (Distance < RangePursuit && Distance > RangeShoot && anglevis < AngleVision &&
+                        Physics.Raycast(ray, out hit, RangePursuit, ignoreMask) && hit.transform.gameObject == Target)
+                    {
+                        NavAgent.destination = Target.position;
+                        // ShockTurret.GetComponent<TurretScriptController>().target = Target;
+                        LastPosition = Target.position;
+                    }
+                    else if (Distance <= RangeShoot && anglevis < AngleVision)
+                    {
+                        NavAgent.destination = transform.position;
+                        // ShockTurret.GetComponent<TurretScriptController>().target = Target;
+                        LastPosition = Target.position;
+                        Attack();
+                    }
+                    else if (LastPosition != StandardPosition)
+                    {
+                        NavAgent.destination = LastPosition;
+                        // ShockTurret.GetComponent<SuperTurretScriptController>().target = null;
+                    }
+                    else
+                    {
+                        NavAgent.destination = transform.position;
+                        // ShockTurret.GetComponent<SuperTurretScriptController>().target = null;
+                    }
                 }
             }
             else
             {
-                IsMeleeAttack = false;
-                if (Distance < RangePursuit && Distance > RangeShoot && anglevis < AngleVision &&
-                    Physics.Raycast(ray, out hit, RangePursuit, ignoreMask) && hit.transform.gameObject == Target)
-                {
-                    NavAgent.destination = Target.position;
-                    // ShockTurret.GetComponent<TurretScriptController>().target = Target;
-                    LastPosition = Target.position;
-                }
-                else if (Distance <= RangeShoot && anglevis < AngleVision)
-                {
-                    NavAgent.destination = transform.position;
-                    // ShockTurret.GetComponent<TurretScriptController>().target = Target;
-                    LastPosition = Target.position;
-                    Attack();
-                }
-                else if (LastPosition != StandardPosition)
-                {
-                    NavAgent.destination = LastPosition;
-                    // ShockTurret.GetComponent<SuperTurretScriptController>().target = null;
-                }
-                else
-                {
-                    NavAgent.destination = transform.position;
-                    // ShockTurret.GetComponent<SuperTurretScriptController>().target = null;
-                }
+                NavAgent.destination = transform.position;
             }
         }
     }
@@ -364,19 +375,27 @@ public class SuperBotControllerChanged : MonoBehaviour, IAlive
 
     #region Получение урона
 
-    public void GetDamage(int damage)
+    public void GetDamage(int damage)//вызов карутина на секунду в котором ставится ключ на стоп машина ставится навмеш в ноги и в дистанции ключ не дает делать ничего
     {
+        //Debug.Log("!");
         if (alive)
         {
             if (Health > 0)
             {
-                NavAgent.destination = transform.position;
-                Anim.SetTrigger("Damage");
                 Health -= damage;
+                StartCoroutine(Damage());
             }
         }
     }
-    
+    protected virtual IEnumerator Damage()
+    {
+        stun = true;
+        NavAgent.destination = transform.position;
+        Anim.SetTrigger("Damage");        
+        yield return new WaitForSeconds(3F);
+        stun = false;
+    }
+
     protected virtual void OnTriggerEnter(Collider other)
     {
         if (other.tag.Equals("Sword"))
