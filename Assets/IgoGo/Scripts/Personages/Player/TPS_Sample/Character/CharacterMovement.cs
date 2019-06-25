@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CharacterMovement : MyTools, IPlayerPart {
 
-
+    [Range(1,100)]
+    public float sprintTime;
     [HideInInspector] public PlayerState State
     {
         get { return _state; }
@@ -87,6 +88,7 @@ public class CharacterMovement : MyTools, IPlayerPart {
         {
             if (State == PlayerState.active)
             {
+                characterStatus.isGround = OnGround();
                 vertical = Input.GetAxis("Vertical");
                 horizontal = Input.GetAxis("Horizontal");
                 moveAmounth = Mathf.Clamp01(Mathf.Abs(horizontal) + Mathf.Abs(vertical));
@@ -109,7 +111,6 @@ public class CharacterMovement : MyTools, IPlayerPart {
 
                 RotationNormal();
                 PlayerMove();
-                characterStatus.isGround = OnGround();
             }
         }
     }
@@ -176,31 +177,52 @@ public class CharacterMovement : MyTools, IPlayerPart {
     {
         if(!characterStatus.isAiming)
         {
-            if (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") > 0)
+            if (Input.GetKey(KeyCode.LeftShift))
             {
                 characterStatus.isSprint = true;
             }
-            if (Input.GetKeyUp(KeyCode.LeftShift) || Input.GetAxis("Vertical") <= 0)
+            if (Input.GetKeyUp(KeyCode.LeftShift))
             {
                 characterStatus.isSprint = false;
             }
 
-            if (characterStatus.isGround && characterStatus.isSprint && opportunityToSprint)
+            if (characterStatus.isSprint && characterStatus.isGround && opportunityToSprint)
             {
-                cameraHandler.nearCam = true;
-                sprintForce += Time.deltaTime;
-                if (sprintForce >= 5)
+                if(vertical > 0)
                 {
-                    sprintForce = 5;
-                    opportunityToSprint = false;
-                    cameraHandler.SmoothCamFieldOfView = 120;
-                    sprintValue = 1;
+                    cameraHandler.nearCam = true;
+
+                    sprintForce += Time.deltaTime;
+                    if (sprintForce >= sprintTime)
+                    {
+                        sprintForce = sprintTime;
+                        opportunityToSprint = false;
+                        cameraHandler.SmoothCamFieldOfView = 120;
+                        sprintValue = 1;
+                    }
+                    else
+                    {
+                        sprintValue = Mathf.Lerp(sprintValue, 1, Time.deltaTime * 100);
+                        cameraHandler.SmoothCamFieldOfView = Mathf.Lerp(cameraHandler.SmoothCamFieldOfView, 120, Time.deltaTime);
+                    }
                 }
                 else
                 {
-                    sprintValue = Mathf.Lerp(sprintValue, 1, Time.deltaTime * 100);
-                    cameraHandler.SmoothCamFieldOfView = Mathf.Lerp(cameraHandler.SmoothCamFieldOfView, 120, Time.deltaTime);
+                    cameraHandler.nearCam = false;
+                    if (sprintForce >= sprintTime)
+                    {
+                        sprintForce = sprintTime;
+                        opportunityToSprint = false;
+                        cameraHandler.SmoothCamFieldOfView = 60;
+                        sprintValue = 1;
+                    }
+                    else
+                    {
+                        sprintValue = Mathf.Lerp(sprintValue, 1, Time.deltaTime * 100);
+                        cameraHandler.SmoothCamFieldOfView = Mathf.Lerp(cameraHandler.SmoothCamFieldOfView, 60, Time.deltaTime);
+                    }
                 }
+                
             }
             else if (characterStatus.isGround)
             {
@@ -223,7 +245,10 @@ public class CharacterMovement : MyTools, IPlayerPart {
         else
         {
             cameraHandler.nearCam = false;
-            characterStatus.isSprint = false;
+            if(characterStatus.isGround)
+            {
+                characterStatus.isSprint = false;
+            }
         }
         
     }

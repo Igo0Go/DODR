@@ -4,7 +4,8 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -13,10 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   type: 2
-  itemPrefab: {fileID: 1681498837838174, guid: 7e9bf966c39b202459188b2bf9a2b71c, type: 2}
+  itemPrefab: {fileID: 1681498837838174, guid: 7e9bf966c39b202459188b2bf9a2b71c, type: 3}
   rHandPos: {x: 0.15, y: -0.024, z: 0.237}
   rHandRot: {x: 0.6, y: 17.35, z: -103.082}
   weaponPrefab: {fileID: 1684268948692214, guid: c4b4bc85df687e0468b0891bf0cd1219,
-    type: 2}
+    type: 3}
   weaponPos: {x: -0.01429598, y: -0.003864421, z: 0.03618532}
   weaponRot: {x: 0, y: 0, z: 0}
+  lHandTargetDefaultPos: {x: 0.077, y: 0.175, z: 0.0339}
+  lHandTargetDefaultRot: {x: 10.474, y: 257.886, z: -272.805}
+  lHandTargetActionPos: {x: 0.029, y: 0.156, z: 0.0314}
+  lHandTargetActionRot: {x: -41.631, y: 274.933, z: 90.005}

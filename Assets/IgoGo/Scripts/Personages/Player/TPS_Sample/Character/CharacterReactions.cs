@@ -30,6 +30,7 @@ public interface IAlive
 
 public class CharacterReactions : MyTools, IAlive {
 
+    public Animator healtNodes;
     public Slider healthSlider;
     public PlayerKit specKit;
     public Transform damagePoint;
@@ -53,6 +54,7 @@ public class CharacterReactions : MyTools, IAlive {
         set
         {
             healthSlider.value = value;
+            healtNodes.SetFloat("Health", healthSlider.value);
             if(healthSlider.value <= 0)
             {
                 Dead();
@@ -88,6 +90,7 @@ public class CharacterReactions : MyTools, IAlive {
         anim = sampleController.anim;
         target = sampleController.target;
         damageParticle = damagePoint.gameObject.GetComponent<ParticleSystem>();
+        healtNodes.SetFloat("Health", 100);
     }
 
     public void Dead()

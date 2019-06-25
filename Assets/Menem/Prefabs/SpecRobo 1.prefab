@@ -529,10 +529,10 @@ GameObject:
   - component: {fileID: 3871552004385261381}
   - component: {fileID: 1225065610469500195}
   - component: {fileID: 1225065610469500204}
-  - component: {fileID: 177904138}
+  - component: {fileID: 72285072}
   m_Layer: 0
   m_Name: SpecRobo 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -589,6 +589,10 @@ MonoBehaviour:
   LastPosition: {x: 0, y: 0, z: 0}
   StandardPosition: {x: 0, y: 0, z: 0}
   gun: {fileID: 1225065610322543570}
+  ignoreMask:
+    serializedVersion: 2
+    m_Bits: 7987
+  health: 120
   Distance: 0
   RangePursuit: 19
   RangeShoot: 8.3
@@ -607,14 +611,11 @@ MonoBehaviour:
   wait: 0
   alive: 0
   Alert: 0
+  stun: 0
   Version: 0
   State: 0
   Anim: {fileID: 0}
   Geosphere: {fileID: 3871552004375753879}
-  health: 120
-  ignoreMask:
-    serializedVersion: 2
-    m_Bits: 7987
 --- !u!195 &1225065610469500204
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -637,7 +638,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!143 &177904138
+--- !u!143 &72285072
 CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1008,6 +1009,7 @@ GameObject:
   - component: {fileID: 3871552004379076747}
   - component: {fileID: 3871552004377946699}
   - component: {fileID: 684858524}
+  - component: {fileID: 1636718468}
   m_Layer: 0
   m_Name: SpecRoboBladeL
   m_TagString: EnemySword
@@ -1089,6 +1091,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.55161786, y: 0.09686914, z: 0.025000015}
   m_Center: {x: 0.2758113, y: -0.000000006935469, z: 0.00000763808}
+--- !u!65 &1636718468
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3871552004375753885}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5516179, y: 0.096869126, z: 0.025000023}
+  m_Center: {x: 0.27587238, y: 0.0000038146973, z: 0.000003823383}
 --- !u!1 &3871552004375753887
 GameObject:
   m_ObjectHideFlags: 0

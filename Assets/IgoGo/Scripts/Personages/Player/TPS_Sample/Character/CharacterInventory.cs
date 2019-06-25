@@ -57,7 +57,7 @@ public class CharacterInventory : MyTools, IPlayerPart {
                     itemText.text = string.Empty;
                     if (item.firstWeapon)
                     {
-                        if (firstWeapon != null)
+                        if (firstWeapon != null && item.remove)
                         {
                             Instantiate(firstWeapon.itemPrefab, hit.collider.transform.position, hit.collider.transform.rotation);
                         }
@@ -65,11 +65,14 @@ public class CharacterInventory : MyTools, IPlayerPart {
                         firstWeapon = item.weaponConfig;
                         characterInput.selectedWeapon = 1;
                         anim.SetTrigger("ChangeWeapon");
-                        Destroy(hit.collider.gameObject);
+                        if(item.remove)
+                        {
+                            Destroy(hit.collider.gameObject);
+                        }
                     }
                     else
                     {
-                        if (secondWeapon != null)
+                        if (secondWeapon != null && item.remove)
                         {
                             Instantiate(secondWeapon.itemPrefab, hit.collider.transform.position, hit.collider.transform.rotation);
                         }
@@ -77,7 +80,10 @@ public class CharacterInventory : MyTools, IPlayerPart {
                         secondWeapon = item.weaponConfig;
                         characterInput.selectedWeapon = 2;
                         anim.SetTrigger("ChangeWeapon");
-                        Destroy(hit.collider.gameObject);
+                        if (item.remove)
+                        {
+                            Destroy(hit.collider.gameObject);
+                        }
                     }
                 }
             }

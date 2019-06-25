@@ -22,6 +22,7 @@ public class CharacterClimb : MyTools, IPlayerPart {
     private float currentSpeed;
     private bool fall;
     private bool key;
+    private bool opportunityToClimb;
     private int move;
 
 	
@@ -32,6 +33,7 @@ public class CharacterClimb : MyTools, IPlayerPart {
             if(characterStatus.isGround)
             {
                 fall = false;
+                opportunityToClimb = true;
                 anim.SetTrigger("ChangeWeapon");
             }
         }
@@ -141,6 +143,10 @@ public class CharacterClimb : MyTools, IPlayerPart {
     {
         key = true;
     }
+    private void ReturnOp()
+    {
+        opportunityToClimb = true;
+    }
     private void MoveToSimplePoint()
     {
         float step = currentSpeed * Time.deltaTime;
@@ -182,6 +188,7 @@ public class CharacterClimb : MyTools, IPlayerPart {
             characterStatus.onWall = false;
             move = 0;
             anim.SetTrigger("ChangeWeapon");
+            Invoke("ReturnOp", 1f);
             cameraHandler.StaticCam = false;
         }
     }
@@ -200,6 +207,7 @@ public class CharacterClimb : MyTools, IPlayerPart {
     public void Initialize(SampleController sampleController)
     {
         fall = false;
+        opportunityToClimb = true;
         characterInventory = sampleController.characterInventory;
         characterStatus = sampleController.characterStatus;
         characterStatus.onWall = false;
@@ -213,7 +221,7 @@ public class CharacterClimb : MyTools, IPlayerPart {
         {
             if (other.tag.Equals("Helper"))
             {
-                if (!characterStatus.isGround && !fall)
+                if (!characterStatus.isGround && !fall && opportunityToClimb)
                 {
                     ClimbStarter starter;
                     if (MyGetComponent(other.gameObject, out starter))
@@ -223,6 +231,7 @@ public class CharacterClimb : MyTools, IPlayerPart {
                         if (Vector3.Angle(transform.forward, dir) < 100)
                         {
                             key = true;
+                            opportunityToClimb = false;
                             characterInventory.DestroyWeapon();
                             characterInventory.SelectWeaponAction(3);
                             currentPoint = starter.point;

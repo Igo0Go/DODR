@@ -6,19 +6,20 @@ public delegate void SimpleHandler();
 
 public class ObjectTranslateManager : UsingObject {
 
-    public Vector3 offsetPos;
-    public float speed;
+    [Tooltip("Смещения. Суммируются от начальной позиции. При старте объект сместиться от начального состояния на вектор из элемента 0," +
+        "потом от полученной позции ещё на вектор из элемента 1 и т.д.")] public List<Vector3> offsetPos;
+    [Tooltip("скорость движения")] public float speed;
     [Tooltip("Задержка перед запуском")] public float delay;
     [Tooltip("Задержка между циклами")] public float pauseTime;
     public bool reverce;
 
     private SimpleHandler moveHandler;
-    private Vector3 pos1;
-    private Vector3 pos2;
     private Vector3 currentTargetPos;
     private Vector3 moveVector;
     [Space(20)] public bool active;
     private bool pause;
+    private int currentOffsetItem;
+    private int forwardWay;
 
 
     private bool Conclude
@@ -36,18 +37,20 @@ public class ObjectTranslateManager : UsingObject {
     // Use this for initialization
     void Start()
     {
-        pos1 = transform.position;
-        pos2 = pos1 + offsetPos;
         pause = false;
         if (reverce)
         {
             moveHandler = ReverceMove;
+            currentOffsetItem = 0;
+            forwardWay = 1;
+            currentTargetPos = transform.position + (forwardWay * offsetPos[currentOffsetItem]);
+            moveVector = currentTargetPos - transform.position;
+            moveVector = moveVector.normalized;
         }
         else
         {
             moveHandler = ForwardMove;
         }
-        currentTargetPos = pos1;
     }
 
     // Update is called once per frame
@@ -68,7 +71,15 @@ public class ObjectTranslateManager : UsingObject {
             if (Conclude)
             {
                 transform.position = currentTargetPos;
-                active = false;
+                if(currentOffsetItem == offsetPos.Count-1)
+                {
+                    active = false;
+                }
+                else
+                {
+                    pause = true;
+                    Invoke("ChangeTarget", pauseTime);
+                }
             }
             else
             {
@@ -95,19 +106,31 @@ public class ObjectTranslateManager : UsingObject {
 
     private void ChangeTarget()
     {
-        if (currentTargetPos == pos1)
+        if(forwardWay == 1)
         {
-            currentTargetPos = pos2;
+            currentOffsetItem++;
+            if (currentOffsetItem == offsetPos.Count)
+            {
+                currentOffsetItem--;
+                forwardWay = -1;
+            }
         }
         else
         {
-            currentTargetPos = pos1;
+            currentOffsetItem--;
+            if (currentOffsetItem < 0)
+            {
+                currentOffsetItem++;
+                forwardWay = 1;
+            }
         }
+
+        currentTargetPos = transform.position + (forwardWay *  offsetPos[currentOffsetItem]);
+        
         moveVector = currentTargetPos - transform.position;
         moveVector = moveVector.normalized;
         pause = false;
     }
-    
     private void Action()
     {
         if (reverce)
@@ -116,16 +139,27 @@ public class ObjectTranslateManager : UsingObject {
         }
         else
         {
+            ChangeTarget();
             active = true;
         }
         pause = false;
-        ChangeTarget();
     }
-
-
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.cyan;
-        Gizmos.DrawCube(transform.position + offsetPos, transform.localScale);
+        Vector3 bufer = transform.position;
+        for (int i = 0; i < offsetPos.Count; i++)
+        {
+            Gizmos.DrawLine(bufer, bufer + offsetPos[i]);
+            bufer += offsetPos[i];
+            if(i == offsetPos.Count-1)
+            {
+                Gizmos.DrawCube(bufer, transform.lossyScale);
+            }
+            else
+            {
+                Gizmos.DrawSphere(bufer, 0.4f);
+            }
+        }
     }
 }

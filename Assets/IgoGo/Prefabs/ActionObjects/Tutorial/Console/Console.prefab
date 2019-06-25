@@ -360,7 +360,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionObjects:
   - {fileID: 0}
-  - {fileID: 4437434583794524240}
   debug: 1
   tip: {fileID: 114253025115991322}
   energyMarker: {fileID: 95454160064721006}
@@ -379,6 +378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animObjects:
   - {fileID: 95686797458297858}
+  - {fileID: 848122014273882064}
   triggerReactor: 1
   active: 0
 --- !u!1 &1690524296446594

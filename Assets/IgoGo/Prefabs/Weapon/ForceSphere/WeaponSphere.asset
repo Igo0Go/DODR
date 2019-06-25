@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f516a30c161b87e44847884ab94ae553, type: 3}
+  m_Name: WeaponSphere
+  m_EditorClassIdentifier: 
+  damage: 0
+  type: 3
+  itemPrefab: {fileID: 2381513048712509804, guid: fcd238c210fefb04db67b9ac3d7ebea0,
+    type: 3}
+  rHandPos: {x: 0.082, y: 0.127, z: 0.486}
+  rHandRot: {x: -43.281, y: 44.968, z: -55.537}
+  weaponPrefab: {fileID: 5328211013720876873, guid: c592db1490dc7324dacfc0b40630c9e6,
+    type: 3}
+  weaponPos: {x: 0.017, y: 0.005, z: 0.09}
+  weaponRot: {x: -133.568, y: -108.995, z: -131.535}
+  lHandTargetDefaultPos: {x: 0.009, y: 0.004, z: 0.139}
+  lHandTargetDefaultRot: {x: -336.759, y: -206.702, z: 467.747}
+  lHandTargetActionPos: {x: -0.088, y: -0.055, z: -0.064}
+  lHandTargetActionRot: {x: -179.917, y: -198.769, z: 659.563}

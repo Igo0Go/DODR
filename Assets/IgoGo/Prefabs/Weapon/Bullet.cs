@@ -62,7 +62,10 @@ public class Bullet : MyTools {
                     }
                     else
                     {
-                        alive.GetDamage(damage);
+                        if(damage > 0)
+                        {
+                            alive.GetDamage(damage);
+                        }
                     }
                 }
                 else
@@ -75,7 +78,10 @@ public class Bullet : MyTools {
                     {
                         alive.ShockEffect(lifeTime);
                     }
-                    alive.GetDamage(damage);
+                    if (damage > 0)
+                    {
+                        alive.GetDamage(damage);
+                    }
                 }
             }
             Destroy(gameObject);

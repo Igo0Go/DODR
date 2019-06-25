@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1842105681
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5267,7 +5267,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1129557731005734}
   m_LocalRotation: {x: -0, y: 0.0950747, z: -0, w: -0.9954702}
-  m_LocalPosition: {x: 0.77075195, y: -2.0599995, z: -2.1825485}
+  m_LocalPosition: {x: 1.4907522, y: 1.779, z: 5.144}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4236294034253962}
@@ -5575,7 +5575,10 @@ MonoBehaviour:
   source: {fileID: 82560076573687432}
   anim: {fileID: 95019559906979412}
   musicBoxes:
-  - clip: {fileID: 8300000, guid: 17ab4884a66dc0c42b034ad57ff3c6db, type: 3}
+  - clip: {fileID: 8300000, guid: 289e06eb925a457478156ac39324c0f0, type: 3}
+    loop: 1
+    hide: 0
+  - clip: {fileID: 8300000, guid: bbfdb86050539e64e9defea388d93182, type: 3}
     loop: 1
     hide: 0
   debug: 0
@@ -5944,7 +5947,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1847
+    m_Bits: 18231
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -6201,7 +6204,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362432168017894}
   m_LocalRotation: {x: -0, y: -0.40408823, z: 0, w: -0.91472006}
-  m_LocalPosition: {x: -37.1718, y: 2.050855, z: 20.354565}
+  m_LocalPosition: {x: 1.69, y: 0.09, z: 4.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4582837891142488}
@@ -6313,6 +6316,7 @@ MonoBehaviour:
   opportunityToAim: 0
   isAiming: 0
   debugAim: 0
+  debugLeftPivot: 0
   selectedWeapon: 3
   sniperMode: 0
   sniperMultiplicator: 0
@@ -6348,6 +6352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f469321798ae2a84a8576b7276b7da38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healtNodes: {fileID: 8742797046393947749}
   healthSlider: {fileID: 114792956086985594}
   specKit: {fileID: 114667350975911686}
   damagePoint: {fileID: 4490154749247640}
@@ -6419,7 +6424,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.9, z: 0}
+  m_Center: {x: 0, y: 0.85, z: 0}
 --- !u!82 &82442699860001730
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6553,6 +6558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4628256228301764}
+  - component: {fileID: 8742797046393947749}
   m_Layer: 2
   m_Name: LowManSpine1
   m_TagString: Untagged
@@ -6578,6 +6584,25 @@ Transform:
   m_Father: {fileID: 4445899439614632}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &8742797046393947749
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372645657338386}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 17e9b8e2fa64ce24292e033b838fa42f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1398866384108096
 GameObject:
   m_ObjectHideFlags: 0

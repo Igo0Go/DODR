@@ -14,6 +14,8 @@ TagManager:
   - Helper
   - Sword
   - EnemySword
+  - ForceObj
+  - ForceReactor
   layers:
   - Default
   - TransparentFX
@@ -29,7 +31,7 @@ TagManager:
   - Engineer
   - NoAutoWeapon
   - NoCamRay
-  - 
+  - ForceLayer
   - 
   - 
   - 

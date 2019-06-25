@@ -14,7 +14,6 @@ public class ActionNode : ActionObject {
     {
         counter = 0;
     }
-
     public override void Use()
     {
         counter++;
@@ -23,7 +22,6 @@ public class ActionNode : ActionObject {
             UseAll();
         }
     }
-
     private void OnDrawGizmosSelected()
     {
         if(debug)
@@ -31,7 +29,10 @@ public class ActionNode : ActionObject {
             Gizmos.color = Color.red;
             foreach(var c in actors)
             {
-                Gizmos.DrawLine(transform.position, c.transform.position);
+                if(c != null)
+                {
+                    Gizmos.DrawLine(transform.position, c.transform.position);
+                }
             }
         }
     }

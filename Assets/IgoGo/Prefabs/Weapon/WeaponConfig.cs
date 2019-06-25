@@ -23,4 +23,9 @@ public class WeaponConfig : ScriptableObject {
     public GameObject weaponPrefab;
     public Vector3 weaponPos;
     public Vector3 weaponRot;
+    [Space(10)]
+    public Vector3 lHandTargetDefaultPos;
+    public Vector3 lHandTargetDefaultRot;
+    public Vector3 lHandTargetActionPos;
+    public Vector3 lHandTargetActionRot;
 }

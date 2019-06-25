@@ -16,6 +16,7 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
     public bool opportunityToAim;
     public bool isAiming;
     public bool debugAim;
+    public bool debugLeftPivot;
     [Range(1,3)] public int selectedWeapon;
 
     [HideInInspector]
@@ -97,6 +98,20 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
 
         if(anim.GetInteger("WeaponType") != 0)
         {
+            if(!debugLeftPivot)
+            {
+                if (characterStatus.isAiming)
+                {
+                    shootWeapon.leftHandTarget.transform.localPosition = shootWeapon.weaponConfig.lHandTargetActionPos;
+                    shootWeapon.leftHandTarget.transform.localRotation = Quaternion.Euler(shootWeapon.weaponConfig.lHandTargetActionRot);
+                }
+                else
+                {
+                    shootWeapon.leftHandTarget.transform.localPosition = shootWeapon.weaponConfig.lHandTargetDefaultPos;
+                    shootWeapon.leftHandTarget.transform.localRotation = Quaternion.Euler(shootWeapon.weaponConfig.lHandTargetDefaultRot);
+                }
+            }
+
             if (characterStatus.sniper)
             {
                 SniperMode();
@@ -231,7 +246,7 @@ public class CharacterInput : MonoBehaviour, IPlayerPart {
     }
     private void FightInput()
     {
-        if(characterMovement.State == PlayerState.active && !characterStatus.shock)
+        if(characterStatus.isGround && characterMovement.State == PlayerState.active && !characterStatus.shock)
         {
             if (Input.GetKeyDown(KeyCode.Q) && characterInventory.fighter && !anim.GetBool("Aiming"))
             {

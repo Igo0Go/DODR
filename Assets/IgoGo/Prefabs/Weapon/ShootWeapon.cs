@@ -33,13 +33,17 @@ public class ShootWeapon : Weapon {
 
     [HideInInspector] public SimpleHandler shootDelegate;
     [HideInInspector] public Slider ammoSlider;
-
+    public bool force;
+    public Transform forceBufer;
+    [Range(1,150)]
+    public int countOfControls;
     [Space(10)]
     public bool shotgun;
     [Range(1,10)]
     public int bulletCount;
     [Range(0, 1)]
     public float angel;
+    
 
     private LineRenderer lineRenderer;
     private AudioSource aud;
@@ -62,11 +66,12 @@ public class ShootWeapon : Weapon {
 
     private Vector3 origin;
     private Vector3 dir;
+    private List<ForceObject> forceObjects;
 
     private void Start()
     {
         aud = GetComponent<AudioSource>();
-        
+        forceObjects = new List<ForceObject>();
         switch(weaponConfig.type)
         {
             case WeaponType.OneShoot:
@@ -125,8 +130,9 @@ public class ShootWeapon : Weapon {
     {
         if(!thermalError)
         {
-            lineRenderer.enabled = true;
             aud.enabled = true;
+
+            lineRenderer.enabled = true;
             lineRenderer.SetPosition(0, shootPoint.position);
             lineRenderer.SetPosition(1, targetLook.position);
             if (removeDestruct)
@@ -152,12 +158,55 @@ public class ShootWeapon : Weapon {
                 delay = true;
                 Invoke("FinalDelay", delayTime);
             }
+
+            if(force)
+            {
+                RaycastHit hit;
+                Vector3 dir = targetLook.position - shootPoint.position;
+                if(Physics.Raycast(shootPoint.position, dir, out hit, 200, ~ignoreMask))
+                {
+                    if(hit.collider.tag.Equals("ForceObj"))
+                    {
+                        GameObject bufer = hit.collider.gameObject;
+                        ForceObject forceObject;
+                        if(MyGetComponent<ForceObject>(bufer, out forceObject))
+                        {
+                            if(forceObjects.Count < countOfControls && !forceObjects.Contains(forceObject))
+                            {
+                                forceBufer.position = bufer.transform.position;
+                                forceObjects.Add(forceObject);
+                            }
+                        }
+                        else
+                        {
+                            Vector3 forceDir = hit.point - transform.position;
+                            Rigidbody rb = bufer.GetComponent<Rigidbody>();
+                            float mult = 10 / (Vector3.Distance(hit.point, transform.position) * rb.mass);
+                            rb.AddForce(forceDir.normalized * mult, ForceMode.Impulse);
+                        }
+                    }
+                    if(hit.collider.tag.Equals("Enemy"))
+                    {
+                        forceBufer.position = hit.point;
+                    }
+                }
+
+                foreach (var item in forceObjects)
+                {
+                    item.contactMethod(forceBufer);
+                }
+            }
         }
     }
     public void ReturnRay()
     {
         lineRenderer.enabled = false;
         aud.enabled = false;
+        foreach (var item in forceObjects)
+        {
+            item.transform.parent = null;
+        }
+        forceObjects.Clear();
     }
     private void FinalDelay()
     {

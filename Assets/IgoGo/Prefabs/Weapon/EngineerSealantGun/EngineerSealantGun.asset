@@ -21,3 +21,7 @@ MonoBehaviour:
     type: 3}
   weaponPos: {x: 0, y: 0, z: 0}
   weaponRot: {x: 0, y: 0, z: 0}
+  lHandTargetDefaultPos: {x: 0, y: 0, z: 0}
+  lHandTargetDefaultRot: {x: 0, y: 0, z: 0}
+  lHandTargetActionPos: {x: 0.06, y: 0.028, z: 0.032}
+  lHandTargetActionRot: {x: -37.358, y: -114.102, z: 43.542}

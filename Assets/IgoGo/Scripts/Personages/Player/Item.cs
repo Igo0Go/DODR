@@ -8,4 +8,7 @@ public class Item : MonoBehaviour {
     public string itemName;
     public WeaponConfig weaponConfig;
 
+    [Space(20)]
+    public bool remove;
+
 }
