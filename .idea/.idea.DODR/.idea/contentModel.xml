@@ -7,6 +7,13 @@
       <e p="Assets" t="Include">
         <e p="IgoGo" t="Include">
           <e p="Prefabs" t="Include">
+            <e p="ActionObjects" t="Include">
+              <e p="ForceObject" t="Include">
+                <e p="ForceObject.cs" t="Include" />
+                <e p="ForceReactor.cs" t="Include" />
+                <e p="KeyReactor.cs" t="Include" />
+              </e>
+            </e>
             <e p="EffectExamples" t="Include">
               <e p="Magic Effects" t="Include">
                 <e p="Shaders" t="Include">
@@ -80,6 +87,7 @@
               <e p="MusicChanger.cs" t="Include" />
               <e p="MusicManager.cs" t="Include" />
               <e p="ObjectTranslateManager.cs" t="Include" />
+              <e p="RBActivator.cs" t="Include" />
               <e p="ReplicSceneLoader.cs" t="Include" />
               <e p="TimlineActivator.cs" t="Include" />
               <e p="WeaponReactor.cs" t="Include" />

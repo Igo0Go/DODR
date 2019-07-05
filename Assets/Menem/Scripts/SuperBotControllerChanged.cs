@@ -116,6 +116,11 @@ public class SuperBotControllerChanged : MonoBehaviour, IAlive
         }
     }
 
+    public void IsAttacketd()
+    {
+        
+    }
+
     public virtual float DistanceTP
     {
         get { return Distance; }
@@ -149,6 +154,7 @@ public class SuperBotControllerChanged : MonoBehaviour, IAlive
                 AngleVision = AngleVisionStandart;
             }
 
+
             if (!stun)
             {
 
@@ -157,17 +163,15 @@ public class SuperBotControllerChanged : MonoBehaviour, IAlive
                 {
                     if (Distance < RangePursuit && Distance > RangeAttack && anglevis < AngleVision &&
                         Physics.Raycast(ray, out hit, RangePursuit, ignoreMask) &&
-                        hit.transform.gameObject == Target.gameObject)
+                        hit.transform.gameObject == Target.gameObject) //Move
                     {
                         if (anglecam < Camshooting)
                         {
                             IsMeleeAttack = false;
                         }
 
-                        if (Alert)
-                        {
-                            StartCoroutine(Alarm());
-                        }
+                        Alert = true;
+
 
                         if (Anim.GetBool("Shoot"))
                         {
@@ -181,8 +185,9 @@ public class SuperBotControllerChanged : MonoBehaviour, IAlive
                     }
                     else if (Distance <= RangeAttack && anglevis < AngleVision &&
                              Physics.Raycast(ray, out hit, RangePursuit, ignoreMask) &&
-                             hit.transform.gameObject == Target.gameObject)
+                             hit.transform.gameObject == Target.gameObject) // \Attack
                     {
+                        Alert = true;
                         if (!IsMeleeAttack && anglecam > AngleCamera) // переключатель
                         {
                             IsMeleeAttack = true;
@@ -191,30 +196,30 @@ public class SuperBotControllerChanged : MonoBehaviour, IAlive
                         {
                             LastPosition = Target.position;
                             NavAgent.destination = transform.position;
-                            if (!Alert)
-                            {
-                                Alert = true;
-
-                            }
-
                             Attack();
                         }
                     }
-                    else if (LastPosition != StandardPosition)
+                    else if (LastPosition != StandardPosition) // Pursuit 
                     {
+                        Alert = true;
                         if (Anim.GetBool("Shoot"))
                         {
                             Anim.SetBool("Shoot", false);
                         }
-
+                        StateSolver = EnemyState.Walk;
                         NavAgent.destination = LastPosition;
                         if (LastPosition.x == transform.position.x && LastPosition.z == transform.position.z)
                         {
                             LastPosition = StandardPosition;
                         }
                     }
-                    else
+                    else //Stay
                     {
+                        if (Alert)
+                        {
+                            StartCoroutine(Alarm());
+                        }
+
                         if (Anim.GetBool("Shoot"))
                         {
                             Anim.SetBool("Shoot", false);
@@ -391,6 +396,7 @@ public class SuperBotControllerChanged : MonoBehaviour, IAlive
     {
         stun = true;
         NavAgent.destination = transform.position;
+        LastPosition = Target.transform.position;
         Anim.SetTrigger("Damage");        
         yield return new WaitForSeconds(3F);
         stun = false;
@@ -402,6 +408,9 @@ public class SuperBotControllerChanged : MonoBehaviour, IAlive
         {
             GetDamage(5);
         }
+
+        Alert = true;
+        IsAttacketd();
     }
 
 
